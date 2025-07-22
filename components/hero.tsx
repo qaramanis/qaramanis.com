@@ -12,15 +12,13 @@ export default function Hero() {
         priority
       />
 
-      <div className="flex flex-row pt-[4rem]">
-        <div className="text-white">Apostolos (Q) Karamanis</div>
-        <div className="ml-2 ">
+      <div className=" pt-[4rem]">
+        <a className="text-white">Apostolos (Q) Karamanis</a>
+        <a className="pl-[0.5rem] ">
           is a web developer from Thessaloniki, Greece.
-        </div>
+        </a>
       </div>
-      <div className="flex mx-auto pt-[1rem]">
-        Looking for new opportunities.
-      </div>
+      <div className="pt-[1rem]">Looking for new opportunities.</div>
     </div>
   );
 }
