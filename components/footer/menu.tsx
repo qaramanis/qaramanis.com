@@ -17,6 +17,10 @@ const menuItems = [
     name: "LinkedIn",
     url: "https://www.linkedin.com/in/apostolos-karamanis/",
   },
+  {
+    name: "Mail",
+    url: "mailto:apostkaram@gmail.com",
+  },
 ];
 
 const Menu: React.FC = () => {

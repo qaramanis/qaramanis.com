@@ -43,6 +43,9 @@
     --color-foreground: var(--foreground);
     --font-sans: var(--font-hack);
     --font-mono: var(--font-hack);
+    --font-paraText: var(--font-para-text);
+    --font-paraDis: var(--font-para-dis);
+    --font-writer: var(--font-writer-reg);
 }
 
 @media (prefers-color-scheme: dark) {

@@ -7,7 +7,7 @@ import Hero from "@/components/hero";
 export default function Home() {
   return (
     <div className="text-sm">
-      <div className="w-full md:max-w-[40vw] mx-auto ">
+      <div className="w-full md:max-w-[40vw] p-[1rem] md:p-0 mx-auto ">
         <Hero />
         <Experience />
         <Awards />
