@@ -32,10 +32,28 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: "WriterReg";
+    src: url("/fonts/writer/Writer-Regular.woff2") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "ParaDis";
+    src: url("/fonts/parabole/Parabole-DisplayRegular.woff2") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
 :root {
     --background: #000000;
     --foreground: #171717;
     --font-hack: "Hack", "Courier New", monospace;
+    --font-writer-reg: "WriterReg", variable;
+    --font-para-dis: "ParaDis", variable;
 }
 
 @theme inline {
@@ -45,7 +63,7 @@
     --font-mono: var(--font-hack);
     --font-paraText: var(--font-para-text);
     --font-paraDis: var(--font-para-dis);
-    --font-writer: var(--font-writer-reg);
+    --font-writerReg: var(--font-writer-reg);
 }
 
 @media (prefers-color-scheme: dark) {

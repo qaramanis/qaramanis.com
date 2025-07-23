@@ -45,12 +45,13 @@ const Menu: React.FC = () => {
       <div id="menu" className="flex items-center relative z-10">
         <div
           id="menu-items"
-          className="flex flex-row relative"
+          className="flex flex-col md:flex-row relative items-center"
           data-active-index={hoverIndex !== null ? hoverIndex : undefined}
         >
           {menuItems.map((item, index) => (
             <div
               key={index}
+              className="mb-1"
               ref={(el) => {
                 itemRefs.current[index] = el;
                 if (index === 0) ref.current = el;
