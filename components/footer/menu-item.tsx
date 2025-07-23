@@ -25,7 +25,7 @@ const MenuItem: React.FC<MenuItemProps> = ({
     <div
       className={`
         menu-item cursor-pointer block
-        transition-all duration-500 ease-in-out pr-[2rem]
+        transition-all duration-500 ease-in-out px-1 md:pr-[1rem]
         ${
           hoverIndex !== null && hoverIndex !== index
             ? "text-[#666666] scale-98"

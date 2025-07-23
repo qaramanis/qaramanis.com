@@ -41,11 +41,11 @@ const Menu: React.FC = () => {
   };
 
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative ">
       <div id="menu" className="flex items-center relative z-10">
         <div
           id="menu-items"
-          className="flex flex-col md:flex-row relative items-center"
+          className="flex flex-col md:flex-row relative items-center "
           data-active-index={hoverIndex !== null ? hoverIndex : undefined}
         >
           {menuItems.map((item, index) => (
