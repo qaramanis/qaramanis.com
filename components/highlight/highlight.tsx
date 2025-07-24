@@ -36,11 +36,11 @@ export default function Highlight() {
           </div> */}
 
           {/* Version 2 - Centered text */}
-          <div className="absolute inset-0 flex flex-col items-center self-center">
+          <div className="absolute inset-0 flex flex-col items-center self-center justify-center">
             <span className="font-writerReg text-[#0022FF] text-base md:text-lg">
               ATHENS — MAY 2026
             </span>
-            <h1 className="text-black text-center text-2xl md:text-3xl tracking-tight mt-2">
+            <h1 className="text-foreground text-center text-2xl md:text-3xl tracking-tight mt-2">
               The t<span className="font-paraDis">oo</span>ls you will use
               <br />
               to<span className="font-paraDis">m</span>orrow — to
