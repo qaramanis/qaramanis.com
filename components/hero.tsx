@@ -13,10 +13,8 @@ export default function Hero() {
       />
 
       <div className=" pt-[4rem]">
-        <a className="text-foreground">Apostolos (Q) Karamanis</a>
-        <a className="pl-[0.5rem] ">
-          is a web designer from Thessaloniki, Greece.
-        </a>
+        <a className="text-foreground">Apostolos (Q) Karamanis</a>{" "}
+        <a className="">is a web designer from Thessaloniki, Greece.</a>
       </div>
       <div className="pt-[1rem]">Looking for new opportunities.</div>
     </div>
