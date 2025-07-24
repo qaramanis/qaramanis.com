@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <div className="pt-[2rem] md:pt-[4rem] text-[#666666] text-start">
+    <div className="pt-[2rem] md:pt-[4rem] text-[#555555] text-start">
       <Image
-        src="/logo_white.svg"
+        src="/logo_black.svg"
         alt="Logo"
         width={150}
         height={10}
@@ -13,7 +13,7 @@ export default function Hero() {
       />
 
       <div className=" pt-[4rem]">
-        <a className="text-white">Apostolos (Q) Karamanis</a>
+        <a className="text-foreground">Apostolos (Q) Karamanis</a>
         <a className="pl-[0.5rem] ">
           is a web designer from Thessaloniki, Greece.
         </a>

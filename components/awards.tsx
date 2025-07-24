@@ -20,14 +20,14 @@ export default function Awards() {
       {awards.map((item, index) => (
         <div
           key={index}
-          className="pt-[1rem] flex flex-col justify-between border-b border-[#666666] hover:border-white relative overflow-hidden group transition-all duration-500 ease-out"
+          className="pt-[1rem] flex flex-col justify-between border-b border-[#666666] hover:border-foreground relative overflow-hidden group transition-all duration-500 ease-out"
         >
           <div className="flex flex-row justify-between">
             <div>{item.title}</div>
-            <div className="text-[#666666]">{item.date}</div>
+            <div className="text-[#555555]">{item.date}</div>
           </div>
-          <p className="text-[#666666]">{item.description}</p>
-          <div className="absolute bottom-0 left-0 h-[1px] bg-white w-0 group-hover:w-full transition-all duration-500 ease-out" />
+          <p className="text-[#555555]">{item.description}</p>
+          <div className="absolute bottom-0 left-0 h-[1px] bg-foreground w-0 group-hover:w-full transition-all duration-500 ease-out" />
         </div>
       ))}
     </div>

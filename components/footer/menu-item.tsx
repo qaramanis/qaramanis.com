@@ -28,8 +28,8 @@ const MenuItem: React.FC<MenuItemProps> = ({
         transition-all duration-500 ease-in-out px-1 md:pr-[1rem]
         ${
           hoverIndex !== null && hoverIndex !== index
-            ? "text-[#666666] scale-98"
-            : "text-white scale-100"
+            ? "text-[#555555] scale-99"
+            : "text-foreground scale-100"
         }
       `}
       onMouseEnter={onMouseEnter}
