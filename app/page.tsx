@@ -1,6 +1,6 @@
 import Awards from "@/components/awards";
 import Experience from "@/components/experience";
-import Featured from "@/components/featured/featured";
+import Highlight from "@/components/highlight/highlight";
 import Footer from "@/components/footer/footer";
 import Hero from "@/components/hero";
 
@@ -11,7 +11,7 @@ export default function Home() {
         <Hero />
         <Experience />
         <Awards />
-        <Featured />
+        <Highlight />
       </div>
       <Footer />
     </div>

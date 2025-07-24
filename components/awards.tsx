@@ -27,7 +27,7 @@ export default function Awards() {
             <div className="text-[#555555]">{item.date}</div>
           </div>
           <p className="text-[#555555]">{item.description}</p>
-          <div className="absolute bottom-0 left-0 h-[1px] bg-foreground w-0 group-hover:w-full transition-all duration-500 ease-out" />
+          <div className="absolute bottom-0 left-0 h-[1px] bg-foreground w-0 group-hover:w-full transition-all duration-500 ease-in-out" />
         </div>
       ))}
     </div>
