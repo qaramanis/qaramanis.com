@@ -8,10 +8,10 @@ export default function Highlight() {
     <div className="pt-[4rem] ">
       <div className="pb-[1rem]">Highlight</div>
       <div className="pt-[1rem] text-[#555555] block items-start  relative overflow-hidden group transition-all duration-500 ease-out">
-        Contributing Organizer for
+        Contributing Organizer for{" "}
         <a
           href="https://thewebconf.com/"
-          className="pl-[0.5rem] text-foreground hover:underline underline-offset-2"
+          className="text-foreground hover:underline underline-offset-2"
         >
           &quot;The Web Conf 2026&quot;
         </a>
