@@ -17,7 +17,7 @@ export default function Highlight() {
         </a>
       </div>
       <div className="py-[1rem] pointer-events-none select-none ">
-        <div className="w-full h-[50vh] relative border-1 border-[#555555] rounded-[0.5rem]">
+        <div className="w-full md:h-[50vh] h-[24rem] relative border-1 border-[#555555] rounded-[0.5rem]">
           <UnicornScene projectId="D44WtJNcYUNnkQfCweSm" />
           <div className="absolute inset-0 flex flex-col items-start p-4">
             <TheWebConfLogo className="w-12 h-12" />
