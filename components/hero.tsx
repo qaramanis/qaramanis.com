@@ -16,7 +16,9 @@ export default function Hero() {
         <a className="text-foreground">Apostolos (Q) Karamanis</a>{" "}
         <a className="">is a web designer from Thessaloniki, Greece.</a>
       </div>
-      <div className="pt-[1rem]">Looking for new opportunities.</div>
+      <div className="pt-[1rem]">
+        Looking for new opportunities. I also have a dog.
+      </div>
     </div>
   );
 }

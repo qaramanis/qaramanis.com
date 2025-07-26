@@ -5,9 +5,9 @@ import UnicornScene from "../unicorn-scene/unicorn-scene";
 
 export default function Highlight() {
   return (
-    <div className="pt-[4rem] ">
+    <div className="pt-[4rem]">
       <div className="pb-[1rem]">Highlight</div>
-      <div className="pt-[1rem] text-[#555555] block items-start  relative overflow-hidden group transition-all duration-500 ease-out">
+      <div className="pt-[1rem] text-[#555555] block items-start relative overflow-hidden group transition-all duration-500 ease-out">
         Contributing Organizer for{" "}
         <a
           href="https://thewebconf.com/"
