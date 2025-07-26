@@ -1,9 +1,9 @@
-import Awards from "@/components/awards";
-import Experience from "@/components/experience";
-import Highlight from "@/components/highlight/highlight";
-import Footer from "@/components/footer/footer";
-import Hero from "@/components/hero";
+import Awards from "@/components/awards/awards";
 import Dog from "@/components/dog/dog";
+import Experience from "@/components/experience/experience";
+import Footer from "@/components/footer/footer";
+import Hero from "@/components/hero/hero";
+import Highlight from "@/components/highlight/highlight";
 
 export default function Home() {
   return (

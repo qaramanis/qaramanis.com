@@ -17,7 +17,7 @@ export default function Highlight() {
         </a>
       </div>
       <div className="py-[1rem] pointer-events-none select-none ">
-        <div className="w-full md:h-[50vh] h-[24rem] relative border-1 border-[#555555] rounded-[0.5rem]">
+        <div className="w-full aspect-square md:aspect-[5/4] relative border-1 border-[#555555] rounded-[0.5rem]">
           <UnicornScene projectId="D44WtJNcYUNnkQfCweSm" />
           <div className="absolute inset-0 flex flex-col items-start p-4">
             <TheWebConfLogo className="w-12 h-12" />
@@ -34,7 +34,6 @@ export default function Highlight() {
               <span className="font-paraDis">d</span>ay.
             </h1>
           </div> */}
-
           {/* Version 2 - Centered text */}
           <div className="absolute inset-0 flex flex-col items-center self-center justify-center">
             <span className="font-writerReg text-[#0022FF] text-base md:text-lg">
