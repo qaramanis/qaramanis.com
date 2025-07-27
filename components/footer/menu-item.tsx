@@ -25,11 +25,11 @@ const MenuItem: React.FC<MenuItemProps> = ({
     <div
       className={`
         menu-item cursor-pointer block
-        transition-all duration-500 ease-in-out px-1 md:pr-[1rem]
+        transition-all duration-500 ease-in-out px-1 md:pr-[1rem] hover:underline underline-offset-2
         ${
           hoverIndex !== null && hoverIndex !== index
             ? "text-[#555555] scale-99"
-            : "text-foreground scale-100"
+            : "text-foreground scale-100 "
         }
       `}
       onMouseEnter={onMouseEnter}

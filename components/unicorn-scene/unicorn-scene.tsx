@@ -1,5 +1,3 @@
-// This is an example React component for Unicorn Studio
-// Use it for reference when building your own component
 "use client";
 
 import { useEffect, useRef, useState } from "react";
