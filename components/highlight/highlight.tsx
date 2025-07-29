@@ -4,6 +4,9 @@ import TheWebConfLogo from "@/svgs/thewebconf-logo";
 import UnicornScene from "../unicorn-scene/unicorn-scene";
 
 export default function Highlight() {
+  const handleOnClick = () => {
+    window.open("https://thewebconf.com/", "_blank");
+  };
   return (
     <div className="pt-[4rem]">
       <div className="pb-[1rem]">Highlight</div>
@@ -16,7 +19,7 @@ export default function Highlight() {
           &quot;The Web Conf 2026&quot;
         </a>
       </div>
-      <div className="py-[1rem] pointer-events-none select-none ">
+      <div className="py-[1rem] select-none" onClick={handleOnClick}>
         <div className="w-full aspect-square md:aspect-[5/4] relative border-1 border-[#555555] rounded-[0.5rem]">
           <UnicornScene projectId="D44WtJNcYUNnkQfCweSm" />
           <div className="absolute inset-0 flex flex-col items-start p-4">
