@@ -13,13 +13,16 @@ export default function Highlight() {
       <div className="pt-[1rem] text-[#555555] block items-start relative overflow-hidden group transition-all duration-500 ease-out">
         Contributing Organizer for{" "}
         <a
-          href="https://thewebconf.com/"
-          className="text-foreground hover:underline underline-offset-2"
+          onClick={handleOnClick}
+          className="text-foreground hover:underline underline-offset-2 cursor-pointer"
         >
           &quot;The Web Conf 2026&quot;
         </a>
       </div>
-      <div className="py-[1rem] select-none" onClick={handleOnClick}>
+      <div
+        className="py-[1rem] select-none cursor-pointer"
+        onClick={handleOnClick}
+      >
         <div className="w-full aspect-square md:aspect-[5/4] relative border-1 border-[#555555] rounded-[0.5rem]">
           <UnicornScene projectId="D44WtJNcYUNnkQfCweSm" />
           <div className="absolute inset-0 flex flex-col items-start p-4">

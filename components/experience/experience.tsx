@@ -5,7 +5,7 @@ import TitleCard from "../title-card";
 const experience = [
   {
     title: "Freelancer",
-    description: "Anything web related",
+    description: "Web Designer and Developer",
     date: "2024 - now",
   },
 ];

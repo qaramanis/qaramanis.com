@@ -20,11 +20,11 @@ export default function NotFound() {
           <h1 className="text-6xl md:text-8xl font-bold text-foreground mb-[1rem]">
             404
           </h1>
-          <h2 className="text-xl md:text-2xl text-foreground mb-[1rem]">
+          {/* <h2 className="text-xl md:text-2xl text-foreground mb-[1rem]">
             Page Not Found
-          </h2>
+          </h2> */}
           <p className="text-[#555555] mb-[2rem]">
-            The page you&apos;re looking for doesn&apos;t exist.
+            The page you&apos;re looking for is nowhere to be found.
             <br />
             Maybe it went to play with Oscar?
           </p>
