@@ -24,9 +24,8 @@ export default function NotFound() {
             Page Not Found
           </h2> */}
           <p className="text-[#555555] mb-[2rem]">
-            The page you&apos;re looking for is nowhere to be found.
-            <br />
-            Maybe it went to play with Oscar?
+            The page you&apos;re looking for
+            <br></br> went to play with Oscar
           </p>
         </div>
 
