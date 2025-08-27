@@ -6,12 +6,12 @@ const awards = [
   {
     title: "Netcompany Hackathon",
     description: "1st place | AI Travel Agent",
-    date: "Feb. 21 2025",
+    date: "Feb. 2025",
   },
   {
     title: "Open Jar Jam",
     description: "3rd place | Game Jam: New Take on an Old Game",
-    date: "May 14 2025",
+    date: "May 2025",
   },
 ];
 

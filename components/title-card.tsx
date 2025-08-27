@@ -16,7 +16,7 @@ export default function TitleCard({
           <div>{title}</div>
           <div className="text-[#555555]">{date}</div>
         </div>
-        <p className="text-[#555555] truncate">{description}</p>
+        <p className="text-[#555555] truncate mb-1">{description}</p>
         <div className="absolute bottom-0 left-0 h-[0.75px] bg-foreground w-0 group-hover:w-full transition-all duration-500 ease-in-out" />
       </div>
     </div>
