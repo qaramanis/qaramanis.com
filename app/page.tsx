@@ -1,4 +1,5 @@
 import Awards from "@/components/awards/awards";
+// import Courses from "@/components/courses/courses";
 import Dog from "@/components/dog/dog";
 import Experience from "@/components/experience/experience";
 import Footer from "@/components/footer/footer";
@@ -13,6 +14,7 @@ export default function Home() {
         <Hero />
         <Experience />
         <Awards />
+        {/*<Courses /> TODO: complete courses*/}
         <Highlight />
         <Writings />
         <Dog />

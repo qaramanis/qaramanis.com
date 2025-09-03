@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useRef, useState } from "react";
-import { redirect } from "next/navigation";
 import MenuItem from "./menu-item";
 
 const menuItems = [
@@ -21,6 +20,11 @@ const menuItems = [
     name: "Mail",
     url: "mailto:apostkaram@gmail.com",
   },
+  {
+    name: "My Resume",
+    url: "/resume.pdf",
+    download: "Apostolos_Karamanis_Resume.pdf",
+  },
 ];
 
 const Menu: React.FC = () => {
@@ -29,7 +33,7 @@ const Menu: React.FC = () => {
   const ref = useRef<HTMLDivElement | null>(null);
 
   const handleItemClick = (url: string) => {
-    redirect(url);
+    window.open(url);
   };
 
   const handleMouseEnter = (index: number) => {

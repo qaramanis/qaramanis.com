@@ -10,8 +10,8 @@ export default function TitleCard({
   date,
 }: TitleCardProps) {
   return (
-    <div className="bg-background">
-      <div className="pt-[1rem] flex flex-col justify-between border-b border-[#666666] hover:border-foreground relative overflow-hidden group transition-all duration-500 ease-out">
+    <div className="pt-[1rem] bg-background">
+      <div className="flex flex-col justify-between border-b border-[#666666] hover:border-foreground relative overflow-hidden group transition-all duration-500 ease-out">
         <div className="flex flex-row justify-between">
           <div>{title}</div>
           <div className="text-[#555555]">{date}</div>

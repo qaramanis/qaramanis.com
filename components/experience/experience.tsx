@@ -6,13 +6,14 @@ const experience = [
   {
     title: "Freelance",
     description: "Web Developer",
-    date: "2024 - now",
+    date: "2024 - present",
   },
 ];
 
 export default function Experience() {
   return (
     <div className="pt-[4rem]">
+      <div className="pb-[1rem]">Experience</div>
       {experience.map((item, index) => (
         <div key={index}>
           <TitleCard

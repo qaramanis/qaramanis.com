@@ -1,4 +1,3 @@
-import Link from "next/link";
 import React from "react";
 
 interface MenuItemProps {
@@ -36,9 +35,7 @@ const MenuItem: React.FC<MenuItemProps> = ({
       onMouseLeave={onMouseLeave}
       onClick={onClick}
     >
-      <Link className="flex items-center" href={item.url}>
-        {item.name}
-      </Link>
+      <div className="flex items-center">{item.name}</div>
     </div>
   );
 };
