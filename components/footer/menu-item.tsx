@@ -4,12 +4,12 @@ interface MenuItemProps {
   item: {
     name: string;
     url: string;
+    download?: string;
   };
   index: number;
   hoverIndex: number | null;
   onMouseEnter: () => void;
   onMouseLeave: () => void;
-  onClick: () => void;
 }
 
 const MenuItem: React.FC<MenuItemProps> = ({
@@ -18,25 +18,31 @@ const MenuItem: React.FC<MenuItemProps> = ({
   hoverIndex,
   onMouseEnter,
   onMouseLeave,
-  onClick,
 }) => {
   return (
-    <div
+    <a
+      href={item.url}
+      target={
+        item.url.startsWith("mailto:") || item.url.startsWith("/")
+          ? "_self"
+          : "_blank"
+      }
+      rel={item.url.startsWith("http") ? "noopener noreferrer" : undefined}
+      download={item.download}
       className={`
-        menu-item cursor-pointer block
+        menu-item cursor-pointer block no-underline
         transition-all duration-500 ease-in-out px-1 md:pr-[1rem] hover:underline underline-offset-2
         ${
           hoverIndex !== null && hoverIndex !== index
-            ? "text-[#555555] scale-99"
-            : "text-foreground scale-100 "
+            ? "text-[#555555]"
+            : "text-foreground"
         }
       `}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
-      onClick={onClick}
     >
       <div className="flex items-center">{item.name}</div>
-    </div>
+    </a>
   );
 };
 
