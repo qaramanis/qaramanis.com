@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://qaramanis.com/sitemap.xml
+
+User-agent: *
+Disallow: /api/
+Disallow: /_next/
+Disallow: /fonts/
+
+User-agent: Googlebot
+Allow: /*.pdf$
+
+Crawl-delay: 1
