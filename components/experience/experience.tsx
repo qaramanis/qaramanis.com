@@ -6,7 +6,12 @@ const experience = [
   {
     title: "Freelance",
     description: "Web Developer",
-    date: "2024 - present",
+    date: "Feb. 2024 - present",
+  },
+  {
+    title: "Vidavo",
+    description: "Laravel Web Developer",
+    date: "Sept. 2025 - present",
   },
 ];
 
