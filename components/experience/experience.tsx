@@ -11,7 +11,7 @@ const experience = [
   {
     title: "Freelance",
     description: "Web Developer",
-    date: "",
+    date: "∞",
   },
   
 ];
