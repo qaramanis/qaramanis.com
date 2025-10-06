@@ -23,7 +23,7 @@ export default function NotFound() {
           {/* <h2 className="text-xl md:text-2xl text-foreground mb-[1rem]">
             Page Not Found
           </h2> */}
-          <p className="text-[#555555] mb-[2rem]">
+          <p className="text-accent mb-[2rem]">
             The page you&apos;re looking for
             <br></br> went to play with Oscar
           </p>
@@ -38,7 +38,7 @@ export default function NotFound() {
           </Link>
         </div>
 
-        <div className="absolute bottom-[2rem] text-center left-1/2 transform -translate-x-1/2  text-[#555555] text-xs font-mono block">
+        <div className="absolute bottom-[2rem] text-center left-1/2 transform -translate-x-1/2  text-accent text-xs font-mono block">
           <div> How did we get here?</div>
           <br />
           <pre>{`¯\\_(ツ)_/¯`}</pre>

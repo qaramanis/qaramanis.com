@@ -14,9 +14,9 @@ export default function TitleCard({
       <div className="flex flex-col justify-between border-b border-[#666666] hover:border-foreground relative overflow-hidden group transition-all duration-500 ease-out">
         <div className="flex flex-row justify-between">
           <div>{title}</div>
-          <div className="text-[#555555]">{date}</div>
+          <div className="text-accent">{date}</div>
         </div>
-        <p className="text-[#555555] truncate mb-1">{description}</p>
+        <p className="text-accent truncate mb-1">{description}</p>
         <div className="absolute bottom-0 left-0 h-[0.75px] bg-foreground w-0 group-hover:w-full transition-all duration-500 ease-in-out" />
       </div>
     </div>

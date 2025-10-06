@@ -17,7 +17,7 @@ export default function MachineLearning() {
   return (
     <div className="pt-[4rem]">
       <div className="pb-[1rem]">Writings</div>
-      <div className="pt-[1rem] text-[#555555] block items-start relative overflow-hidden group transition-all duration-500 ease-out">
+      <div className="pt-[1rem] text-accent block items-start relative overflow-hidden group transition-all duration-500 ease-out">
         Co-Author:{" "}
         <a
           onClick={handleOnClick}
@@ -31,7 +31,7 @@ export default function MachineLearning() {
         className="py-[1rem] select-none cursor-pointer"
         onClick={handleOnClick}
       >
-        <div className="w-full aspect-square md:aspect-[5/4] relative border-1 border-[#555555] rounded-[0.5rem]">
+        <div className="w-full aspect-square md:aspect-[5/4] relative border-1 border-accent rounded-[0.5rem]">
           <div className="absolute h-[35%] inset-0 flex flex-col items-center self-start justify-center z-10">
             <span
               className={`${manrope.className} text-2xl md:text-4xl text-foreground tracking-wide`}

@@ -1,4 +1,4 @@
-export default function TheWebConfLogo({ className }: { className?: string }) {
+export default function WebConfLogo({ className }: { className?: string }) {
   return (
     <svg
       className={className}

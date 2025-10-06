@@ -48,14 +48,49 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: "Satoshi";
+    src: url("/fonts/Satoshi/Satoshi-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Satoshi";
+    src: url("/fonts/Satoshi/Satoshi-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Echelon";
+    src: url("/fonts/Echelon/Echelon-Rg.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Echelon";
+    src: url("/fonts/Echelon/Echelon-It.otf") format("opentype");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
 @theme inline {
     --color-background: var(--background);
     --color-foreground: var(--foreground);
+    --color-accent: var(--accent);
     --font-sans: var(--font-hack);
     --font-mono: var(--font-hack);
     --font-paraText: var(--font-para-text);
     --font-paraDis: var(--font-para-dis);
     --font-writerReg: var(--font-writer-reg);
+    --font-echelon: var(--font-echelon);
+    --font-satoshi: var(--font-satoshi);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -68,9 +103,12 @@
 :root {
     --background: #ffffff;
     --foreground: #000000;
+    --accent: #555555;
     --font-hack: "Hack", "Courier New", monospace;
     --font-writer-reg: "WriterReg", variable;
     --font-para-dis: "ParaDis", variable;
+    --font-echelon: "Echelon", sans-serif;
+    --font-satoshi: "Satoshi", sans-serif;
 }
 
 body {

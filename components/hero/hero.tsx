@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <div className="pt-[2rem] md:pt-[4rem] text-[#555555] text-start flex flex-col gap-[1rem]">
+    <div className="pt-[2rem] md:pt-[4rem] text-accent text-start flex flex-col gap-[1rem]">
       <Image
         src="/logo_black.svg"
         alt="Logo"

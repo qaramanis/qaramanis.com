@@ -34,7 +34,7 @@ const MenuItem: React.FC<MenuItemProps> = ({
         transition-all duration-500 ease-in-out px-1 md:pr-[1rem] hover:underline underline-offset-2
         ${
           hoverIndex !== null && hoverIndex !== index
-            ? "text-[#555555]"
+            ? "text-accent"
             : "text-foreground"
         }
       `}
