@@ -5,6 +5,7 @@ import Experience from "@/components/experience/experience";
 import Footer from "@/components/footer/footer";
 import Hero from "@/components/hero/hero";
 import Highlight from "@/components/highlight/highlight";
+import WebConf from "@/components/webconf/webconf";
 import Writings from "@/components/writings/writings";
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
         <Awards />
         {/*<Courses /> TODO: complete courses*/}
         <Highlight />
+        <WebConf />
         <Writings />
         <Dog />
       </div>

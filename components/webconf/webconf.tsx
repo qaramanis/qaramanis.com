@@ -1,3 +1,5 @@
+"use client";
+
 import WebConfLogo from "@/svgs/webconf-logo";
 import UnicornScene from "../unicorn-scene/unicorn-scene";
 
@@ -8,7 +10,7 @@ export default function WebConf() {
 
   return (
     <div className="pt-[4rem]">
-      <div className="pb-[1rem]">Highlight</div>
+      <div className="pb-[1rem]">The Web Conf 2026</div>
       <div>
         <div className="pt-[1rem] text-accent block items-start relative overflow-hidden group transition-all duration-500 ease-out">
           Contributing Organizer for{" "}

@@ -21,8 +21,8 @@ const menuItems = [
     url: "mailto:apostkaram@gmail.com",
   },
   {
-    name: "My Resume",
-    url: "/resume.pdf",
+    name: "Resume",
+    url: "/resume-08.10.2025.pdf",
     download: "Apostolos_Karamanis_Resume.pdf",
   },
 ];
