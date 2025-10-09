@@ -10,7 +10,7 @@ const awards = [
   },
   {
     title: "Open Jar Jam",
-    description: "3rd place | Game Jam: New Take on an Old Game",
+    description: "3rd place | New Take on an Old Game",
     date: "May 2025",
   },
 ];
