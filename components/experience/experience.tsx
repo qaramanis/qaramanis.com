@@ -5,7 +5,7 @@ import TitleCard from "../title-card";
 const experience = [
   {
     title: "Vidavo",
-    description: "Laravel Web Developer",
+    description: "Full Stack Web Developer",
     date: "Sept. 2025 - present",
   },
   {
@@ -13,7 +13,6 @@ const experience = [
     description: "Web Developer",
     date: "∞",
   },
-  
 ];
 
 export default function Experience() {
