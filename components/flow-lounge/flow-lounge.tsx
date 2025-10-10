@@ -30,14 +30,14 @@ export default function FlowLounge() {
           <div className="absolute inset-0 flex flex-col items-start p-4">
             <FlowLoungeLogo className="w-12 h-12" />
           </div>
-          <div className="absolute inset-0 flex flex-col items-center self-center justify-center">
-            <span className="font-satoshi text-white text-lg md:text-2xl">
+          <div className="absolute inset-0 flex flex-col items-center justify-center">
+            <span className="font-satoshi text-white text-lg md:text-2xl -mb-6">
               Immersive
             </span>
-            <h1 className="text-[#ef5021] font-echelon italic text-center text-7xl md:text-8xl tracking-tight mt-2 mb-3 drop-shadow-[0_0_20px_rgba(239,80,33,1)]">
+            <h1 className="text-[#ef5021] font-echelon italic font-extralight text-[6rem] md:text-[8rem] tracking-wide drop-shadow-[0_0_40px_rgba(239,80,33,1)]">
               Hookah
             </h1>
-            <span className="font-satoshi text-white text-lg md:text-2xl">
+            <span className="font-satoshi text-white text-lg md:text-2xl -mt-5">
               Experience
             </span>
           </div>
