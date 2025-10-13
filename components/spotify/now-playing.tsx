@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
-import { BatteryMedium, MapPinOff, Wifi } from "lucide-react";
+import { BatteryMedium, MapPinOff, Wifi, RotateCw } from "lucide-react";
 
 interface NowPlayingData {
   album: string;
@@ -13,9 +13,12 @@ interface NowPlayingData {
   lastPlayedAt?: string;
 }
 
+const CACHE_KEY = "spotify:cached-track";
+
 export default function NowPlaying() {
   const [data, setData] = useState<NowPlayingData | null>(null);
   const [loading, setLoading] = useState(true);
+  const [refreshing, setRefreshing] = useState(false);
   const [bgGradient, setBgGradient] = useState<string>(
     "linear-gradient(to bottom, rgb(66, 80, 98), rgb(44, 53, 66))",
   );
@@ -32,14 +35,14 @@ export default function NowPlaying() {
     el.style.transition = "none";
     el.style.backgroundPosition = "-100% -100%, 0 0";
     requestAnimationFrame(() => {
-      el.style.transition = "600ms ease";
-      el.style.backgroundPosition = "100% 100%, 0 0";
+      el.style.transition = "800ms ease";
+      el.style.backgroundPosition = "150% 150%, 0 0";
     });
 
     // Re-enable animation after 1.5 seconds
     setTimeout(() => {
       canAnimateRef.current = true;
-    }, 1500);
+    }, 3000);
   };
 
   const handleGlareOut = () => {
@@ -135,9 +138,54 @@ export default function NowPlaying() {
     img.src = imageUrl;
   };
 
+  const handleManualRefresh = async () => {
+    if (refreshing) return; // Prevent multiple simultaneous refreshes
+
+    setRefreshing(true);
+    try {
+      const response = await fetch("/api/spotify/now-playing");
+      if (response.ok) {
+        const nowPlaying = await response.json();
+        setData(nowPlaying);
+
+        // Save to localStorage
+        localStorage.setItem(CACHE_KEY, JSON.stringify(nowPlaying));
+
+        if (nowPlaying?.albumImageUrl) {
+          extractDominantColor(nowPlaying.albumImageUrl);
+        }
+      }
+    } catch (error) {
+      console.error("Error manually refreshing:", error);
+    } finally {
+      setRefreshing(false);
+    }
+  };
+
   useEffect(() => {
     let eventSource: EventSource | null = null;
     let reconnectTimeout: NodeJS.Timeout | null = null;
+
+    // Load cached data from localStorage on mount
+    const loadCachedData = () => {
+      try {
+        const cached = localStorage.getItem(CACHE_KEY);
+        if (cached) {
+          const cachedData = JSON.parse(cached);
+          setData(cachedData);
+          setLoading(false);
+
+          if (cachedData?.albumImageUrl) {
+            extractDominantColor(cachedData.albumImageUrl);
+          }
+        }
+      } catch (error) {
+        console.error("Error loading cached data:", error);
+      }
+    };
+
+    // Load cached data immediately
+    loadCachedData();
 
     const connect = () => {
       // Close existing connection if any
@@ -152,6 +200,9 @@ export default function NowPlaying() {
           const nowPlaying = JSON.parse(event.data);
           setData(nowPlaying);
           setLoading(false);
+
+          // Save to localStorage for future sessions
+          localStorage.setItem(CACHE_KEY, JSON.stringify(nowPlaying));
 
           if (nowPlaying?.albumImageUrl) {
             extractDominantColor(nowPlaying.albumImageUrl);
@@ -309,9 +360,9 @@ export default function NowPlaying() {
         </div>
       </div>
 
-      <div className="relative mt-auto flex items-center justify-between px-2 pb-1.5">
-        <div className="flex items-center justify-between gap-1.5">
-          <div className="flex items-center gap-0.5 h-2">
+      <div className="relative mt-auto flex items-end justify-between px-2 pb-1.5">
+        <div className="flex items-end justify-between gap-1.5">
+          <div className="flex items-center gap-0.5 h-2 self-center">
             <div
               className={`w-0.5 bg-white/80 rounded-sm ${data.isPlaying ? "animate-bar-1" : ""}`}
               style={{ height: data.isPlaying ? undefined : "45%" }}
@@ -337,8 +388,16 @@ export default function NowPlaying() {
               style={{ height: data.isPlaying ? undefined : "50%" }}
             />
           </div>
+          <button
+            onClick={handleManualRefresh}
+            disabled={refreshing}
+            className="text-background/70 hover:text-background cursor-pointer transition-colors disabled:opacity-50 ml-1"
+            title="Refresh now"
+          >
+            <RotateCw size={12} className={refreshing ? "animate-spin" : ""} />
+          </button>
         </div>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 self-end">
           <span className="text-white/70 text-end text-[10px] font-medium max-w-[120px] leading-tight">
             {data.isPlaying
               ? "listening now"

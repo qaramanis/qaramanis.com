@@ -1,5 +1,5 @@
+import { getLastPlayed } from "@/lib/kv";
 import { getNowPlaying, getRecentlyPlayed } from "@/lib/spotify";
-import { saveLastPlayed, getLastPlayed } from "@/lib/kv";
 
 interface TrackData {
   album: string;
@@ -12,89 +12,76 @@ interface TrackData {
   trackId?: string;
 }
 
-let lastTrackId: string | null = null;
-let lastIsPlaying: boolean | null = null;
+async function getCurrentTrack(
+  allowRedisFallback: boolean = false
+): Promise<TrackData | null> {
+  try {
+    // Read directly from Spotify API (no rate limit concerns)
+    const response = await getNowPlaying();
 
-async function getCurrentTrack(): Promise<TrackData | null> {
-  const response = await getNowPlaying();
+    // Currently playing
+    if (response.status === 200) {
+      const song = await response.json();
 
-  // Currently playing - save and return
-  if (response.status === 200) {
-    const song = await response.json();
-
-    if (song.item !== null) {
-      const isPlaying = song.is_playing;
-      const trackId = song.item.id;
-      const title = song.item.name;
-      const artist = song.item.artists.map((_artist: { name: string }) => _artist.name).join(", ");
-      const album = song.item.album.name;
-      const albumImageUrl = song.item.album.images[0].url;
-      const songUrl = song.item.external_urls.spotify;
-
-      const trackData: TrackData = {
-        album,
-        albumImageUrl,
-        artist,
-        title,
-        songUrl,
-        lastPlayedAt: new Date().toISOString(),
-        isPlaying,
-        trackId,
-      };
-
-      // Only save to Redis if track changed or play state changed
-      if (trackId !== lastTrackId || isPlaying !== lastIsPlaying) {
-        await saveLastPlayed(trackData);
-        lastTrackId = trackId;
-        lastIsPlaying = isPlaying;
+      if (song.item !== null) {
+        return {
+          album: song.item.album.name,
+          albumImageUrl: song.item.album.images[0].url,
+          artist: song.item.artists
+            .map((_artist: { name: string }) => _artist.name)
+            .join(", "),
+          title: song.item.name,
+          songUrl: song.item.external_urls.spotify,
+          lastPlayedAt: new Date().toISOString(),
+          isPlaying: song.is_playing,
+          trackId: song.item.id,
+        };
       }
-
-      return trackData;
     }
-  }
 
-  // Not currently playing - try recently played
-  const recentResponse = await getRecentlyPlayed();
+    // Not currently playing - try recently played
+    const recentResponse = await getRecentlyPlayed();
 
-  if (recentResponse.status === 200) {
-    const recentData = await recentResponse.json();
-    if (recentData.items && recentData.items.length > 0) {
-      const lastPlayed = recentData.items[0];
-      const trackId = lastPlayed.track.id;
+    if (recentResponse.status === 200) {
+      const recentData = await recentResponse.json();
+      if (recentData.items && recentData.items.length > 0) {
+        const lastPlayed = recentData.items[0];
 
-      const trackData: TrackData = {
-        album: lastPlayed.track.album.name,
-        albumImageUrl: lastPlayed.track.album.images[0].url,
-        artist: lastPlayed.track.artists.map((_artist: { name: string }) => _artist.name).join(", "),
-        title: lastPlayed.track.name,
-        songUrl: lastPlayed.track.external_urls.spotify,
-        lastPlayedAt: lastPlayed.played_at,
-        isPlaying: false,
-        trackId,
-      };
-
-      // Only save to Redis if track changed or play state changed
-      if (trackId !== lastTrackId || false !== lastIsPlaying) {
-        await saveLastPlayed(trackData);
-        lastTrackId = trackId;
-        lastIsPlaying = false;
+        return {
+          album: lastPlayed.track.album.name,
+          albumImageUrl: lastPlayed.track.album.images[0].url,
+          artist: lastPlayed.track.artists
+            .map((_artist: { name: string }) => _artist.name)
+            .join(", "),
+          title: lastPlayed.track.name,
+          songUrl: lastPlayed.track.external_urls.spotify,
+          lastPlayedAt: lastPlayed.played_at,
+          isPlaying: false,
+          trackId: lastPlayed.track.id,
+        };
       }
-
-      return trackData;
     }
+
+    // Only use Redis fallback if explicitly allowed (first load only)
+    if (allowRedisFallback) {
+      const cachedTrack = await getLastPlayed();
+      if (cachedTrack) {
+        return cachedTrack as TrackData;
+      }
+    }
+
+    return null;
+  } catch (error) {
+    console.error("Error fetching from Spotify:", error);
+    // On API error, use Redis fallback if allowed
+    if (allowRedisFallback) {
+      const cachedTrack = await getLastPlayed();
+      if (cachedTrack) {
+        return cachedTrack as TrackData;
+      }
+    }
+    return null;
   }
-
-  // No Spotify data - fallback to KV cache
-  const cachedTrack = await getLastPlayed();
-
-  if (cachedTrack) {
-    return {
-      ...cachedTrack,
-      isPlaying: false,
-    };
-  }
-
-  return null;
 }
 
 export async function GET(request: Request) {
@@ -102,27 +89,28 @@ export async function GET(request: Request) {
 
   const stream = new ReadableStream({
     async start(controller) {
-      // Send initial data
-      const initialTrack = await getCurrentTrack();
+      // Send initial data - allow Redis fallback ONCE on first load
+      const initialTrack = await getCurrentTrack(true);
       if (initialTrack) {
         const data = `data: ${JSON.stringify(initialTrack)}\n\n`;
         controller.enqueue(encoder.encode(data));
       }
 
-      // Poll for changes
+      // Poll Spotify API for changes (no Redis fallback after initial load)
       const interval = setInterval(async () => {
         try {
-          const currentTrack = await getCurrentTrack();
+          const currentTrack = await getCurrentTrack(false);
 
           if (currentTrack) {
-            // Send update to client
+            // Only send update if there's actual Spotify data
             const data = `data: ${JSON.stringify(currentTrack)}\n\n`;
             controller.enqueue(encoder.encode(data));
           }
+          // If no Spotify data, don't send anything (client keeps cached data)
         } catch (error) {
           console.error("Error fetching track:", error);
         }
-      }, 5000); // Poll Spotify every 5 seconds
+      }, 10000); // Poll Spotify every 10 seconds
 
       // Cleanup on disconnect
       request.signal.addEventListener("abort", () => {
