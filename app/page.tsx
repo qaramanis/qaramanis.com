@@ -5,19 +5,19 @@ import Experience from "@/components/experience/experience";
 import Footer from "@/components/footer/footer";
 import Hero from "@/components/hero/hero";
 import Highlight from "@/components/highlight/highlight";
-import WebConf from "@/components/webconf/webconf";
+import Product from "@/components/product/product";
 import Writings from "@/components/writings/writings";
 
 export default function Home() {
   return (
     <div className="text-sm">
-      <div className="w-full md:max-w-[35vw] p-[1rem] md:p-0 mx-auto">
+      <div className="w-full md:max-w-[35vw] md:pb-[8rem] mx-auto flex flex-col gap-[8rem]">
         <Hero />
         <Experience />
         <Awards />
         {/*<Courses /> TODO: complete courses*/}
         <Highlight />
-        <WebConf />
+        <Product />
         <Writings />
         <Dog />
       </div>

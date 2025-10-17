@@ -1,5 +1,6 @@
 "use client";
 
+import SectionTitle from "../section-title";
 import TitleCard from "../title-card";
 
 const awards = [
@@ -17,8 +18,8 @@ const awards = [
 
 export default function Awards() {
   return (
-    <div className="pt-[4rem]">
-      <div className="pb-[1rem]">Awards & Honors</div>
+    <div>
+      <SectionTitle title="Awards" />
       {awards.map((item, index) => (
         <div key={index}>
           <TitleCard

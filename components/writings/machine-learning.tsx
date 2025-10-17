@@ -15,9 +15,8 @@ export default function MachineLearning() {
   };
 
   return (
-    <div className="pt-[4rem]">
-      <div className="pb-[1rem]">Writings</div>
-      <div className="pt-[1rem] text-accent block items-start relative overflow-hidden group transition-all duration-500 ease-out">
+    <div>
+      <div className="pt-[1rem] text-accent block text-start items-start relative overflow-hidden group transition-all duration-500 ease-out">
         Co-Author:{" "}
         <a
           onClick={handleOnClick}

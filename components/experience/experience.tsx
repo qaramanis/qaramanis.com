@@ -1,5 +1,6 @@
 "use client";
 
+import SectionTitle from "../section-title";
 import TitleCard from "../title-card";
 
 const experience = [
@@ -17,8 +18,8 @@ const experience = [
 
 export default function Experience() {
   return (
-    <div className="pt-[4rem]">
-      <div className="pb-[1rem]">Experience</div>
+    <div>
+      <SectionTitle title="Experience" />
       {experience.map((item, index) => (
         <div key={index}>
           <TitleCard

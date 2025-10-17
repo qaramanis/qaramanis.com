@@ -17,7 +17,7 @@ export default function FlowLounge() {
           &quot;Flow Lounge&quot;
         </a>
         <br />
-        <a className="text-accent text-[0.6rem]"> (under development)</a>
+        <a className="text-accent text-[0.6rem]"> (currently working on)</a>
       </div>
       <div
         className="py-[1rem] select-none cursor-pointer"
