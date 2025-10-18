@@ -11,7 +11,7 @@ import Writings from "@/components/writings/writings";
 export default function Home() {
   return (
     <div className="text-sm">
-      <div className="w-full md:max-w-[35vw] md:pb-[8rem] mx-auto flex flex-col gap-[8rem]">
+      <div className="w-full px-[1rem] mb:px-0 md:max-w-[35vw] md:pb-[8rem] mx-auto flex flex-col gap-[8rem]">
         <Hero />
         <Experience />
         <Awards />
