@@ -32,7 +32,7 @@ export default function NotFound() {
         <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
           <Link
             href="/"
-            className="text-foreground hover:underline underline-offset-2 transition-all duration-300"
+            className="text-foreground hover:underline underline-offset-2 decoration-1 transition-all duration-300"
           >
             Back to Home
           </Link>

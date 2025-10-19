@@ -5,7 +5,7 @@ import TitleCard from "../title-card";
 
 const experience = [
   {
-    title: "Vidavo",
+    title: "Vidavo S.A.",
     description: "Full Stack Web Developer",
     date: "Sept. 2025 - present",
   },

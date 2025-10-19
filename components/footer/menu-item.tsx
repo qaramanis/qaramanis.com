@@ -31,10 +31,10 @@ const MenuItem: React.FC<MenuItemProps> = ({
       download={item.download}
       className={`
         menu-item cursor-pointer block no-underline
-        transition-all duration-500 ease-in-out px-1 md:pr-[1rem] hover:underline underline-offset-2
+        transition-all duration-500 ease-in-out px-1 md:pr-[1rem] hover:underline underline-offset-2 decoration-1
         ${
           hoverIndex !== null && hoverIndex !== index
-            ? "text-accent"
+            ? "text-accent/50"
             : "text-foreground"
         }
       `}

@@ -14,7 +14,7 @@ export default function WebConf() {
         Contributing Organizer for{" "}
         <a
           onClick={handleOnClick}
-          className="text-foreground hover:underline underline-offset-2 cursor-pointer"
+          className="text-foreground hover:underline underline-offset-2 decoration-1 cursor-pointer"
         >
           &quot;The Web Conf 2026&quot;
         </a>

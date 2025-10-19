@@ -12,7 +12,7 @@ export default function FlowLounge() {
         Creative Direction for{" "}
         <a
           onClick={handleOnClick}
-          className="text-foreground hover:underline underline-offset-2 cursor-pointer"
+          className="text-foreground hover:underline underline-offset-2 decoration-1 cursor-pointer"
         >
           &quot;Flow Lounge&quot;
         </a>

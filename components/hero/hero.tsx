@@ -7,13 +7,13 @@ export default function Hero() {
         src="/logo_black.svg"
         alt="Logo"
         width={150}
-        height={10}
+        height={0}
         className="select-none pointer-events-none"
         priority
       />
 
       <div className="pt-[3rem]">
-        <a className="text-foreground">Apostolos Karamanis</a>{" "}
+        <a className="text-foreground font-medium">Apostolos Karamanis</a>{" "}
         <a className="">
           is a Computer Science Student from Thessaloniki, Greece.
         </a>
