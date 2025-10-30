@@ -17,7 +17,7 @@ export default function Home() {
         <Awards />
         {/*<Courses /> TODO: complete courses*/}
         <Highlight />
-        <Product />
+        {/*<Product />*/}
         <Writings />
         <Dog />
       </div>
