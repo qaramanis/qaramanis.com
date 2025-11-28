@@ -3,7 +3,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import MenuItem from "./menu-item";
 import { useHorizontalScroll } from "@/lib/hooks/useHorizontalScroll";
-import { useSectionDimensions } from "@/lib/hooks/useSectionDimensions";
 
 const menuItems = [
   {
@@ -34,16 +33,14 @@ const Menu: React.FC = () => {
   const [hasMeasured, setHasMeasured] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
   const { scrollProgress, lenisRef } = useHorizontalScroll(1100);
-  const { setMenuWidth } = useSectionDimensions();
 
   useEffect(() => {
     if (menuRef.current && !hasMeasured) {
       const width = menuRef.current.offsetWidth;
       setNaturalWidth(width);
-      setMenuWidth(width);
       setHasMeasured(true);
     }
-  }, [setMenuWidth, hasMeasured]);
+  }, [hasMeasured]);
 
   const handleMouseEnter = (index: number) => {
     setHoverIndex(index);
@@ -62,16 +59,17 @@ const Menu: React.FC = () => {
     }
   };
 
-  const menuOffset =
+  const maxOffset =
     typeof window !== "undefined" && naturalWidth > 0
-      ? scrollProgress * (window.innerWidth / 2 - naturalWidth / 2)
+      ? window.innerWidth / 2 - naturalWidth / 2
       : 0;
+  const menuOffset = Math.min(scrollProgress * maxOffset, maxOffset);
 
   return (
     <div className="fixed top-0 left-1/2 flex items-center pointer-events-none">
       <div
         ref={menuRef}
-        className="flex flex-col h-screen px-[1rem] bg-foreground/10 relative items-center justify-center pointer-events-auto w-fit"
+        className="flex flex-col h-screen px-[1rem] bg-transparent relative items-center justify-center pointer-events-auto w-fit"
         style={{
           transform: `translateX(calc(-50% - ${menuOffset}px))`,
         }}

@@ -16,7 +16,7 @@ export const useHorizontalScroll = (maxScroll: number = 1200) => {
     lenisRef.current = lenis;
 
     const handleScroll = () => {
-      const progress = Math.min(window.scrollX / maxScroll, 1);
+      const progress = window.scrollX / maxScroll;
       setScrollProgress(progress);
     };
 

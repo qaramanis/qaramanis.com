@@ -1,11 +1,10 @@
 "use client";
 
 import Menu from "@/components/experiment/menu/menu";
-import { SectionDimensionsProvider } from "@/lib/hooks/useSectionDimensions";
 
 export default function Home() {
   return (
-    <SectionDimensionsProvider>
+    <>
       <Menu />
       <div className="flex gap-[4rem] ml-[100vw]">
         <section
@@ -39,6 +38,6 @@ export default function Home() {
           Contact
         </section>
       </div>
-    </SectionDimensionsProvider>
+    </>
   );
 }
