@@ -33,7 +33,7 @@ const Menu: React.FC = () => {
   const [naturalWidth, setNaturalWidth] = useState(0);
   const [hasMeasured, setHasMeasured] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
-  const { scrollProgress, lenisRef } = useHorizontalScroll(1200);
+  const { scrollProgress, lenisRef } = useHorizontalScroll(1100);
   const { setMenuWidth } = useSectionDimensions();
 
   useEffect(() => {
@@ -67,25 +67,15 @@ const Menu: React.FC = () => {
       ? scrollProgress * (window.innerWidth / 2 - naturalWidth / 2)
       : 0;
 
-  const currentWidth =
-    typeof window !== "undefined" && naturalWidth > 0 && hasMeasured
-      ? window.innerWidth - scrollProgress * (window.innerWidth - naturalWidth)
-      : "auto";
-
   return (
     <div className="fixed top-0 left-1/2 flex items-center pointer-events-none">
       <div
         ref={menuRef}
-        className="flex flex-col h-screen px-[1rem] relative items-center justify-center pointer-events-auto bg-background"
+        className="flex flex-col h-screen px-[1rem] bg-foreground/10 relative items-center justify-center pointer-events-auto w-fit"
         style={{
           transform: `translateX(calc(-50% - ${menuOffset}px))`,
-          width:
-            typeof currentWidth === "number"
-              ? `${currentWidth}px`
-              : currentWidth,
         }}
       >
-        {/*{currentWidth}*/}
         {menuItems.map((item, index) => (
           <MenuItem
             key={index}
