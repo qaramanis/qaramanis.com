@@ -1,27 +1,44 @@
-import Awards from "@/components/awards/awards";
-// import Courses from "@/components/courses/courses";
-import Dog from "@/components/dog/dog";
-import Experience from "@/components/experience/experience";
-import Footer from "@/components/footer/footer";
-import Hero from "@/components/hero/hero";
-import Highlight from "@/components/highlight/highlight";
-// import Product from "@/components/product/product";
-import Writings from "@/components/writings/writings";
+"use client";
+
+import Menu from "@/components/experiment/menu/menu";
+import { SectionDimensionsProvider } from "@/lib/hooks/useSectionDimensions";
 
 export default function Home() {
   return (
-    <div className="text-sm">
-      <div className="w-full px-[1rem] mb:px-0 md:max-w-[35vw] md:pb-[8rem] mx-auto flex flex-col gap-[8rem]">
-        <Hero />
-        <Experience />
-        <Awards />
-        {/*<Courses /> TODO: complete courses*/}
-        <Highlight />
-        {/*<Product />*/}
-        <Writings />
-        <Dog />
+    <SectionDimensionsProvider>
+      <Menu />
+      <div className="flex gap-[4rem] ml-[100vw]">
+        <section
+          id="info"
+          className="min-h-screen min-w-screen flex items-center justify-center flex-shrink-0 p-[4rem]"
+        >
+          Info
+        </section>
+        <section
+          id="services"
+          className="min-h-screen min-w-screen flex items-center justify-center flex-shrink-0 p-[4rem]"
+        >
+          Services
+        </section>
+        <section
+          id="experience"
+          className="min-h-screen min-w-screen flex items-center justify-center flex-shrink-0 p-[4rem]"
+        >
+          Experience
+        </section>
+        <section
+          id="recognition"
+          className="min-h-screen min-w-screen flex items-center justify-center flex-shrink-0 p-[4rem]"
+        >
+          Recognition
+        </section>
+        <section
+          id="contact"
+          className="min-h-screen min-w-screen flex items-center justify-center flex-shrink-0 p-[4rem]"
+        >
+          Contact
+        </section>
       </div>
-      <Footer />
-    </div>
+    </SectionDimensionsProvider>
   );
 }

@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "lenis/dist/lenis.css";
 
 @font-face {
     font-family: "Hack";
@@ -80,88 +81,150 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: "HigherJump";
+    src: url("/fonts/higher-jump/Higher-Jump.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
 @theme inline {
     --color-background: var(--background);
     --color-foreground: var(--foreground);
     --color-accent: var(--accent);
-    --font-sans: var(--font-hack);
-    --font-mono: var(--font-hack);
+    --color-accent-secondary: var(--accent-secondary);
+    --font-sans: var(--font-satoshi);
+    --font-mono: var(--font-satoshi);
+    --font-hack: var(--font-hack);
     --font-paraText: var(--font-para-text);
     --font-paraDis: var(--font-para-dis);
     --font-writerReg: var(--font-writer-reg);
     --font-echelon: var(--font-echelon);
     --font-satoshi: var(--font-satoshi);
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --background: #000000;
-        --foreground: #ffffff;
-    }
+    --font-tinos: var(--font-tinos);
+    --font-higherJump: var(--font-higher-jump);
 }
 
 :root {
-    --background: #ffffff;
-    --foreground: #000000;
-    --accent: #555555;
-    --font-hack: "Hack", "Courier New", monospace;
+    --background: #000000;
+    --foreground: #cbcbcb;
+    --accent: #707375;
+    --font-hack: "Hack", monospace;
+    --font-tinos: "Tinos", sans-serif;
     --font-writer-reg: "WriterReg", variable;
     --font-para-dis: "ParaDis", variable;
     --font-echelon: "Echelon", sans-serif;
     --font-satoshi: "Satoshi", sans-serif;
+    --font-higher-jump: "Higher Jump", sans-serif;
+    scrollbar-width: none;
 }
 
 body {
     background: var(--background);
     color: var(--foreground);
-    font-family: var(--font-hack);
+    font-family: var(--font-higherJump);
 }
 
 ::selection {
-    color: #ffffff;
-    background: #000000;
+    color: #cbcbcb;
+    background: #57595b;
 }
 
 @keyframes bar-1 {
-    0%, 100% { height: 45%; }
-    25% { height: 95%; }
-    50% { height: 30%; }
-    75% { height: 70%; }
+    0%,
+    100% {
+        height: 45%;
+    }
+    25% {
+        height: 95%;
+    }
+    50% {
+        height: 30%;
+    }
+    75% {
+        height: 70%;
+    }
 }
 
 @keyframes bar-2 {
-    0%, 100% { height: 70%; }
-    30% { height: 35%; }
-    60% { height: 90%; }
-    80% { height: 55%; }
+    0%,
+    100% {
+        height: 70%;
+    }
+    30% {
+        height: 35%;
+    }
+    60% {
+        height: 90%;
+    }
+    80% {
+        height: 55%;
+    }
 }
 
 @keyframes bar-3 {
-    0%, 100% { height: 55%; }
-    20% { height: 85%; }
-    45% { height: 40%; }
-    70% { height: 100%; }
+    0%,
+    100% {
+        height: 55%;
+    }
+    20% {
+        height: 85%;
+    }
+    45% {
+        height: 40%;
+    }
+    70% {
+        height: 100%;
+    }
 }
 
 @keyframes bar-4 {
-    0%, 100% { height: 85%; }
-    35% { height: 50%; }
-    65% { height: 75%; }
-    90% { height: 40%; }
+    0%,
+    100% {
+        height: 85%;
+    }
+    35% {
+        height: 50%;
+    }
+    65% {
+        height: 75%;
+    }
+    90% {
+        height: 40%;
+    }
 }
 
 @keyframes bar-5 {
-    0%, 100% { height: 65%; }
-    15% { height: 30%; }
-    40% { height: 95%; }
-    75% { height: 60%; }
+    0%,
+    100% {
+        height: 65%;
+    }
+    15% {
+        height: 30%;
+    }
+    40% {
+        height: 95%;
+    }
+    75% {
+        height: 60%;
+    }
 }
 
 @keyframes bar-6 {
-    0%, 100% { height: 50%; }
-    25% { height: 80%; }
-    55% { height: 40%; }
-    85% { height: 100%; }
+    0%,
+    100% {
+        height: 50%;
+    }
+    25% {
+        height: 80%;
+    }
+    55% {
+        height: 40%;
+    }
+    85% {
+        height: 100%;
+    }
 }
 
 .animate-bar-1 {

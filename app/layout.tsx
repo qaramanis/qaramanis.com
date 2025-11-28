@@ -82,10 +82,10 @@ export default function RootLayout({
                 "https://github.com/qaramanis",
                 "https://www.linkedin.com/in/apostolos-karamanis/",
               ],
-              jobTitle: "Computer Science Student",
+              jobTitle: "Web Developer",
               worksFor: {
                 "@type": "Organization",
-                name: "Freelance",
+                name: "Vidavo S.A.",
               },
               knowsAbout: [
                 "Machine Learning",

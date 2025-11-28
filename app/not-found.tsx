@@ -11,7 +11,7 @@ export default function NotFound() {
             alt="Logo"
             width={100}
             height={10}
-            className="select-none pointer-events-none mx-auto"
+            className="pointer-events-none mx-auto"
             priority
           />
         </div>

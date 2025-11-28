@@ -27,7 +27,7 @@ export default function MachineLearning() {
         </a>
       </div>
       <div
-        className="py-[1rem] select-none cursor-pointer"
+        className="py-[1rem] cursor-pointer"
         onClick={handleOnClick}
       >
         <div className="w-full aspect-square md:aspect-[5/4] relative border-1 border-accent rounded-[0.5rem]">
