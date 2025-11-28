@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
+import { InvertedCircleCursor } from "@/components/inverted-circle-cursor";
 
 export const metadata: Metadata = {
   title: "Apostolos Karamanis - Personal Portfolio",
@@ -110,6 +111,7 @@ export default function RootLayout({
       <body className={`antialiased`}>
         {children}
         <Analytics />
+        <InvertedCircleCursor />
       </body>
     </html>
   );
