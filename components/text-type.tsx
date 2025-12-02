@@ -153,7 +153,10 @@ const TextType = ({
           if (!loop && currentTextIndex === textArray.length - 1) {
             timeout = setTimeout(() => {
               if (onSentenceComplete) {
-                onSentenceComplete(textArray[currentTextIndex], currentTextIndex);
+                onSentenceComplete(
+                  textArray[currentTextIndex],
+                  currentTextIndex,
+                );
               }
             }, pauseDuration);
             return;
@@ -201,7 +204,7 @@ const TextType = ({
       ...props,
     },
     <span
-      className="inline"
+      className="hidden md:inline"
       style={{ color: getCurrentTextColor() || "inherit" }}
     >
       {displayedText}
@@ -209,7 +212,7 @@ const TextType = ({
     showCursor && (
       <span
         ref={cursorRef}
-        className={`ml-1 inline-block opacity-100 ${shouldHideCursor ? "hidden" : ""} ${cursorClassName}`}
+        className={`ml-1 hidden md:inline-block opacity-100 ${shouldHideCursor ? "hidden" : ""} ${cursorClassName}`}
       >
         {cursorCharacter}
       </span>
