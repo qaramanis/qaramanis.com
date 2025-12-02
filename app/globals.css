@@ -107,9 +107,9 @@
 }
 
 :root {
-    --background: #000000;
-    --foreground: #cbcbcb;
-    --accent: #707375;
+    --background: #d9dcdc;
+    --foreground: #000000;
+    --accent: #57595b;
     --font-hack: "Hack", monospace;
     --font-tinos: "Tinos", sans-serif;
     --font-writer-reg: "WriterReg", variable;
@@ -118,22 +118,26 @@
     --font-satoshi: "Satoshi", sans-serif;
     --font-higher-jump: "Higher Jump", sans-serif;
     scrollbar-width: none;
-    cursor: none;
+    /*cursor: none;*/
 }
 
 body {
     background: var(--background);
     color: var(--foreground);
-    font-family: var(--font-higherJump);
+    font-family: var(--font-satoshi);
 }
 
 ::selection {
-    color: #cbcbcb;
+    color: #d9dcdc;
     background: #57595b;
 }
 
 *,
 *::before,
 *::after {
-    cursor: none !important;
+    /*cursor: none !important;*/
+}
+
+.btn-primary {
+    @apply hover:text-accent transition-colors duration-300;
 }
