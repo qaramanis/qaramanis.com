@@ -50,7 +50,7 @@ export default function WorksGrid() {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-1 gap-y-2 md:gap-x-2 md:gap-y-4 lg:gap-x-4 lg:gap-y-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-1 gap-y-8 md:gap-x-2 md:gap-y-16 lg:gap-x-4 lg:gap-y-16"
         >
           {filteredWorks.map((work) => (
             <div
