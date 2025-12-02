@@ -1,17 +1,6 @@
 export default function Description() {
   return (
     <div className="grid grid-cols-12 gap-1 md:gap-2 lg:gap-4 w-full border-t border-foreground mt-4 md:mt-8 lg:mt-16 pt-1 md:pt-2 lg:pt-4">
-<<<<<<< Updated upstream
-      <div className="col-span-10 md:text-3xl lg:text-3xl tracking-normal">
-        Apostolos Karamanis is a Greece based, independent creative developer.
-        <br />
-        His focus is compelling digital experiences, from large scale projects
-        <br />
-        to small, simple ones. His work is grounded in a Computer Science
-        background
-        <br />
-        and shaped by years of building with modern web technologies.
-=======
       <div className="col-span-12 md:col-span-9 md:text-3xl lg:text-3xl tracking-normal">
         Apostolos Karamanis is a Greece based, independent creative developer.
         His focus is compelling digital experiences, from large scale projects
@@ -21,15 +10,11 @@ export default function Description() {
         His work is grounded in a Computer Science background and shaped by
         years of building with modern web technologies.
         <br />
->>>>>>> Stashed changes
         <br />
         He currently works as a Full Stack Web Developer at{" "}
         <a href="https://vidavo.eu/" className="btn-primary font-medium">
           Vidavo S.A.
         </a>{" "}
-<<<<<<< Updated upstream
-        <br /> Interested in working together?{" "}
-=======
         <div className="hidden md:block">
           <br />
         </div>{" "}
@@ -38,7 +23,6 @@ export default function Description() {
           <br />
         </div>
         Interested in working together?{" "}
->>>>>>> Stashed changes
         <a
           href="mailto:apostkaram@gmail.com"
           className="btn-primary font-medium"
@@ -47,15 +31,10 @@ export default function Description() {
         </a>
         .
       </div>
-<<<<<<< Updated upstream
-      <div className="col-start-11 col-span-2 flex flex-col items-start text-start">
-        <div className="text-2xl">Services</div>
-        <div className="flex flex-col text-xl text-accent">
-=======
       <div className="col-span-12 md:col-start-11 md:col-span-2 flex flex-col items-start text-start mt-4 md:mt-0">
         <div className="flex flex-col text-lg md:text-xl text-accent">
           <div className="text-xl md:text-2xl text-foreground">Services</div>
->>>>>>> Stashed changes
+
           <div>Web Design</div>
           <div>Creative Direction</div>
           <div>Design Strategy</div>

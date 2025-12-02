@@ -153,14 +153,10 @@ const TextType = ({
           if (!loop && currentTextIndex === textArray.length - 1) {
             timeout = setTimeout(() => {
               if (onSentenceComplete) {
-<<<<<<< Updated upstream
-                onSentenceComplete(textArray[currentTextIndex], currentTextIndex);
-=======
                 onSentenceComplete(
                   textArray[currentTextIndex],
                   currentTextIndex,
                 );
->>>>>>> Stashed changes
               }
             }, pauseDuration);
             return;
@@ -208,11 +204,7 @@ const TextType = ({
       ...props,
     },
     <span
-<<<<<<< Updated upstream
-      className="inline"
-=======
       className="hidden md:inline"
->>>>>>> Stashed changes
       style={{ color: getCurrentTextColor() || "inherit" }}
     >
       {displayedText}
@@ -220,11 +212,7 @@ const TextType = ({
     showCursor && (
       <span
         ref={cursorRef}
-<<<<<<< Updated upstream
-        className={`ml-1 inline-block opacity-100 ${shouldHideCursor ? "hidden" : ""} ${cursorClassName}`}
-=======
         className={`ml-1 hidden md:inline-block opacity-100 ${shouldHideCursor ? "hidden" : ""} ${cursorClassName}`}
->>>>>>> Stashed changes
       >
         {cursorCharacter}
       </span>
