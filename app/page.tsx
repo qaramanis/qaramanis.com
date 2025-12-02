@@ -1,27 +1,11 @@
-import Awards from "@/components/awards/awards";
-// import Courses from "@/components/courses/courses";
-import Dog from "@/components/dog/dog";
-import Experience from "@/components/experience/experience";
-import Footer from "@/components/footer/footer";
-import Hero from "@/components/hero/hero";
-import Highlight from "@/components/highlight/highlight";
-// import Product from "@/components/product/product";
-import Writings from "@/components/writings/writings";
+import Description from "@/components/description";
+import WorksGrid from "@/components/works-grid";
 
 export default function Home() {
   return (
-    <div className="text-sm">
-      <div className="w-full px-[1rem] mb:px-0 md:max-w-[35vw] md:pb-[8rem] mx-auto flex flex-col gap-[8rem]">
-        <Hero />
-        <Experience />
-        <Awards />
-        {/*<Courses /> TODO: complete courses*/}
-        <Highlight />
-        {/*<Product />*/}
-        <Writings />
-        <Dog />
-      </div>
-      <Footer />
+    <div className="">
+      <WorksGrid />
+      <Description />
     </div>
   );
 }

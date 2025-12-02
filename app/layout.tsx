@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
+import LenisProvider from "@/providers/lenis-provider";
+import LayoutWrapper from "@/components/layout-wrapper";
 
 export const metadata: Metadata = {
   title: "Apostolos Karamanis - Personal Portfolio",
@@ -82,10 +84,10 @@ export default function RootLayout({
                 "https://github.com/qaramanis",
                 "https://www.linkedin.com/in/apostolos-karamanis/",
               ],
-              jobTitle: "Computer Science Student",
+              jobTitle: "Web Developer",
               worksFor: {
                 "@type": "Organization",
-                name: "Freelance",
+                name: "Vidavo S.A.",
               },
               knowsAbout: [
                 "Machine Learning",
@@ -93,6 +95,11 @@ export default function RootLayout({
                 "Data Analysis",
                 "Visual Design",
                 "User Experience",
+                "Web Design",
+                "Creative Direction",
+                "Branding",
+                "Design Strategy",
+                "Digital Media",
               ],
               alumniOf: {
                 "@type": "CollegeOrUniversity",
@@ -108,8 +115,10 @@ export default function RootLayout({
         />
       </head>
       <body className={`antialiased`}>
-        {children}
+        <LenisProvider />
+        <LayoutWrapper>{children}</LayoutWrapper>
         <Analytics />
+        {/*<InvertedCircleCursor />*/}
       </body>
     </html>
   );
