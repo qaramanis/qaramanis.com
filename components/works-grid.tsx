@@ -58,7 +58,8 @@ export default function WorksGrid() {
               className={`group ${work.url ? "cursor-pointer" : ""}`}
               onClick={() => work.url && window.open(work.url, "_blank")}
             >
-              <div className="aspect-[9/10] bg-accent/30 mb-2 overflow-hidden relative">
+              {/* @TODO change scale to 105*/}
+              <div className="aspect-[1080/1350] bg-accent/30 mb-2 overflow-hidden relative">
                 {work.videoUrl ? (
                   <video
                     src={work.videoUrl}
@@ -66,14 +67,14 @@ export default function WorksGrid() {
                     loop
                     muted
                     playsInline
-                    className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
+                    className="w-full h-full object-cover group-hover:scale-100 transition-all duration-500"
                   />
                 ) : work.imageUrl ? (
                   <Image
                     src={work.imageUrl}
                     alt={work.title}
                     fill
-                    className="object-cover group-hover:scale-105 transition-all duration-500"
+                    className="object-cover group-hover:scale-100 transition-all duration-500"
                   />
                 ) : null}
               </div>
