@@ -17,6 +17,7 @@ export const works: Work[] = [
     description: "Web Design, Visual Works",
     categories: ["Web Design", "Branding", "Digital Media"],
     imageUrl: "/works/images/flow-lounge.png",
+    url: "/flow-lounge",
   },
   {
     id: 2,

@@ -1,7 +1,7 @@
 export default function Description() {
   return (
-    <div className="grid grid-cols-12 gap-1 md:gap-2 lg:gap-4 w-full border-t border-foreground mt-8 md:mt-16 lg:mt-16 pt-1 md:pt-2 lg:pt-4">
-      <div className="col-span-12 md:col-span-9 text-lg md:text-3xl lg:text-3xl tracking-normal">
+    <div className="grid grid-cols-12 gap-1 md:gap-2 lg:gap-4 w-full border-t border-foreground my-8 md:my-16 lg:my-16 pt-1 md:pt-2 lg:pt-4">
+      <div className="col-span-12 md:col-span-9 text-lg md:text-3xl lg:text-3xl font-tinos tracking-tighter">
         Apostolos Karamanis is a Greece based, independent creative developer.
         His focus is compelling digital experiences, from large scale projects
         to small, focused ones.
