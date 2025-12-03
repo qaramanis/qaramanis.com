@@ -56,7 +56,7 @@ export default function WorksGrid() {
             <div
               key={work.id}
               className={`group ${work.url ? "cursor-pointer" : ""}`}
-              onClick={() => work.url && window.open(work.url, "_blank")}
+              onClick={() => work.url && window.open(work.url, "_self")}
             >
               {/* @TODO change scale to 105*/}
               <div className="aspect-[1080/1350] bg-accent/30 mb-2 overflow-hidden relative">

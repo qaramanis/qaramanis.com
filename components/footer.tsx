@@ -13,12 +13,6 @@ export default function Footer() {
             >
               LinkedIn
             </a>
-            <a
-              href="https://www.instagram.com/qaramanis/"
-              className="btn-primary"
-            >
-              Instagram
-            </a>
             <a href="https://github.com/qaramanis" className="btn-primary">
               GitHub
             </a>
