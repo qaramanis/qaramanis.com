@@ -13,7 +13,7 @@ export default function LayoutWrapper({
   return (
     <div className="relative min-h-screen w-screen tracking-tight">
       {/*<Grid />*/}
-      <div className="w-full  mx-auto px-2 md:px-4 lg:px-8">
+      <div className="w-full mx-auto px-2 md:px-4 lg:px-8">
         <NavigationBar />
         <PageTransition>{children}</PageTransition>
       </div>
