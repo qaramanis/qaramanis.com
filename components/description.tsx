@@ -8,9 +8,9 @@ export default function Description() {
         <br />
         <br />
         His work is grounded in a Computer Science background and shaped by
-        years of building with modern web technologies.
-        <br />
-        <br />
+        years of building with modern web technologies.{" "}
+        {/*<br />
+        <br />*/}
         He currently works as a Full Stack Web Developer at{" "}
         <a href="https://vidavo.eu/" className="btn-primary font-medium">
           Vidavo S.A.

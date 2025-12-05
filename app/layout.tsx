@@ -7,17 +7,17 @@ import LayoutWrapper from "@/components/layout-wrapper";
 export const metadata: Metadata = {
   title: "Apostolos Karamanis - Personal Portfolio",
   description:
-    "Computer Science student from Thessaloniki, Greece. Specialized in Machine Learning, Web Development, and Data Analysis. Portfolio showcasing projects, awards, and experience.",
+    "Creative Developer from Thessaloniki, Greece. Specialized in Machine Learning, Web Development, and Data Analysis. Portfolio showcasing projects, awards, and experience.",
   keywords:
-    "Apostolos Karamanis, Computer Science, Web Developer, Machine Learning, Data Analysis, Thessaloniki, Greece, Portfolio",
+    "Apostolos Karamanis, Computer Science, Web Developer, Machine Learning, Data Analysis, Web Design, Thessaloniki, Greece, Portfolio",
   authors: [{ name: "Apostolos Karamanis" }],
   creator: "Apostolos Karamanis",
   publisher: "Apostolos Karamanis",
 
   openGraph: {
-    title: "Apostolos Karamanis - Computer Science Student & Web Developer",
+    title: "Apostolos Karamanis - Creative Developer",
     description:
-      "Computer Science student specializing in Machine Learning, Web Development, and Data Analysis",
+      "Independent creative developer. Main focus is compelling digital experiences, from large scale projects to small, focused ones.",
     url: "https://qaramanis.com/",
     siteName: "Apostolos Karamanis - Personal Portfolio",
     images: [
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     title: "Apostolos Karamanis - Computer Science Student & Web Developer",
     description:
       "Computer Science student specializing in Machine Learning, Web Development, and Data Analysis",
-    images: ["https://yourdomain.com/og-image.jpg"],
+    images: ["https://qaramanis.com/og-image.jpg"],
     creator: "@qaramanis",
   },
 

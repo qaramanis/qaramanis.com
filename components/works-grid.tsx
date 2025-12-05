@@ -4,12 +4,18 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { works, WorkCategory } from "@/data/works";
+import Skeleton from "./skeleton-loader";
 
 type FilterCategory = "All" | WorkCategory;
 
 export default function WorksGrid() {
   const [selectedCategory, setSelectedCategory] =
     useState<FilterCategory>("All");
+  const [loadedImages, setLoadedImages] = useState<Record<number, boolean>>({});
+
+  const handleImageLoad = (id: number) => {
+    setLoadedImages((prev) => ({ ...prev, [id]: true }));
+  };
 
   const categories: FilterCategory[] = [
     "All",
@@ -60,6 +66,10 @@ export default function WorksGrid() {
             >
               {/* @TODO change scale to 105*/}
               <div className="aspect-[1080/1350] bg-accent/30 mb-2 overflow-hidden relative">
+                {!loadedImages[work.id] && (
+                  // @TODO remove hidden
+                  <Skeleton className="hidden absolute inset-0 rounded-none" />
+                )}
                 {work.videoUrl ? (
                   <video
                     src={work.videoUrl}
@@ -67,6 +77,7 @@ export default function WorksGrid() {
                     loop
                     muted
                     playsInline
+                    onLoadedData={() => handleImageLoad(work.id)}
                     className="w-full h-full object-cover group-hover:scale-100 transition-all duration-500"
                   />
                 ) : work.imageUrl ? (
@@ -74,6 +85,7 @@ export default function WorksGrid() {
                     src={work.imageUrl}
                     alt={work.title}
                     fill
+                    onLoad={() => handleImageLoad(work.id)}
                     className="object-cover group-hover:scale-100 transition-all duration-500"
                   />
                 ) : null}
