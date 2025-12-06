@@ -1,12 +1,20 @@
 "use client";
 
 import { usePathname, useRouter } from "next/navigation";
+import { useState, useEffect } from "react";
 import TextType from "./text-type";
 import { scrollToTop } from "@/lib/scroll";
 
 export default function NavigationBar() {
   const pathname = usePathname();
   const router = useRouter();
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 0);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const texts = [
     "Web Design",
@@ -25,7 +33,9 @@ export default function NavigationBar() {
   };
 
   return (
-    <div className="sticky top-0 z-10 flex flex-row items-center justify-between w-full text-xl mb-4 md:mb-8 lg:mb-16 bg-background py-2">
+    <div
+      className={`sticky top-0 z-10 flex flex-row items-center justify-between w-full text-xl mb-4 md:mb-8 lg:mb-16 bg-background py-2 border-b transition-all duration-300 ${scrolled ? "border-foreground" : "border-transparent"}`}
+    >
       <div onClick={handleLogoClick} className="cursor-pointer btn-primary">
         Apostolos K.
       </div>
