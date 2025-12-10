@@ -1,3 +1,4 @@
+import ViewAll from "@/components/view-all-container";
 
 export default function FlowLounge() {
   return (
@@ -46,11 +47,11 @@ export default function FlowLounge() {
       <a
         href="https://flowlounge.gr"
         target="_blank"
-        className="size-fit btn-primary col-span-6 md:col-start-1 md:col-span-4 text-lg md:text-xl text-foreground font-medium mt-16 md:mt-8"
+        className="size-fit btn-primary col-span-6 md:col-span-3 md:col-start-5  text-lg md:text-xl text-foreground font-medium"
       >
         View Website
       </a>
-      <div className="col-span-12 border-t border-foreground mt-2 md:mt-0"></div>
+      <ViewAll />
     </div>
   );
 }
