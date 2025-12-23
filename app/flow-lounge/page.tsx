@@ -1,12 +1,36 @@
 import ViewAll from "@/components/view-all-container";
+import { Link } from "lucide-react";
+import Image from "next/image";
 
 export default function FlowLounge() {
   return (
     <div className="grid grid-cols-12 gap-1 md:gap-2 lg:gap-4">
       {/* Large image container spanning all columns */}
-      <div className="col-span-12 aspect-[1920/1080] bg-accent/30"></div>
-      <div className="col-span-6 aspect-[1080/1920] bg-accent/30"></div>
-      <div className="col-span-6 aspect-[1080/1920] bg-accent/30"></div>
+      <div className="col-span-12 aspect-[1920/1080] bg-accent/30 relative">
+        <Image
+          src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/flow-4.png"
+          alt="Flow Lounge"
+          fill
+          className="object-cover bg-foreground"
+        />
+      </div>
+      {/*@TODO remove comment whn images are ready*/}
+      {/*<div className="col-span-6 aspect-[2/3] bg-accent-30 relative">
+        <Image
+          src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/flow-2.png"
+          alt="Flow Lounge"
+          fill
+          className="object-cover bg-foreground"
+        />
+      </div>
+      <div className="col-span-6 aspect-[2/3] bg-transparent relative">
+        <Image
+          src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/flow-1.png"
+          alt="Flow Lounge"
+          fill
+          className="object-cover"
+        />
+      </div>*/}
 
       {/* Description section */}
 
@@ -47,9 +71,12 @@ export default function FlowLounge() {
       <a
         href="https://flowlounge.gr"
         target="_blank"
-        className="size-fit btn-primary col-span-6 md:col-span-3 md:col-start-5  text-lg md:text-xl text-foreground font-medium"
+        className="flex flex-row mt-4 md:mt-0 gap-2 size-fit btn-primary col-span-6 md:col-span-3 md:col-start-5 text-lg md:text-xl text-foreground font-medium group"
       >
+        <Link className="self-center size-4.5 hidden md:block" />
         View Website
+        <Link className="self-center size-4 block md:hidden" />
+        {/*<div className="h-[1px] group-hover:bg-accent bg-transparent transition-all duration-300"></div>*/}
       </a>
       <ViewAll />
     </div>

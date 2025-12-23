@@ -34,7 +34,7 @@ export default function NavigationBar() {
 
   return (
     <div
-      className={`sticky top-0 z-10 flex flex-row items-center justify-between w-full text-xl mb-4 md:mb-8 lg:mb-16 bg-background py-2 border-b transition-all duration-300 ${scrolled ? "border-foreground" : "border-transparent"}`}
+      className={`sticky top-0 z-10 flex flex-row items-center justify-between w-full text-xl bg-background py-2 border-b transition-all duration-300 ${scrolled ? "border-foreground" : "border-transparent"}`}
     >
       <div onClick={handleLogoClick} className="cursor-pointer btn-primary">
         Apostolos K.

@@ -7,6 +7,10 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "i.scdn.co",
       },
+      {
+        protocol: "https",
+        hostname: "5ios91bhrgnfxlta.public.blob.vercel-storage.com",
+      },
     ],
   },
 };

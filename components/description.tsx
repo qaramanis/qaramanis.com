@@ -30,7 +30,7 @@ export default function Description() {
         </a>
         .
       </div>
-      <div className="col-span-12 md:col-start-11 md:col-span-2 flex flex-col items-start text-start mt-4 md:mt-0">
+      <div className="col-span-12 md:col-start-1 md:col-span-2 flex flex-col items-start text-start mt-4 md:mt-12">
         <div className="flex flex-col text- md:text-xl text-accent">
           <div className="text-xl md:text-2xl text-foreground font-medium">
             Services

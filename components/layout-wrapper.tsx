@@ -1,6 +1,6 @@
 "use client";
 
-// import Grid from "@/components/grid";
+import Grid from "@/components/grid";
 import NavigationBar from "@/components/navigation-bar";
 import PageTransition from "@/components/page-transition";
 import Footer from "./footer";
