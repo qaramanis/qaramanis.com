@@ -16,7 +16,8 @@ export const works: Work[] = [
     title: "Flow Lounge",
     description: "Web Design, Visual Works",
     categories: ["Web Design", "Branding", "Digital Media"],
-    imageUrl: "/works/images/flow-lounge.png",
+    imageUrl:
+      "https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/flow-1.png",
     url: "/flow-lounge",
   },
   {
