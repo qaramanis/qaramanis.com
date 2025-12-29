@@ -11,7 +11,7 @@ export default function Description() {
         years of building with modern web technologies.{" "}
         {/*<br />
         <br />*/}
-        He currently works as a Full Stack Web Developer at{" "}
+        He currently works as a Full Stack Web Engineer at{" "}
         <a href="https://vidavo.eu/" className="btn-primary font-medium">
           Vidavo S.A.
         </a>
