@@ -8,29 +8,37 @@ export default function FlowLounge() {
       {/* Large image container spanning all columns */}
       <div className="col-span-12 aspect-[1920/1080] bg-accent/30 relative">
         <Image
-          src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/flow-4.png"
+          src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/flow-7.png"
           alt="Flow Lounge"
           fill
           className="object-cover bg-foreground"
         />
       </div>
       {/*@TODO remove comment whn images are ready*/}
-      {/*<div className="col-span-6 aspect-[2/3] bg-accent-30 relative">
+      <div className="col-span-4 aspect-[2/3] bg-accent-30 relative">
         <Image
-          src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/flow-2.png"
+          src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/flow-6.png"
           alt="Flow Lounge"
           fill
           className="object-cover bg-foreground"
         />
       </div>
-      <div className="col-span-6 aspect-[2/3] bg-transparent relative">
+      <div className="col-span-4 aspect-[2/3] bg-accent/30 relative">
         <Image
-          src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/flow-1.png"
+          src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/flow-4.png"
+          alt="Flow Lounge"
+          fill
+          className="object-cover bg-foreground"
+        />
+      </div>
+      <div className="col-span-4 aspect-[2/3] bg-transparent relative">
+        <Image
+          src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/flow-5.png"
           alt="Flow Lounge"
           fill
           className="object-cover"
         />
-      </div>*/}
+      </div>
 
       {/* Description section */}
 
