@@ -25,7 +25,7 @@ export default function FlowLounge() {
       </div>
       <div className="col-span-4 aspect-[2/3] bg-accent/30 relative">
         <Image
-          src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/flow-4.png"
+          src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/IMG_6647.png"
           alt="Flow Lounge"
           fill
           className="object-cover bg-foreground"
