@@ -31,9 +31,25 @@ export default function FlowLounge() {
           className="object-cover bg-foreground"
         />
       </div>
-      <div className="col-span-4 aspect-[2/3] bg-transparent relative">
+      <div className="col-span-4 aspect-[2/3] bg-accent/30 relative">
         <Image
           src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/flow-5.png"
+          alt="Flow Lounge"
+          fill
+          className="object-cover"
+        />
+      </div>
+      <div className="col-span-6 aspect-[1.2] bg-accent/30 relative">
+        <Image
+          src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/flow-poster-2.png"
+          alt="Flow Lounge"
+          fill
+          className="object-cover bg-foreground"
+        />
+      </div>
+      <div className="col-span-6 aspect-[1.2] bg-accent/30 relative">
+        <Image
+          src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/flow-poster-1.png"
           alt="Flow Lounge"
           fill
           className="object-cover"
