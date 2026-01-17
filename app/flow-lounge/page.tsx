@@ -49,7 +49,7 @@ export default function FlowLounge() {
       </div>
       <div className="col-span-6 aspect-[1.2] bg-accent/30 relative">
         <Image
-          src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/flow-poster-1.png"
+          src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/flow-poster-3.png"
           alt="Flow Lounge"
           fill
           className="object-cover"
