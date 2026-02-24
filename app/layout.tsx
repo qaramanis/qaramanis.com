@@ -5,21 +5,21 @@ import LenisProvider from "@/providers/lenis-provider";
 import LayoutWrapper from "@/components/layout-wrapper";
 
 export const metadata: Metadata = {
-  title: "Apostolos Karamanis - Personal Portfolio",
+  title: "Apostolos Karamanis - Creative Developer & Designer",
   description:
-    "Creative Developer from Thessaloniki, Greece. Specialized in Machine Learning, Web Development, and Data Analysis. Portfolio showcasing projects, awards, and experience.",
+    "Independent creative developer from Thessaloniki, Greece. Specializing in web design, branding, creative direction, and digital experiences. He designs and builds modern, animation-rich websites with Next.js, React, and TypeScript.",
   keywords:
-    "Apostolos Karamanis, Computer Science, Web Developer, Machine Learning, Data Analysis, Web Design, Thessaloniki, Greece, Portfolio",
+    "Apostolos Karamanis, Creative Developer, Web Design, Branding, Creative Direction, Web Development, Next.js, React, TypeScript, GSAP, Freelance, Thessaloniki, Greece",
   authors: [{ name: "Apostolos Karamanis" }],
   creator: "Apostolos Karamanis",
   publisher: "Apostolos Karamanis",
 
   openGraph: {
-    title: "Apostolos Karamanis - Creative Developer",
+    title: "Apostolos Karamanis - Creative Developer & Designer",
     description:
-      "Independent creative developer. Main focus is compelling digital experiences, from large scale projects to small, focused ones.",
+      "Independent creative developer from Greece. Web design, branding, creative direction, and digital experiences — designed and built as one unified vision.",
     url: "https://qaramanis.com/",
-    siteName: "Apostolos Karamanis - Personal Portfolio",
+    siteName: "Apostolos Karamanis - Creative Developer & Designer",
     images: [
       {
         url: "https://qaramanis.com/og-image.jpg",
@@ -34,9 +34,9 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Apostolos Karamanis - Computer Science Student & Web Developer",
+    title: "Apostolos Karamanis - Creative Developer & Designer",
     description:
-      "Computer Science student specializing in Machine Learning, Web Development, and Data Analysis",
+      "Independent creative developer from Greece. Web design, branding, creative direction, and animation-rich digital experiences.",
     images: ["https://qaramanis.com/og-image.jpg"],
     creator: "@qaramanis",
   },
@@ -84,22 +84,27 @@ export default function RootLayout({
                 "https://github.com/qaramanis",
                 "https://www.linkedin.com/in/apostolos-karamanis/",
               ],
-              jobTitle: "Web Developer",
+              jobTitle: "Creative Developer & Designer",
               worksFor: {
                 "@type": "Organization",
                 name: "Vidavo S.A.",
               },
               knowsAbout: [
-                "Machine Learning",
-                "Web Development",
-                "Data Analysis",
-                "Visual Design",
-                "User Experience",
                 "Web Design",
+                "Web Development",
                 "Creative Direction",
                 "Branding",
                 "Design Strategy",
                 "Digital Media",
+                "Typography",
+                "Visual Design",
+                "User Experience",
+                "Next.js",
+                "React",
+                "TypeScript",
+                "GSAP",
+                "Framer Motion",
+                "Animation",
               ],
               alumniOf: {
                 "@type": "CollegeOrUniversity",

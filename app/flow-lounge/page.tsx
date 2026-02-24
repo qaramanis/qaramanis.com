@@ -1,4 +1,5 @@
 import ViewAll from "@/components/view-all-container";
+import ImageMontage from "@/components/image-montage";
 import { Link } from "lucide-react";
 import Image from "next/image";
 
@@ -6,18 +7,34 @@ export default function FlowLounge() {
   return (
     <div className="grid grid-cols-12 gap-1 md:gap-2 lg:gap-4">
       {/* Large image container spanning all columns */}
-      <div className="col-span-12 aspect-[1920/1080] bg-accent/30 relative">
+      <div className="col-span-12 w-screen -ml-8 aspect-[1920/1080] bg-accent/30 relative">
         <Image
-          src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/flow-7.png"
+          src="https://8mxjmxhvgtye4fln.public.blob.vercel-storage.com/DKP_2219.jpg"
           alt="Flow Lounge"
           fill
           className="object-cover bg-foreground"
         />
       </div>
-      {/*@TODO remove comment whn images are ready*/}
-      <div className="col-span-4 aspect-[2/3] bg-accent-30 relative">
+      <div className="col-span-12 w-full aspect-[1920/1080] bg-accent/30 relative">
         <Image
-          src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/flow-6.png"
+          src="https://8mxjmxhvgtye4fln.public.blob.vercel-storage.com/flow_banner02.png"
+          alt="Flow Lounge"
+          fill
+          className="object-cover bg-foreground"
+        />
+      </div>
+      <div className="col-span-12 w-full aspect-[1920/1080] bg-accent/30 relative">
+        <Image
+          src="https://8mxjmxhvgtye4fln.public.blob.vercel-storage.com/DKP_2397.jpg"
+          alt="Flow Lounge"
+          fill
+          className="object-cover bg-foreground"
+        />
+      </div>
+      {/* Second row */}
+      {/*<div className="col-span-4 aspect-[2/3] bg-accent-30 relative">
+        <Image
+          src="https://8mxjmxhvgtye4fln.public.blob.vercel-storage.com/FTP_1276.jpg"
           alt="Flow Lounge"
           fill
           className="object-cover bg-foreground"
@@ -25,7 +42,7 @@ export default function FlowLounge() {
       </div>
       <div className="col-span-4 aspect-[2/3] bg-accent/30 relative">
         <Image
-          src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/IMG_6647.png"
+          src="https://8mxjmxhvgtye4fln.public.blob.vercel-storage.com/FTP_1245.jpg"
           alt="Flow Lounge"
           fill
           className="object-cover bg-foreground"
@@ -33,26 +50,59 @@ export default function FlowLounge() {
       </div>
       <div className="col-span-4 aspect-[2/3] bg-accent/30 relative">
         <Image
-          src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/flow-5.png"
+          src="https://8mxjmxhvgtye4fln.public.blob.vercel-storage.com/FTP_1280.jpg"
           alt="Flow Lounge"
           fill
           className="object-cover"
         />
-      </div>
-      <div className="col-span-6 aspect-[1.2] bg-accent/30 relative">
+      </div>*/}
+
+      {/* espresso martini + hookah */}
+      <div className="col-span-6 aspect-square bg-accent/30 relative">
         <Image
-          src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/flow-poster-2.png"
+          src="https://8mxjmxhvgtye4fln.public.blob.vercel-storage.com/FTP_1245.jpg"
           alt="Flow Lounge"
           fill
-          className="object-cover bg-foreground"
+          className="object-cover bg-foreground object-center"
         />
       </div>
-      <div className="col-span-6 aspect-[1.2] bg-accent/30 relative">
+      <div className="col-span-6 aspect-square bg-accent/30 relative">
         <Image
-          src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/flow-poster-3.png"
+          src="https://8mxjmxhvgtye4fln.public.blob.vercel-storage.com/FTP_1280.jpg"
           alt="Flow Lounge"
           fill
-          className="object-cover"
+          className="object-cover object-center"
+        />
+      </div>
+
+      {/* collage + 4hookah */}
+      <div className="col-span-6 aspect-square bg-accent/30 relative">
+        <ImageMontage className="object-cover object-bottom" />
+      </div>
+      <div className="col-span-6 aspect-square bg-accent/30 relative">
+        <Image
+          src="https://8mxjmxhvgtye4fln.public.blob.vercel-storage.com/DKP_2394.jpg"
+          alt="Flow Lounge"
+          fill
+          className="object-cover object-top"
+        />
+      </div>
+
+      {/* tshirt + guitar row */}
+      <div className="col-span-6 aspect-square bg-accent/30 relative">
+        <Image
+          src="https://8mxjmxhvgtye4fln.public.blob.vercel-storage.com/FTP_1289.jpg"
+          alt="Flow Lounge"
+          fill
+          className="object-cover bg-foreground object-center"
+        />
+      </div>
+      <div className="col-span-6 aspect-square bg-accent/30 relative">
+        <Image
+          src="https://8mxjmxhvgtye4fln.public.blob.vercel-storage.com/DKP_2399.jpg"
+          alt="Flow Lounge"
+          fill
+          className="object-cover object-center"
         />
       </div>
 

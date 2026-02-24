@@ -24,10 +24,11 @@ export default function WorksGrid() {
     "Branding",
   ];
 
-  const filteredWorks =
+  const filteredWorks = (
     selectedCategory === "All"
       ? works
-      : works.filter((work) => work.categories.includes(selectedCategory));
+      : works.filter((work) => work.categories.includes(selectedCategory))
+  ).toReversed();
 
   return (
     <div>
