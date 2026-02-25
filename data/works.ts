@@ -36,4 +36,13 @@ export const works: Work[] = [
   //     "https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/flow-1.png",
   //   url: "/repower-solutions",
   // },
+  // {
+  //   id: 4,
+  //   title: "GDD Digital",
+  //   description: "Web Design",
+  //   categories: ["Web Design", "Branding", "Digital Media"],
+  //   imageUrl:
+  //     "https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/flow-1.png",
+  //   url: "/gdd-digital",
+  // },
 ];

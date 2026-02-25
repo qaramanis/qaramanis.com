@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
 import LenisProvider from "@/providers/lenis-provider";
 import LayoutWrapper from "@/components/layout-wrapper";
@@ -123,6 +124,12 @@ export default function RootLayout({
         <LenisProvider />
         <LayoutWrapper>{children}</LayoutWrapper>
         <Analytics />
+        <Script
+          src="https://datafa.st/js/script.js"
+          data-website-id="dfid_DAcQa2VAAgnRuROAWK5tK"
+          data-domain="qaramanis.com"
+          strategy="afterInteractive"
+        />
         {/*<InvertedCircleCursor />*/}
       </body>
     </html>
