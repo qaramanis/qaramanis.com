@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { works, WorkCategory } from "@/data/works";
 import Skeleton from "./skeleton-loader";
+import DigitalGalleryAnimation from "./digital-gallery-animation";
 
 type FilterCategory = "All" | WorkCategory;
 
@@ -66,7 +67,7 @@ export default function WorksGrid() {
               onClick={() => work.url && window.open(work.url, "_self")}
             >
               {/* @TODO change scale to 105*/}
-              <div className="aspect-[1080/1350] bg-accent/30 mb-2 overflow-hidden relative">
+              <div className="aspect-[1080/1350] bg-foreground mb-2 overflow-hidden relative">
                 {!loadedImages[work.id] && (
                   // @TODO remove hidden
                   <Skeleton className="hidden absolute inset-0 rounded-none" />
@@ -87,8 +88,10 @@ export default function WorksGrid() {
                     alt={work.title}
                     fill
                     onLoad={() => handleImageLoad(work.id)}
-                    className="object-cover group-hover:scale-100 transition-all duration-500"
+                    className="object-cover object-top group-hover:scale-100 transition-all duration-500"
                   />
+                ) : work.id === 2 ? (
+                  <DigitalGalleryAnimation />
                 ) : null}
               </div>
               <div className="flex items-center justify-between text-xl">

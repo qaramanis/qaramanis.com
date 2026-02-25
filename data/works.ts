@@ -20,6 +20,13 @@ export const works: Work[] = [
   },
   {
     id: 2,
+    title: "Digital Gallery",
+    description: "Collection of Personal Works",
+    categories: ["Web Design", "Digital Media"],
+    url: "/digital-gallery",
+  },
+  {
+    id: 3,
     title: "Flow Lounge",
     description: "Web Design, Visual Works",
     categories: ["Web Design", "Branding", "Digital Media"],

@@ -1,12 +1,27 @@
 @import "tailwindcss";
 @import "lenis/dist/lenis.css";
 
+
 @font-face {
     font-family: "HigherJump";
     src: url("/fonts/higher-jump/Higher-Jump.ttf") format("truetype");
     font-weight: 400;
     font-style: normal;
     font-display: swap;
+}
+
+@font-face {
+    font-family: "Paggoda";
+    src: url("/fonts/paggoda/paggoda.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Paggoda";
+    src: url("/fonts/paggoda/paggoda-italic.otf") format("opentype");
+    font-weight: normal;
+    font-style: italic;
 }
 
 @theme inline {
@@ -31,6 +46,7 @@
     --font-tinos: "Tinos", sans-serif;
     --font-satoshi: "Satoshi", sans-serif;
     --font-higher-jump: "Higher Jump", sans-serif;
+    --font-paggoda: "Paggoda";
     scrollbar-width: none;
     /*cursor: none;*/
 }
