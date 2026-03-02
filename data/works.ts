@@ -19,13 +19,6 @@ export const works: Work[] = [
     imageUrl: "/works/images/vidavo-nda.png",
   },
   {
-    id: 2,
-    title: "Digital Gallery",
-    description: "Collection of Personal Works",
-    categories: ["Web Design", "Digital Media"],
-    url: "/digital-gallery",
-  },
-  {
     id: 3,
     title: "Flow Lounge",
     description: "Web Design, Visual Works",
@@ -33,6 +26,13 @@ export const works: Work[] = [
     imageUrl:
       "https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/flow-1.png",
     url: "/flow-lounge",
+  },
+  {
+    id: 2,
+    title: "Digital Gallery",
+    description: "Collection of Personal Works",
+    categories: ["Web Design", "Digital Media"],
+    url: "/digital-gallery",
   },
   // {
   //   id: 3,
