@@ -16,7 +16,7 @@ export const works: Work[] = [
     title: "Vidavo S.A.",
     description: "NDA",
     categories: [""],
-    imageUrl: "/works/images/vidavo-nda.png",
+    imageUrl: "/works/vidavo-nda.png",
   },
   {
     id: 2,
