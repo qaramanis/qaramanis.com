@@ -19,7 +19,7 @@ export const works: Work[] = [
     imageUrl: "/works/images/vidavo-nda.png",
   },
   {
-    id: 3,
+    id: 2,
     title: "Flow Lounge",
     description: "Web Design, Visual Works",
     categories: ["Web Design", "Branding", "Digital Media"],
@@ -28,11 +28,20 @@ export const works: Work[] = [
     url: "/flow-lounge",
   },
   {
-    id: 2,
+    id: 3,
     title: "Digital Gallery",
     description: "Collection of Personal Works",
     categories: ["Web Design", "Digital Media"],
     url: "/digital-gallery",
+  },
+  {
+    id: 4,
+    title: "Monitor",
+    description: "Monitoring Platform",
+    categories: ["Web Design", "Digital Media"],
+    url: "/monitor",
+    imageUrl:
+      "https://swsskqtlrzcxayzlajmv.supabase.co/storage/v1/object/public/images/monitor-2.png",
   },
   // {
   //   id: 3,

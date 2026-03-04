@@ -80,7 +80,7 @@ export default function WorksGrid() {
                     muted
                     playsInline
                     onLoadedData={() => handleImageLoad(work.id)}
-                    className="w-full h-full object-cover group-hover:scale-100 transition-all duration-500"
+                    className="w-full h-full object-cover transition-all duration-500"
                   />
                 ) : work.imageUrl ? (
                   <Image
@@ -88,14 +88,14 @@ export default function WorksGrid() {
                     alt={work.title}
                     fill
                     onLoad={() => handleImageLoad(work.id)}
-                    className="object-cover object-top group-hover:scale-100 transition-all duration-500"
+                    className="object-cover object-top transition-all duration-500"
                   />
-                ) : work.id === 2 ? (
+                ) : work.title === "Digital Gallery" ? (
                   <DigitalGalleryAnimation />
                 ) : null}
               </div>
               <div className="flex items-center justify-between text-xl">
-                <h3 className="font-">{work.title}</h3>
+                <h3 className="">{work.title}</h3>
                 <span className="text-accent text-lg">{work.description}</span>
               </div>
             </div>
