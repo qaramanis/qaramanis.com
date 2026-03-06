@@ -34,15 +34,15 @@ export const works: Work[] = [
     categories: ["Web Design", "Digital Media"],
     url: "/digital-gallery",
   },
-  {
-    id: 4,
-    title: "Monitor",
-    description: "Monitoring Platform",
-    categories: ["Web Design", "Digital Media"],
-    url: "/monitor",
-    imageUrl:
-      "https://swsskqtlrzcxayzlajmv.supabase.co/storage/v1/object/public/images/monitor-2.png",
-  },
+  // {
+  //   id: 4,
+  //   title: "Monitor",
+  //   description: "Monitoring Platform",
+  //   categories: ["Web Design", "Digital Media"],
+  //   url: "/monitor",
+  //   imageUrl:
+  //     "https://swsskqtlrzcxayzlajmv.supabase.co/storage/v1/object/public/images/monitor-2.png",
+  // },
   // {
   //   id: 3,
   //   title: "Repower Solutions",
