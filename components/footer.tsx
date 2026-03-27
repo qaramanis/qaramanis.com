@@ -17,7 +17,7 @@ export default function Footer() {
               GitHub
             </a>
           </div>
-          <div className="flex flex-row gap-2 md:gap-4 lg:gap-8 self-start">
+          <div className="flex flex-row gap-2 md:gap-4 lg:gap-8 self-end md:self-auto">
             <a
               href="/resume.pdf"
               target="_blank"
@@ -26,10 +26,7 @@ export default function Footer() {
             >
               CV
             </a>
-            <a
-              href="mailto:apostkaram@gmail.com"
-              className="btn-primary self-end md:self-auto"
-            >
+            <a href="mailto:apostkaram@gmail.com" className="btn-primary">
               apostkaram@gmail.com
             </a>
           </div>
