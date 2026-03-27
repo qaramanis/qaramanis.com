@@ -1,4 +1,8 @@
-export type WorkCategory = "Web Design" | "Digital Media" | "Branding" | "";
+export type WorkCategory =
+  | "Web Design"
+  | "Branding / Digital Media"
+  | "System Design"
+  | "";
 
 export interface Work {
   id: number;
@@ -21,28 +25,25 @@ export const works: Work[] = [
   {
     id: 2,
     title: "Flow Lounge",
-    description: "Web Design, Visual Works",
-    categories: ["Web Design", "Branding", "Digital Media"],
-    imageUrl:
-      "https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/flow-1.png",
+    description: "Web Design and Digital Direction",
+    categories: ["Web Design", "Branding / Digital Media"],
+    videoUrl: "/videos/flow-lounge/flow-lounge.mp4",
     url: "/flow-lounge",
   },
   {
     id: 3,
     title: "Digital Gallery",
     description: "Collection of Personal Works",
-    categories: ["Web Design", "Digital Media"],
+    categories: ["Web Design", "Branding / Digital Media"],
     url: "/digital-gallery",
   },
-  // {
-  //   id: 4,
-  //   title: "Monitor",
-  //   description: "Monitoring Platform",
-  //   categories: ["Web Design", "Digital Media"],
-  //   url: "/monitor",
-  //   imageUrl:
-  //     "https://swsskqtlrzcxayzlajmv.supabase.co/storage/v1/object/public/images/monitor-2.png",
-  // },
+  {
+    id: 4,
+    title: "Bloom AI",
+    description: "AI Intelligence Startup",
+    categories: ["System Design", "Web Design"],
+    url: "/bloom-ai",
+  },
   // {
   //   id: 3,
   //   title: "Repower Solutions",

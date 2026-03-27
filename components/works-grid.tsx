@@ -6,6 +6,7 @@ import Image from "next/image";
 import { works, WorkCategory } from "@/data/works";
 import Skeleton from "./skeleton-loader";
 import DigitalGalleryAnimation from "./digital-gallery-animation";
+import EventHorizon from "./event-horizon";
 
 type FilterCategory = "All" | WorkCategory;
 
@@ -21,8 +22,8 @@ export default function WorksGrid() {
   const categories: FilterCategory[] = [
     "All",
     "Web Design",
-    "Digital Media",
-    "Branding",
+    "Branding / Digital Media",
+    "System Design",
   ];
 
   const filteredWorks = (
@@ -80,7 +81,7 @@ export default function WorksGrid() {
                     muted
                     playsInline
                     onLoadedData={() => handleImageLoad(work.id)}
-                    className="w-full h-full object-cover transition-all duration-500"
+                    className="w-full h-full object-cover transition-all duration-500 grayscale"
                   />
                 ) : work.imageUrl ? (
                   <Image
@@ -92,6 +93,15 @@ export default function WorksGrid() {
                   />
                 ) : work.title === "Digital Gallery" ? (
                   <DigitalGalleryAnimation />
+                ) : work.title === "Bloom AI" ? (
+                  <EventHorizon
+                    rotate={0.1}
+                    rotationSpeed={0.1}
+                    diskIntensity={0.8}
+                    tilt={0.05}
+                    className="rotate-y-180"
+                    color="#d9d9d9"
+                  />
                 ) : null}
               </div>
               <div className="flex items-center justify-between text-xl">

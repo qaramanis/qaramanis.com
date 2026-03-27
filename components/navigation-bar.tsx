@@ -19,9 +19,9 @@ export default function NavigationBar() {
   const texts = [
     "Web Design",
     "Creative Direction",
-    "Branding",
+    "Branding / Digital Media",
     "Design Strategy",
-    "Digital Media",
+    "System Design",
   ];
 
   const handleLogoClick = () => {

@@ -1,7 +1,6 @@
 @import "tailwindcss";
 @import "lenis/dist/lenis.css";
 
-
 @font-face {
     font-family: "HigherJump";
     src: url("/fonts/higher-jump/Higher-Jump.ttf") format("truetype");
@@ -42,6 +41,14 @@
     --background: #d9d9d9;
     --foreground: #000000;
     --accent: #57595b;
+    --color-accent-red: #ef4444;
+    --color-accent-orange: #f59e0b;
+    --color-accent-yellow: #eab308;
+    --color-accent-green: #22c55e;
+    --color-accent-gray: #d4d4d4;
+    --color-accent-blue: #0ac4e0;
+    --color-accent-purple: #a855f7;
+    --color-accent-cyan: #06b6d4;
     --font-hack: "Hack", monospace;
     --font-tinos: "Tinos", sans-serif;
     --font-satoshi: "Satoshi", sans-serif;

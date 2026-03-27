@@ -11,7 +11,7 @@ export default function Description() {
         years of building with modern web technologies.{" "}
         {/*<br />
         <br />*/}
-        He currently works as a Full Stack Web Engineer at{" "}
+        He currently works as a Full Stack Engineer at{" "}
         <a href="https://vidavo.eu/" className="btn-primary font-medium">
           Vidavo S.A.
         </a>
@@ -39,9 +39,9 @@ export default function Description() {
           <div>Web Design</div>
           <div>Creative Direction</div>
           <div>Design Strategy</div>
-          <div>Digital Media</div>
+          <div>Branding / Digital Media</div>
           <div>Typography</div>
-          <div>Branding</div>
+          <div>System Design</div>
         </div>
       </div>
     </div>
