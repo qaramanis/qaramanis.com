@@ -17,20 +17,22 @@ export default function Footer() {
               GitHub
             </a>
           </div>
-          {/*<a
-            href="/resume-08.10.2025.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-primary"
-          >
-            Curriculum Vitae
-          </a>*/}
-          <a
-            href="mailto:apostkaram@gmail.com"
-            className="btn-primary self-end md:self-auto"
-          >
-            apostkaram@gmail.com
-          </a>
+          <div className="flex flex-row gap-2 md:gap-4 lg:gap-8 self-start">
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary lowercase"
+            >
+              CV
+            </a>
+            <a
+              href="mailto:apostkaram@gmail.com"
+              className="btn-primary self-end md:self-auto"
+            >
+              apostkaram@gmail.com
+            </a>
+          </div>
         </div>
       </div>
     </footer>
