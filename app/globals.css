@@ -64,9 +64,21 @@ body {
     font-family: var(--font-satoshi);
 }
 
+.dark {
+    --background: #141414;
+    --foreground: #d9d9d9;
+    --accent: #8a8c8e;
+    --accent-secondary: #6a6c6e;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+    animation-duration: 0.3s;
+}
+
 ::selection {
-    color: #d9dcdc;
-    background: #57595b;
+    color: var(--background);
+    background: var(--accent);
 }
 
 *,

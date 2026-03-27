@@ -3,6 +3,7 @@
 import { usePathname, useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 import TextType from "./text-type";
+import ThemeToggle from "./theme-toggle";
 import { scrollToTop } from "@/lib/scroll";
 
 export default function NavigationBar() {
@@ -34,10 +35,13 @@ export default function NavigationBar() {
 
   return (
     <div
-      className={`sticky top-0 z-10 flex flex-row items-center justify-between w-screen -ml-2 md:-ml-4 lg:-ml-8 px-2 md:px-4 lg:px-8 text-xl bg-background py-2 border-b transition-all duration-300 ${scrolled ? "border-foreground" : "border-transparent"}`}
+      className={`sticky top-0 z-10 flex flex-row items-center justify-between w-screen -ml-2 md:-ml-4 lg:-ml-8 px-2 md:px-4 lg:px-8 text-xl py-2 border-b bg-background transition-[border-color] duration-300 ${scrolled ? "border-foreground" : "border-transparent"}`}
     >
-      <div onClick={handleLogoClick} className="cursor-pointer btn-primary">
-        Apostolos K.
+      <div className="flex items-center gap-4 md:gap-6">
+        <div onClick={handleLogoClick} className="cursor-pointer btn-primary">
+          Apostolos K.
+        </div>
+        <ThemeToggle />
       </div>
       <TextType
         text={texts}
