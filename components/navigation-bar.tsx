@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import TextType from "./text-type";
 import ThemeToggle from "./theme-toggle";
 import { scrollToTop } from "@/lib/scroll";
+import { capabilities } from "@/lib/capabilities";
 
 export default function NavigationBar() {
   const pathname = usePathname();
@@ -16,14 +17,6 @@ export default function NavigationBar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  const texts = [
-    "Web Design",
-    "Creative Direction",
-    "Branding / Digital Media",
-    "Design Strategy",
-    "System Design",
-  ];
 
   const handleLogoClick = () => {
     if (pathname === "/") {
@@ -44,7 +37,7 @@ export default function NavigationBar() {
         <ThemeToggle />
       </div>
       <TextType
-        text={texts}
+        text={capabilities}
         typingSpeed={75}
         deletingSpeed={75}
         initialDelay={1000}

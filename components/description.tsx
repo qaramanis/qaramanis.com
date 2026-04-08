@@ -1,3 +1,5 @@
+import { capabilities } from "@/lib/capabilities";
+
 export default function Description() {
   return (
     <div className="grid grid-cols-12 gap-1 md:gap-2 lg:gap-4 w-full border-t border-foreground my-8 md:my-16 lg:my-16 pt-1 md:pt-2 lg:pt-4">
@@ -36,12 +38,9 @@ export default function Description() {
             Capabilities
           </div>
 
-          <div>Web Design</div>
-          <div>Creative Direction</div>
-          <div>Design Strategy</div>
-          <div>Branding / Digital Media</div>
-          <div>Typography</div>
-          <div>System Design</div>
+          {capabilities.map((capability) => (
+            <div key={capability}>{capability}</div>
+          ))}
         </div>
       </div>
     </div>

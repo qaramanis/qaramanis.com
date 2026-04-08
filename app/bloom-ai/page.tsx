@@ -12,7 +12,7 @@ export default function Monitor() {
   return (
     <div className="grid grid-cols-12 gap-1 md:gap-2 lg:gap-4">
       {/* Large image container spanning all columns */}
-      <div className="col-span-12 w-screen -ml-2 md:-ml-4 lg:-ml-8 -mt-1 md:-mt-2 lg:-mt-4  aspect-[1920/1080] bg-foreground relative overflow-hidden">
+      <div className="col-span-12 w-screen -ml-2 md:-ml-4 lg:-ml-8 aspect-[1920/1080] bg-foreground relative overflow-hidden">
         <video
           src={
             "https://swsskqtlrzcxayzlajmv.supabase.co/storage/v1/object/public/images/monitor-video.mp4"
@@ -21,7 +21,7 @@ export default function Monitor() {
           loop
           muted
           playsInline
-          className="w-full h-full object-contain transition-all duration-500"
+          className="w-full h-full object-cover transition-all duration-500"
         />
       </div>
       <div className="col-span-12 w-full aspect-[2842/1526] bg-foreground relative">
