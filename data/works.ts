@@ -30,13 +30,13 @@ export const works: Work[] = [
     videoUrl: "/videos/flow-lounge/flow-lounge.mp4",
     url: "/flow-lounge",
   },
-  {
-    id: 3,
-    title: "Digital Gallery",
-    description: "Collection of Personal Works",
-    categories: ["Web Design", "Branding / Digital Media"],
-    url: "/digital-gallery",
-  },
+  // {
+  //   id: 3,
+  //   title: "Digital Gallery",
+  //   description: "Collection of Personal Works",
+  //   categories: ["Web Design", "Branding / Digital Media"],
+  //   url: "/digital-gallery",
+  // },
   {
     id: 4,
     title: "Bloom AI",
