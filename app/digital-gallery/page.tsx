@@ -12,7 +12,7 @@ export default function DigitalGallery() {
       </div>
       <div className="col-span-12 w-full aspect-[2842/1526] bg-foreground relative">
         <Image
-          src="https://swsskqtlrzcxayzlajmv.supabase.co/storage/v1/object/public/images/digital-gallery-image-1.png"
+          src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/gallery/digital-gallery-image-1.png"
           alt="Digital Gallery"
           fill
           className="object-cover bg-foreground"
@@ -20,7 +20,7 @@ export default function DigitalGallery() {
       </div>
       <div className="col-span-12 w-full aspect-[2842/1526] bg-foreground relative">
         <Image
-          src="https://swsskqtlrzcxayzlajmv.supabase.co/storage/v1/object/public/images/digital-gallery-image-2.png"
+          src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/gallery/digital-gallery-image-2.png"
           alt="Digital Gallery"
           fill
           className="object-cover bg-foreground"
@@ -28,7 +28,7 @@ export default function DigitalGallery() {
       </div>
       <div className="col-span-12 w-full aspect-[2842/1526] bg-foreground relative">
         <Image
-          src="https://swsskqtlrzcxayzlajmv.supabase.co/storage/v1/object/public/images/digital-gallery-image-3.png"
+          src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/gallery/digital-gallery-image-3.png"
           alt="Digital Gallery"
           fill
           className="object-cover bg-foreground"
@@ -36,7 +36,7 @@ export default function DigitalGallery() {
       </div>
       <div className="col-span-12 w-full aspect-[2842/1526] bg-foreground relative">
         <Image
-          src="https://swsskqtlrzcxayzlajmv.supabase.co/storage/v1/object/public/images/digital-gallery-image-4.png"
+          src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/gallery/digital-gallery-image-4.png"
           alt="Digital Gallery"
           fill
           className="object-cover bg-foreground"

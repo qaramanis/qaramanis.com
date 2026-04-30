@@ -2,22 +2,14 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Image from "next/image";
 import { works, WorkCategory } from "@/data/works";
-import Skeleton from "./skeleton-loader";
-import DigitalGalleryAnimation from "./digital-gallery-animation";
-import EventHorizon from "./event-horizon";
+import WorkItem from "./work-item";
 
 type FilterCategory = "All" | WorkCategory;
 
 export default function WorksGrid() {
   const [selectedCategory, setSelectedCategory] =
     useState<FilterCategory>("All");
-  const [loadedImages, setLoadedImages] = useState<Record<number, boolean>>({});
-
-  const handleImageLoad = (id: number) => {
-    setLoadedImages((prev) => ({ ...prev, [id]: true }));
-  };
 
   const categories: FilterCategory[] = [
     "All",
@@ -62,53 +54,7 @@ export default function WorksGrid() {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-1 gap-y-8 md:gap-x-2 md:gap-y-16 lg:gap-x-4 lg:gap-y-16"
         >
           {filteredWorks.map((work) => (
-            <div
-              key={work.id}
-              className={`group ${work.url ? "cursor-pointer" : ""}`}
-              onClick={() => work.url && window.open(work.url, "_self")}
-            >
-              {/* @TODO change scale to 105*/}
-              <div className="aspect-[1080/1350] bg-foreground mb-2 overflow-hidden relative">
-                {!loadedImages[work.id] && (
-                  // @TODO remove hidden
-                  <Skeleton className="hidden absolute inset-0 rounded-none" />
-                )}
-                {work.videoUrl ? (
-                  <video
-                    src={work.videoUrl}
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    onLoadedData={() => handleImageLoad(work.id)}
-                    className="w-full h-full object-cover transition-all duration-500 grayscale"
-                  />
-                ) : work.imageUrl ? (
-                  <Image
-                    src={work.imageUrl}
-                    alt={work.title}
-                    fill
-                    onLoad={() => handleImageLoad(work.id)}
-                    className="object-cover object-top transition-all duration-500"
-                  />
-                ) : work.title === "Digital Gallery" ? (
-                  <DigitalGalleryAnimation />
-                ) : work.title === "Bloom AI" ? (
-                  <EventHorizon
-                    rotate={0.1}
-                    rotationSpeed={0.1}
-                    diskIntensity={0.8}
-                    tilt={0.05}
-                    className="rotate-y-180"
-                    color="#d9d9d9"
-                  />
-                ) : null}
-              </div>
-              <div className="flex items-center justify-between text-xl">
-                <h3 className="">{work.title}</h3>
-                <span className="text-accent text-lg">{work.description}</span>
-              </div>
-            </div>
+            <WorkItem key={work.id} work={work} />
           ))}
         </motion.div>
       </AnimatePresence>

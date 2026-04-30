@@ -4,12 +4,12 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 
 const montageImages = [
-  "https://swsskqtlrzcxayzlajmv.supabase.co/storage/v1/object/public/images/flow-lounge-montage-1.jpg",
-  "https://swsskqtlrzcxayzlajmv.supabase.co/storage/v1/object/public/images/flow-lounge-montage-2.jpg",
-  "https://swsskqtlrzcxayzlajmv.supabase.co/storage/v1/object/public/images/flow-lounge-montage-3.jpg",
-  "https://swsskqtlrzcxayzlajmv.supabase.co/storage/v1/object/public/images/flow-lounge-montage-4.jpg",
-  "https://swsskqtlrzcxayzlajmv.supabase.co/storage/v1/object/public/images/flow-lounge-montage-5.jpg",
-  "https://swsskqtlrzcxayzlajmv.supabase.co/storage/v1/object/public/images/flow-lounge-montage-6.jpg",
+  "https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/montage/flow-lounge-montage-1.jpg",
+  "https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/montage/flow-lounge-montage-2.jpg",
+  "https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/montage/flow-lounge-montage-3.jpg",
+  "https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/montage/flow-lounge-montage-4.jpg",
+  "https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/montage/flow-lounge-montage-5.jpg",
+  "https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/montage/flow-lounge-montage-6.jpg",
 ];
 
 export default function ImageMontage({ className }: { className?: string }) {
