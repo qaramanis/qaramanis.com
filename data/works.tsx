@@ -4,7 +4,7 @@ import EventHorizon from "@/components/event-horizon";
 
 export type WorkCategory =
   | "Web Design"
-  | "Branding / Digital Media"
+  | "Brand Identity"
   | "System Design"
   | "";
 
@@ -31,14 +31,17 @@ const workItems: Omit<Work, "id">[] = [
   },
   {
     title: "Flow Lounge",
-    description: "Web Design and Digital Direction",
-    categories: ["Web Design", "Branding / Digital Media"],
+    description: "Web Design, Brand Identity",
+    categories: ["Web Design", "Brand Identity"],
     url: "/flow-lounge",
-    media: { type: "video", src: "/videos/flow-lounge/flow-lounge.mp4" },
+    media: {
+      type: "video",
+      src: "https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/flow-lounge.mp4",
+    },
   },
   {
     title: "Bloom AI",
-    description: "AI Intelligence Startup",
+    description: "System Design, Web Design",
     categories: ["System Design", "Web Design"],
     url: "/bloom-ai",
     media: {
@@ -58,11 +61,11 @@ const workItems: Omit<Work, "id">[] = [
   {
     title: "Gold Ice",
     description: "Web Design",
-    categories: ["Web Design", "Branding / Digital Media"],
+    categories: ["Web Design"],
     url: "/gold-ice",
     media: {
-      type: "component",
-      render: () => <DigitalGalleryAnimation />,
+      type: "image",
+      src: "https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/gold-ice/IMG_4302.jpg",
     },
   },
   // {
