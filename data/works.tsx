@@ -2,11 +2,13 @@ import type { ReactNode } from "react";
 import DigitalGalleryAnimation from "@/components/digital-gallery-animation";
 import EventHorizon from "@/components/event-horizon";
 
-export type WorkCategory =
-  | "Web Design"
-  | "Brand Identity"
-  | "System Design"
-  | "";
+export const WORK_CATEGORIES = [
+  "Web Design",
+  "Brand Identity",
+  "System Design",
+] as const;
+
+export type WorkCategory = (typeof WORK_CATEGORIES)[number];
 
 export type WorkMedia =
   | { type: "image"; src: string }
@@ -26,7 +28,7 @@ const workItems: Omit<Work, "id">[] = [
   {
     title: "Vidavo S.A.",
     description: "NDA",
-    categories: [""],
+    categories: [],
     media: { type: "image", src: "/works/vidavo-nda.png" },
   },
   {

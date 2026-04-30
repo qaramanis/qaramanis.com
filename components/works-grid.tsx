@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { works, WorkCategory } from "@/data/works";
+import { works, WORK_CATEGORIES, WorkCategory } from "@/data/works";
 import WorkItem from "./work-item";
 
 type FilterCategory = "All" | WorkCategory;
@@ -11,12 +11,7 @@ export default function WorksGrid() {
   const [selectedCategory, setSelectedCategory] =
     useState<FilterCategory>("All");
 
-  const categories: FilterCategory[] = [
-    "All",
-    "Web Design",
-    "Branding / Digital Media",
-    "System Design",
-  ];
+  const categories: FilterCategory[] = ["All", ...WORK_CATEGORIES];
 
   const filteredWorks = (
     selectedCategory === "All"
