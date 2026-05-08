@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import DigitalGalleryAnimation from "@/components/digital-gallery-animation";
 import EventHorizon from "@/components/event-horizon";
+import GoldIceWorkItem from "@/components/gold-ice/gold-ice";
 
 export const WORK_CATEGORIES = [
   "Web Design",
@@ -66,20 +67,20 @@ const workItems: Omit<Work, "id">[] = [
     categories: ["Web Design"],
     url: "/gold-ice",
     media: {
-      type: "image",
-      src: "https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/gold-ice/IMG_4302.jpg",
+      type: "component",
+      render: () => <GoldIceWorkItem />,
     },
   },
-  {
-    title: "Repower Solutions",
-    description: "Web Design",
-    categories: ["Web Design"],
-    url: "/repower-solutions",
-    media: {
-      type: "image",
-      src: "https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/gold-ice/IMG_4302.jpg",
-    },
-  },
+  // {
+  //   title: "Repower Solutions",
+  //   description: "Web Design",
+  //   categories: ["Web Design"],
+  //   url: "/repower-solutions",
+  //   media: {
+  //     type: "image",
+  //     src: "https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/gold-ice/IMG_4302.jpg",
+  //   },
+  // },
   // {
   //   title: "Digital Gallery",
   //   description: "Collection of Personal Works",

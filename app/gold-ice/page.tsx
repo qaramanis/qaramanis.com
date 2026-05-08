@@ -6,9 +6,9 @@ export default function GoldIce() {
   return (
     <div className="grid grid-cols-12 gap-1 md:gap-2 lg:gap-4">
       {/* Large image container spanning all columns */}
-      <div className="col-span-12 w-screen -ml-2 md:-ml-4 lg:-ml-8 aspect-[1920/1080] bg-accent/30 relative">
+      <div className="col-span-12 aspect-[1920/1027] bg-accent/30 relative">
         <Image
-          src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/gold-ice/IMG_4302.jpg"
+          src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/gold-ice/gold-ice-1.png"
           alt="Gold Ice"
           fill
           className="object-cover bg-foreground"
@@ -16,20 +16,20 @@ export default function GoldIce() {
       </div>
 
       {/* Smaller adjustable images */}
-      <div className="col-span-6 aspect-square bg-accent/30 relative">
+      <div className="col-span-12 aspect-[1920/1027] bg-accent/30 relative">
         <Image
-          src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/gold-ice/IMG_4302.jpg"
+          src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/gold-ice/gold-ice-2.png"
           alt="Gold Ice"
           fill
-          className="object-cover bg-foreground object-center"
+          className="object-cover bg-foreground"
         />
       </div>
-      <div className="col-span-6 aspect-square bg-accent/30 relative">
+      <div className="col-span-12 aspect-[1920/1027] bg-accent/30 relative">
         <Image
-          src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/gold-ice/IMG_4302.jpg"
+          src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/gold-ice/gold-ice-3.png"
           alt="Gold Ice"
           fill
-          className="object-cover bg-foreground object-center"
+          className="object-cover bg-foreground"
         />
       </div>
 
