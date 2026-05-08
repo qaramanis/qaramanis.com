@@ -15,7 +15,7 @@ export default function Monitor() {
       <div className="col-span-12 w-screen -ml-2 md:-ml-4 lg:-ml-8 aspect-[1920/1080] bg-foreground relative overflow-hidden">
         <video
           src={
-            "https://swsskqtlrzcxayzlajmv.supabase.co/storage/v1/object/public/images/monitor-video.mp4"
+            "https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/bloom-ai/bloom-ai-video.mp4"
           }
           autoPlay
           loop
@@ -26,7 +26,7 @@ export default function Monitor() {
       </div>
       <div className="col-span-12 w-full aspect-[2842/1526] bg-foreground relative">
         <Image
-          src="/images/bloom-ai/bloom-ai-1.png"
+          src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/bloom-ai/bloom-ai-1.png"
           alt="Monitor Image"
           fill
           className="object-cover bg-foreground"
@@ -34,7 +34,7 @@ export default function Monitor() {
       </div>
       <div className="col-span-12 w-full aspect-[2842/1526] bg-foreground relative">
         <Image
-          src="/images/bloom-ai/bloom-ai-2.png"
+          src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/bloom-ai/bloom-ai-2.png"
           alt="Monitor Image"
           fill
           className="object-cover bg-foreground"
@@ -43,7 +43,7 @@ export default function Monitor() {
 
       <div className="col-span-6 w-full aspect-[1640/1526] bg-foreground relative">
         <Image
-          src="/images/bloom-ai/bloom-ai-3.png"
+          src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/bloom-ai/bloom-ai-3.png"
           alt="Monitor Image"
           fill
           className="object-cover bg-foreground object-right"
@@ -51,7 +51,7 @@ export default function Monitor() {
       </div>
       <div className="col-span-6 w-full aspect-[1640/1526] bg-foreground relative">
         <Image
-          src="/images/bloom-ai/bloom-ai-4.png"
+          src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/bloom-ai/bloom-ai-4.png"
           alt="Monitor Image"
           fill
           className="object-cover bg-foreground object-right"

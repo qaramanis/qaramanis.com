@@ -9,7 +9,7 @@ export default function FlowLounge() {
       {/* Large image container spanning all columns */}
       <div className="col-span-12 w-screen -ml-2 md:-ml-4 lg:-ml-8 aspect-[1920/1080] bg-accent/30 relative">
         <Image
-          src="https://swsskqtlrzcxayzlajmv.supabase.co/storage/v1/object/public/images/flow-lounge-1.jpg"
+          src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/images/flow-lounge-1.jpg"
           alt="Flow Lounge"
           fill
           className="object-cover bg-foreground"
@@ -17,7 +17,7 @@ export default function FlowLounge() {
       </div>
       <div className="col-span-12 w-full aspect-[1920/1080] bg-accent/30 relative">
         <Image
-          src="https://swsskqtlrzcxayzlajmv.supabase.co/storage/v1/object/public/images/flow-lounge-banner.png"
+          src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/images/flow-lounge-banner.png"
           alt="Flow Lounge"
           fill
           className="object-cover bg-foreground"
@@ -25,7 +25,7 @@ export default function FlowLounge() {
       </div>
       <div className="col-span-12 w-full aspect-[1920/1080] bg-accent/30 relative">
         <Image
-          src="https://swsskqtlrzcxayzlajmv.supabase.co/storage/v1/object/public/images/flow-lounge-7.jpg"
+          src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/images/flow-lounge-7.jpg"
           alt="Flow Lounge"
           fill
           className="object-cover bg-foreground"
@@ -60,7 +60,7 @@ export default function FlowLounge() {
       {/* espresso martini + hookah */}
       <div className="col-span-6 aspect-square bg-accent/30 relative">
         <Image
-          src="https://swsskqtlrzcxayzlajmv.supabase.co/storage/v1/object/public/images/flow-lounge-2.jpg"
+          src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/images/flow-lounge-2.jpg"
           alt="Flow Lounge"
           fill
           className="object-cover bg-foreground object-center"
@@ -68,7 +68,7 @@ export default function FlowLounge() {
       </div>
       <div className="col-span-6 aspect-square bg-accent/30 relative">
         <Image
-          src="https://swsskqtlrzcxayzlajmv.supabase.co/storage/v1/object/public/images/flow-lounge-3.jpg"
+          src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/images/flow-lounge-3.jpg"
           alt="Flow Lounge"
           fill
           className="object-cover object-center"
@@ -81,7 +81,7 @@ export default function FlowLounge() {
       </div>
       <div className="col-span-6 aspect-square bg-accent/30 relative">
         <Image
-          src="https://swsskqtlrzcxayzlajmv.supabase.co/storage/v1/object/public/images/flow-lounge-4.jpg"
+          src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/images/flow-lounge-4.jpg"
           alt="Flow Lounge"
           fill
           className="object-cover object-top"
@@ -91,7 +91,7 @@ export default function FlowLounge() {
       {/* tshirt + guitar row */}
       <div className="col-span-6 aspect-square bg-accent/30 relative">
         <Image
-          src="https://swsskqtlrzcxayzlajmv.supabase.co/storage/v1/object/public/images/flow-lounge-5.jpg"
+          src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/images/flow-lounge-5.jpg"
           alt="Flow Lounge"
           fill
           className="object-cover bg-foreground object-center"
@@ -99,7 +99,7 @@ export default function FlowLounge() {
       </div>
       <div className="col-span-6 aspect-square bg-accent/30 relative">
         <Image
-          src="https://swsskqtlrzcxayzlajmv.supabase.co/storage/v1/object/public/images/flow-lounge-6.jpg"
+          src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/images/flow-lounge-6.jpg"
           alt="Flow Lounge"
           fill
           className="object-cover object-center"
