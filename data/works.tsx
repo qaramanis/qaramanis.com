@@ -30,7 +30,7 @@ const workItems: Omit<Work, "id">[] = [
     title: "Vidavo S.A.",
     description: "NDA",
     categories: [],
-    media: { type: "image", src: "/works/vidavo-nda.png" },
+    media: { type: "image", src: "https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/vidavo/vidavo-nda.png" },
   },
   {
     title: "Flow Lounge",
