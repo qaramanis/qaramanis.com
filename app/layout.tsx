@@ -5,6 +5,7 @@ import LenisProvider from "@/providers/lenis-provider";
 import LayoutWrapper from "@/components/layout-wrapper";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://qaramanis.com"),
   title: "Apostolos Karamanis - Creative Developer & Designer",
   description:
     "Independent creative developer from Thessaloniki, Greece. Specializing in web design, branding, creative direction, and digital experiences. He designs and builds modern, animation-rich websites with Next.js, React, and TypeScript.",
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
     siteName: "Apostolos Karamanis - Creative Developer & Designer",
     images: [
       {
-        url: "https://qaramanis.com/og-image.jpg",
+        url: "https://qaramanis.com/apostolos-karamanis-creative-developer.jpg",
         width: 1200,
         height: 630,
         alt: "Apostolos Karamanis - Personal Portfolio",
@@ -37,7 +38,7 @@ export const metadata: Metadata = {
     title: "Apostolos Karamanis - Creative Developer & Designer",
     description:
       "Independent creative developer from Greece. Web design, branding, creative direction, and animation-rich digital experiences.",
-    images: ["https://qaramanis.com/og-image.jpg"],
+    images: ["https://qaramanis.com/apostolos-karamanis-creative-developer.jpg"],
     creator: "@qaramanis",
   },
 

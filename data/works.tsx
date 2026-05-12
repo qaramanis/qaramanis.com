@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import DigitalGalleryAnimation from "@/components/digital-gallery-animation";
 import EventHorizon from "@/components/event-horizon";
 import GoldIceWorkItem from "@/components/gold-ice/gold-ice";
+import RepowerSolutionsWorkItem from "@/components/repower-solutions/repower-solutions";
 
 export const WORK_CATEGORIES = [
   "Web Design",
@@ -30,7 +31,10 @@ const workItems: Omit<Work, "id">[] = [
     title: "Vidavo S.A.",
     description: "NDA",
     categories: [],
-    media: { type: "image", src: "https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/vidavo/vidavo-nda.png" },
+    media: {
+      type: "image",
+      src: "https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/vidavo/vidavo-nda.png",
+    },
   },
   {
     title: "Flow Lounge",
@@ -71,16 +75,16 @@ const workItems: Omit<Work, "id">[] = [
       render: () => <GoldIceWorkItem />,
     },
   },
-  // {
-  //   title: "Repower Solutions",
-  //   description: "Web Design",
-  //   categories: ["Web Design"],
-  //   url: "/repower-solutions",
-  //   media: {
-  //     type: "image",
-  //     src: "https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/gold-ice/IMG_4302.jpg",
-  //   },
-  // },
+  {
+    title: "Repower Solutions",
+    description: "Web Design",
+    categories: ["Web Design"],
+    url: "/repower-solutions",
+    media: {
+      type: "component",
+      render: () => <RepowerSolutionsWorkItem />,
+    },
+  },
   // {
   //   title: "Digital Gallery",
   //   description: "Collection of Personal Works",
