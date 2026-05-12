@@ -5,7 +5,7 @@ import { Link, Play, X } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 
-export default function BloomAIClient() {
+export default function BloomAIContent() {
   const [videoOpen, setVideoOpen] = useState(false);
 
   return (
@@ -26,7 +26,7 @@ export default function BloomAIClient() {
       <div className="col-span-12 w-full aspect-[2842/1526] bg-foreground relative">
         <Image
           src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/bloom-ai/bloom-ai-1.png"
-          alt="Bloom AI — live personalized news monitor interface"
+          alt="Bloom AI - live personalized news monitor interface"
           fill
           className="object-cover bg-foreground"
         />
@@ -34,7 +34,7 @@ export default function BloomAIClient() {
       <div className="col-span-12 w-full aspect-[2842/1526] bg-foreground relative">
         <Image
           src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/bloom-ai/bloom-ai-2.png"
-          alt="Bloom AI — AI chat, insights and predictions"
+          alt="Bloom AI - AI chat, insights and predictions"
           fill
           className="object-cover bg-foreground"
         />
@@ -43,7 +43,7 @@ export default function BloomAIClient() {
       <div className="col-span-6 w-full aspect-[1640/1526] bg-foreground relative">
         <Image
           src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/bloom-ai/bloom-ai-3.png"
-          alt="Bloom AI — interactive components and live trackers"
+          alt="Bloom AI - interactive components and live trackers"
           fill
           className="object-cover bg-foreground object-right"
         />
@@ -51,7 +51,7 @@ export default function BloomAIClient() {
       <div className="col-span-6 w-full aspect-[1640/1526] bg-foreground relative">
         <Image
           src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/bloom-ai/bloom-ai-4.png"
-          alt="Bloom AI — user personalization and engagement"
+          alt="Bloom AI - user personalization and engagement"
           fill
           className="object-cover bg-foreground object-right"
         />

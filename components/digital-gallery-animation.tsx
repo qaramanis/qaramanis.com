@@ -157,7 +157,7 @@ function AnimationCycle({ onComplete }: { onComplete: () => void }) {
             strokeWidth="2.5"
           />
 
-          {/* Curved text — top */}
+          {/* Curved text - top */}
           <motion.g
             initial={{ opacity: 0 }}
             animate={{ opacity: showCurvedText ? 1 : 0 }}
@@ -176,7 +176,7 @@ function AnimationCycle({ onComplete }: { onComplete: () => void }) {
             </text>
           </motion.g>
 
-          {/* Curved text — bottom (dy shifts text outside the arc) */}
+          {/* Curved text - bottom (dy shifts text outside the arc) */}
           <motion.g
             initial={{ opacity: 0 }}
             animate={{ opacity: showCurvedText ? 1 : 0 }}
@@ -198,7 +198,7 @@ function AnimationCycle({ onComplete }: { onComplete: () => void }) {
         </svg>
       </motion.div>
 
-      {/* "digital gallery" text — right side */}
+      {/* "digital gallery" text - right side */}
       <motion.div
         className="absolute right-[8%] top-1/2 -translate-y-1/2 text-center"
         initial={{ opacity: 0 }}

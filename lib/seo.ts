@@ -26,14 +26,14 @@ export type ProjectSeo = {
 export const PROJECTS_SEO: Record<ProjectSlug, ProjectSeo> = {
   "flow-lounge": {
     name: "Flow Lounge",
-    metaTitle: "Flow Lounge — Hookah Lounge Brand & Website",
+    metaTitle: "Flow Lounge - Hookah Lounge Brand & Website",
     description:
-      "Web design, brand collateral, and digital media for Flow Lounge — a hookah lounge brand curated by Titto Peronetti for restaurants, hotels, and private events.",
+      "Web design, brand collateral, and digital media for Flow Lounge - a hookah lounge brand curated by Titto Peronetti for restaurants, hotels, and private events.",
     heroImage:
       "https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/images/flow-lounge-1.jpg",
     heroImageWidth: 1920,
     heroImageHeight: 1080,
-    heroImageAlt: "Flow Lounge — hookah lounge brand by Titto Peronetti",
+    heroImageAlt: "Flow Lounge - hookah lounge brand by Titto Peronetti",
     externalUrl: "https://flowlounge.gr",
     about: ["Hospitality", "Events", "Hookah Culture", "Brand Identity"],
     keywords:
@@ -41,14 +41,14 @@ export const PROJECTS_SEO: Record<ProjectSlug, ProjectSeo> = {
   },
   "gold-ice": {
     name: "Gold Ice",
-    metaTitle: "Gold Ice — Website Design for Northern Greece's Ice Supplier",
+    metaTitle: "Gold Ice - Website Design for Northern Greece's Ice Supplier",
     description:
-      "Web design for Gold Ice — producing and distributing food-grade drinking ice across northern Greece since 2000. Built around clarity, hygiene, and quiet precision.",
+      "Web design for Gold Ice - producing and distributing food-grade drinking ice across northern Greece since 2000. Built around clarity, hygiene, and quiet precision.",
     heroImage:
       "https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/gold-ice/gold-ice-1.png",
     heroImageWidth: 1920,
     heroImageHeight: 1027,
-    heroImageAlt: "Gold Ice — food-grade ice supplier, northern Greece",
+    heroImageAlt: "Gold Ice - food-grade ice supplier, northern Greece",
     externalUrl: "https://www.goldice.eu/",
     about: ["Food-grade Ice", "Distribution", "Northern Greece", "Web Design"],
     keywords:
@@ -56,15 +56,15 @@ export const PROJECTS_SEO: Record<ProjectSlug, ProjectSeo> = {
   },
   "repower-solutions": {
     name: "Repower Solutions",
-    metaTitle: "Repower Solutions — Website Design for an Energy Engineering Firm",
+    metaTitle: "Repower Solutions - Website Design for an Energy Engineering Firm",
     description:
-      "Web design and brand collateral for Repower Solutions — a Thessaloniki-based technical firm delivering energy upgrades, photovoltaic systems, heat pumps, and engineering studies.",
+      "Web design and brand collateral for Repower Solutions - a Thessaloniki-based technical firm delivering energy upgrades, photovoltaic systems, heat pumps, and engineering studies.",
     heroImage:
       "https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/repower-solutions/repower-1.png",
     heroImageWidth: 1920,
     heroImageHeight: 1027,
     heroImageAlt:
-      "Repower Solutions — energy upgrades and photovoltaics, Thessaloniki",
+      "Repower Solutions - energy upgrades and photovoltaics, Thessaloniki",
     about: [
       "Energy Engineering",
       "Photovoltaic Systems",
@@ -77,14 +77,14 @@ export const PROJECTS_SEO: Record<ProjectSlug, ProjectSeo> = {
   },
   "bloom-ai": {
     name: "Bloom AI",
-    metaTitle: "Bloom AI — AI-Powered World News Platform",
+    metaTitle: "Bloom AI - AI-Powered World News Platform",
     description:
-      "System design and web design for Bloom AI — a personalized live news monitor with AI chat, insights, predictions, interactive components, and live trackers.",
+      "System design and web design for Bloom AI - a personalized live news monitor with AI chat, insights, predictions, interactive components, and live trackers.",
     heroImage:
       "https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/bloom-ai/bloom-ai-1.png",
     heroImageWidth: 2842,
     heroImageHeight: 1526,
-    heroImageAlt: "Bloom AI — live personalized news monitor interface",
+    heroImageAlt: "Bloom AI - live personalized news monitor interface",
     externalUrl: "https://monitor.qaramanis.com",
     about: [
       "Artificial Intelligence",
@@ -98,14 +98,14 @@ export const PROJECTS_SEO: Record<ProjectSlug, ProjectSeo> = {
   },
   "digital-gallery": {
     name: "Digital Gallery",
-    metaTitle: "Digital Gallery — Personal Works",
+    metaTitle: "Digital Gallery - Personal Works",
     description:
-      "A curated collection of personal works exploring the intersection of design, photography, and digital media — visual storytelling with modern aesthetics.",
+      "A curated collection of personal works exploring the intersection of design, photography, and digital media - visual storytelling with modern aesthetics.",
     heroImage:
       "https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/gallery/digital-gallery-image-1.png",
     heroImageWidth: 2842,
     heroImageHeight: 1526,
-    heroImageAlt: "Digital Gallery — personal works by Apostolos Karamanis",
+    heroImageAlt: "Digital Gallery - personal works by Apostolos Karamanis",
     externalUrl: "https://gallery.qaramanis.com",
     about: [
       "Personal Works",

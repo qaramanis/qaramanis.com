@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Apostolos Karamanis - Creative Developer & Designer",
     description:
-      "Independent creative developer from Greece. Web design, branding, creative direction, and digital experiences — designed and built as one unified vision.",
+      "Independent creative developer from Greece. Web design, branding, creative direction, and digital experiences - designed and built as one unified vision.",
     url: "https://qaramanis.com/",
     siteName: "Apostolos Karamanis - Creative Developer & Designer",
     images: [

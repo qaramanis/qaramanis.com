@@ -1,11 +1,9 @@
-"use client";
-
 import ViewAll from "@/components/view-all-container";
 import DigitalGalleryAnimation from "@/components/digital-gallery-animation";
 import { Link } from "lucide-react";
 import Image from "next/image";
 
-export default function DigitalGalleryClient() {
+export default function DigitalGalleryContent() {
   return (
     <div className="grid grid-cols-12 gap-1 md:gap-2 lg:gap-4">
       {/* Large image container spanning all columns */}
@@ -15,7 +13,7 @@ export default function DigitalGalleryClient() {
       <div className="col-span-12 w-full aspect-[2842/1526] bg-foreground relative">
         <Image
           src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/gallery/digital-gallery-image-1.png"
-          alt="Digital Gallery — personal work 01"
+          alt="Digital Gallery - personal work 01"
           fill
           className="object-cover bg-foreground"
         />
@@ -23,7 +21,7 @@ export default function DigitalGalleryClient() {
       <div className="col-span-12 w-full aspect-[2842/1526] bg-foreground relative">
         <Image
           src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/gallery/digital-gallery-image-2.png"
-          alt="Digital Gallery — personal work 02"
+          alt="Digital Gallery - personal work 02"
           fill
           className="object-cover bg-foreground"
         />
@@ -31,7 +29,7 @@ export default function DigitalGalleryClient() {
       <div className="col-span-12 w-full aspect-[2842/1526] bg-foreground relative">
         <Image
           src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/gallery/digital-gallery-image-3.png"
-          alt="Digital Gallery — personal work 03"
+          alt="Digital Gallery - personal work 03"
           fill
           className="object-cover bg-foreground"
         />
@@ -39,7 +37,7 @@ export default function DigitalGalleryClient() {
       <div className="col-span-12 w-full aspect-[2842/1526] bg-foreground relative">
         <Image
           src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/gallery/digital-gallery-image-4.png"
-          alt="Digital Gallery — personal work 04"
+          alt="Digital Gallery - personal work 04"
           fill
           className="object-cover bg-foreground"
         />
