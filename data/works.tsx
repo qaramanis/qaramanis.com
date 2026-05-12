@@ -93,16 +93,6 @@ const workItems: Omit<Work, "id">[] = [
   //   media: { type: "component", render: () => <DigitalGalleryAnimation /> },
   // },
   // {
-  //   title: "Repower Solutions",
-  //   description: "Web Design",
-  //   categories: ["Web Design"],
-  //   url: "/repower-solutions",
-  //   media: {
-  //     type: "image",
-  //     src: "https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/flow-1.png",
-  //   },
-  // },
-  // {
   //   title: "GDD Digital",
   //   description: "Web Design",
   //   categories: ["Web Design", "Branding / Digital Media"],
