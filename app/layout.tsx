@@ -38,7 +38,9 @@ export const metadata: Metadata = {
     title: "Apostolos Karamanis - Creative Developer & Designer",
     description:
       "Independent creative developer from Greece. Web design, branding, creative direction, and animation-rich digital experiences.",
-    images: ["https://qaramanis.com/apostolos-karamanis-creative-developer.jpg"],
+    images: [
+      "https://qaramanis.com/apostolos-karamanis-creative-developer.jpg",
+    ],
     creator: "@qaramanis",
   },
 
