@@ -52,6 +52,7 @@ export default function GoldIceContent() {
       <ProjectLink
         href="https://www.goldice.eu/"
         label="View Website"
+        ariaLabel="Visit Gold Ice website, opens in new tab"
         className="col-span-6 md:col-span-3 md:col-start-3"
       />
     </>

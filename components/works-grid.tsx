@@ -27,7 +27,8 @@ export default function WorksGrid() {
           <button
             key={category}
             onClick={() => setSelectedCategory(category)}
-            className={`py-2 text-lg whitespace-nowrap transition-colors duration-300 cursor-pointer ${
+            aria-pressed={selectedCategory === category}
+            className={`py-2 text-lg whitespace-nowrap transition-colors duration-300 cursor-pointer focus-visible:underline focus-visible:underline-offset-4 focus-visible:text-foreground ${
               selectedCategory === category
                 ? "text-foreground"
                 : "text-accent/50 hover:text-accent"

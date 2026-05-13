@@ -59,6 +59,7 @@ export default function DigitalGalleryContent() {
     <ProjectLink
       href="https://gallery.qaramanis.com"
       label="View Website"
+      ariaLabel="Visit Digital Gallery website, opens in new tab"
       className="col-span-6 md:col-span-3 md:col-start-1"
     />
   );

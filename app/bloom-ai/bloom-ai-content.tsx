@@ -4,10 +4,20 @@ import ProjectPageLayout from "@/components/project-page-layout";
 import ProjectLink from "@/components/project-link";
 import { Play, X } from "lucide-react";
 import Image from "next/image";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 export default function BloomAIContent() {
+  const dialogRef = useRef<HTMLDialogElement>(null);
   const [videoOpen, setVideoOpen] = useState(false);
+
+  const openDialog = () => {
+    setVideoOpen(true);
+    dialogRef.current?.showModal();
+  };
+
+  const closeDialog = () => {
+    dialogRef.current?.close();
+  };
 
   const media = (
     <>
@@ -75,12 +85,14 @@ export default function BloomAIContent() {
       <ProjectLink
         href="https://monitor.qaramanis.com"
         label="View Website"
+        ariaLabel="Visit Bloom AI website, opens in new tab"
         className="col-span-3 md:col-span-2 md:col-start-1"
       />
       <ProjectLink
-        onClick={() => setVideoOpen(true)}
+        onClick={openDialog}
         label="View Demo"
         icon={Play}
+        ariaLabel="Open Bloom AI demo video"
         className="col-span-3 md:col-span-3 md:col-start-3"
       />
     </>
@@ -94,30 +106,35 @@ export default function BloomAIContent() {
         footer={footer}
       />
 
-      {videoOpen && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80"
-          onClick={() => setVideoOpen(false)}
+      <dialog
+        ref={dialogRef}
+        onClose={() => setVideoOpen(false)}
+        onClick={(e) => {
+          if (e.target === e.currentTarget) closeDialog();
+        }}
+        aria-label="Bloom AI demo video"
+        className="fixed inset-0 z-50 w-full h-full max-w-none max-h-none m-0 p-0 border-none bg-transparent backdrop:bg-black/80 open:flex items-center justify-center"
+      >
+        <button
+          type="button"
+          onClick={closeDialog}
+          aria-label="Close video"
+          className="absolute top-4 right-4 text-white cursor-pointer"
         >
-          <button
-            onClick={() => setVideoOpen(false)}
-            className="absolute top-4 right-4 text-white cursor-pointer"
-          >
-            <X className="size-8" />
-          </button>
-          <div
-            className="w-[90vw] max-w-5xl aspect-video"
-            onClick={(e) => e.stopPropagation()}
-          >
+          <X className="size-8" aria-hidden />
+        </button>
+        <div className="w-[90vw] max-w-5xl aspect-video">
+          {videoOpen && (
             <iframe
               src="https://www.youtube.com/embed/ozCRY6v-U00?autoplay=1"
+              title="Bloom AI demo video"
               allow="autoplay; encrypted-media"
               allowFullScreen
               className="w-full h-full rounded-lg"
             />
-          </div>
+          )}
         </div>
-      )}
+      </dialog>
     </>
   );
 }

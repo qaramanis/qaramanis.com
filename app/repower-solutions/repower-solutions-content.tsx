@@ -58,7 +58,7 @@ export default function RepowerSolutionsContent() {
     <>
       <ProjectMeta label="My Role" items={["Web Design", "Brand Collateral"]} />
       <ProjectLink
-        href="#"
+        disabled
         label="Website under construction"
         className="col-span-6 md:col-span-3 md:col-start-3"
       />
