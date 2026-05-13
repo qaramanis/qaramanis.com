@@ -12,6 +12,7 @@ export default function FlowLoungeContent() {
           src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/images/flow-lounge-1.jpg"
           alt="Flow Lounge website hero - hookah lounge brand by Titto Peronetti"
           fill
+          priority
           className="object-cover bg-foreground"
         />
       </div>

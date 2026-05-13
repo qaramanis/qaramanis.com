@@ -11,6 +11,7 @@ export default function GoldIceContent() {
           src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/gold-ice/gold-ice-1.png"
           alt="Gold Ice website hero - food-grade ice supplier, northern Greece"
           fill
+          priority
           className="object-cover bg-foreground"
         />
       </div>

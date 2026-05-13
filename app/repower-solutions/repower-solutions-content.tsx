@@ -11,6 +11,7 @@ export default function RepowerSolutionsContent() {
           src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/repower-solutions/repower-1.png"
           alt="Repower Solutions website hero - energy upgrades and photovoltaics, Thessaloniki"
           fill
+          priority
           className="object-cover bg-foreground"
         />
       </div>

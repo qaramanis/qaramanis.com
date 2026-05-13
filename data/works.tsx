@@ -1,5 +1,4 @@
 import type { ReactNode } from "react";
-import DigitalGalleryAnimation from "@/components/digital-gallery-animation";
 import EventHorizon from "@/components/event-horizon";
 import GoldIceWorkItem from "@/components/gold-ice/gold-ice";
 import RepowerSolutionsWorkItem from "@/components/repower-solutions/repower-solutions";
@@ -85,13 +84,6 @@ const workItems: Omit<Work, "id">[] = [
       render: () => <RepowerSolutionsWorkItem />,
     },
   },
-  // {
-  //   title: "Digital Gallery",
-  //   description: "Collection of Personal Works",
-  //   categories: ["Web Design", "Branding / Digital Media"],
-  //   url: "/digital-gallery",
-  //   media: { type: "component", render: () => <DigitalGalleryAnimation /> },
-  // },
   // {
   //   title: "GDD Digital",
   //   description: "Web Design",
