@@ -7,6 +7,7 @@ export type ProjectSlug =
   | "flow-lounge"
   | "gold-ice"
   | "repower-solutions"
+  | "adrenaline-spike"
   | "bloom-ai"
   | "digital-gallery";
 
@@ -74,6 +75,28 @@ export const PROJECTS_SEO: Record<ProjectSlug, ProjectSeo> = {
     ],
     keywords:
       "Repower Solutions, energy upgrades, photovoltaic systems, heat pumps, engineering studies, Thessaloniki",
+  },
+  "adrenaline-spike": {
+    name: "Adrenaline Spike",
+    metaTitle:
+      "Adrenaline Spike - Brand & Website for an Off-Road Motorcycle Rental",
+    description:
+      "Web design and brand identity for Adrenaline Spike - an off-road motorcycle and equipment rental shop at the foot of Mount Chortiatis, Thessaloniki, with live fleet availability and booking.",
+    heroImage: `${SITE_URL}/adrenaline-spike/screenshot1.png`,
+    heroImageWidth: 2844,
+    heroImageHeight: 1528,
+    heroImageAlt:
+      "Adrenaline Spike - off-road motorcycle rentals, Thessaloniki",
+    externalUrl: "https://www.adrenalinespike.gr/",
+    about: [
+      "Motorcycle Rental",
+      "Off-Road",
+      "Enduro",
+      "Web Design",
+      "Brand Identity",
+    ],
+    keywords:
+      "Adrenaline Spike, off-road motorcycle rental, enduro, adventure bikes, Mount Chortiatis, Thessaloniki, web design, brand identity",
   },
   "bloom-ai": {
     name: "Bloom AI",

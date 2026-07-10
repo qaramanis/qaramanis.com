@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import EventHorizon from "@/components/event-horizon";
 import GoldIceWorkItem from "@/components/gold-ice/gold-ice";
 import RepowerSolutionsWorkItem from "@/components/repower-solutions/repower-solutions";
+import AdrenalineSpikeWorkItem from "@/components/adrenaline-spike/adrenaline-spike";
 
 export const WORK_CATEGORIES = [
   "Web Design",
@@ -82,6 +83,16 @@ const workItems: Omit<Work, "id">[] = [
     media: {
       type: "component",
       render: () => <RepowerSolutionsWorkItem />,
+    },
+  },
+  {
+    title: "Adrenaline Spike",
+    description: "Web Design, Brand Identity",
+    categories: ["Web Design", "Brand Identity"],
+    url: "/adrenaline-spike",
+    media: {
+      type: "component",
+      render: () => <AdrenalineSpikeWorkItem />,
     },
   },
   // {
