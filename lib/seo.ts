@@ -108,7 +108,7 @@ export const PROJECTS_SEO: Record<ProjectSlug, ProjectSeo> = {
     heroImageWidth: 2842,
     heroImageHeight: 1526,
     heroImageAlt: "Bloom AI - live personalized news monitor interface",
-    externalUrl: "https://monitor.qaramanis.com",
+    externalUrl: "https://bloom.qaramanis.com",
     about: [
       "Artificial Intelligence",
       "News Platform",

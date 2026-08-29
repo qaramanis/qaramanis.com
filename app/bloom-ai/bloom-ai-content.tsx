@@ -83,7 +83,7 @@ export default function BloomAIContent() {
   const footer = (
     <>
       <ProjectLink
-        href="https://monitor.qaramanis.com"
+        href="https://bloom.qaramanis.com"
         label="View Website"
         ariaLabel="Visit Bloom AI website, opens in new tab"
         className="col-span-3 md:col-span-2 md:col-start-1"
