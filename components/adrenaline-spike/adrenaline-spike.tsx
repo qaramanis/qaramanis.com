@@ -10,6 +10,7 @@ export default function AdrenalineSpikeWorkItem() {
         src="/adrenaline-spike/banner.png"
         alt="Adrenaline Spike"
         fill
+        sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
         className="object-cover"
         priority
       />
@@ -21,6 +22,7 @@ export default function AdrenalineSpikeWorkItem() {
           alt="Adrenaline Spike website hero"
           width={711}
           height={382}
+          sizes="(min-width: 1024px) 27vw, (min-width: 768px) 40vw, 80vw"
           className="w-full h-auto object-contain"
           priority
         />

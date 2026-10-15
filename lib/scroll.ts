@@ -5,6 +5,11 @@
 export function scrollToTop(duration: number = 800): void {
   if (typeof window === "undefined") return;
 
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    window.scrollTo(0, 0);
+    return;
+  }
+
   const start = window.scrollY;
   const startTime = performance.now();
 

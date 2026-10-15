@@ -1,28 +1,22 @@
 import ProjectPageLayout from "@/components/project-page-layout";
 import ProjectLink from "@/components/project-link";
 import ProjectMeta from "@/components/project-meta";
+import AutoplayVideo from "@/components/autoplay-video";
 import Image from "next/image";
 
 export default function AgoraMcpContent() {
   const media = (
     <>
       <div className="col-span-12 w-screen -ml-2 md:-ml-4 lg:-ml-8 aspect-[1920/1080] bg-foreground relative overflow-hidden">
-        <video
+        <AutoplayVideo
           src="/agora-mcp/loop.mp4"
-          autoPlay
-          loop
-          muted
-          playsInline
+          priority
           className="w-full h-full object-cover"
         />
       </div>
       <div className="col-span-12 w-full aspect-[1920/1080] bg-foreground relative overflow-hidden">
-        <video
+        <AutoplayVideo
           src="/agora-mcp/reel.mp4"
-          autoPlay
-          loop
-          muted
-          playsInline
           className="w-full h-full object-cover"
         />
       </div>
@@ -31,6 +25,7 @@ export default function AgoraMcpContent() {
           src="/agora-mcp/screenshot1.png"
           alt="Agora MCP website - quickstart, Connected in a minute, with the supported MCP clients"
           fill
+          sizes="50vw"
           className="object-cover bg-foreground"
         />
       </div>
@@ -39,6 +34,7 @@ export default function AgoraMcpContent() {
           src="/agora-mcp/screenshot2.png"
           alt="Agora MCP website - The same tools, without an agent, with an HTTP request and its JSON response"
           fill
+          sizes="50vw"
           className="object-cover bg-foreground"
         />
       </div>

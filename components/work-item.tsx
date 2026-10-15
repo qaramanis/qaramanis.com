@@ -2,47 +2,43 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import type { Work } from "@/data/works";
-import Skeleton from "./skeleton-loader";
+import AutoplayVideo from "./autoplay-video";
 
 interface WorkItemProps {
   work: Work;
 }
 
 export default function WorkItem({ work }: WorkItemProps) {
-  const [loaded, setLoaded] = useState(work.media.type === "component");
+  // Media is hidden while it loads, then it fades in. Images start visible:
+  // the server HTML never hides them, so a loaded image does not wait for JS.
+  const [pending, setPending] = useState(work.media.type === "video");
+  const fade = pending
+    ? "opacity-0"
+    : "opacity-100 transition-opacity duration-300 ease-out";
 
-  const handleClick = () => {
-    if (work.url) window.open(work.url, "_self");
-  };
-
-  return (
-    <div
-      className={`group ${work.url ? "cursor-pointer" : ""}`}
-      onClick={handleClick}
-    >
+  const content = (
+    <>
       <div className="aspect-[1080/1350] bg-foreground mb-2 overflow-hidden relative">
-        {!loaded && (
-          <Skeleton className="hidden absolute inset-0 rounded-none" />
-        )}
         {work.media.type === "video" && (
-          <video
+          <AutoplayVideo
             src={work.media.src}
-            autoPlay
-            loop
-            muted
-            playsInline
-            onLoadedData={() => setLoaded(true)}
-            className="w-full h-full object-cover transition-all duration-500 grayscale"
+            onLoadedData={() => setPending(false)}
+            className={`w-full h-full object-cover grayscale ${fade}`}
           />
         )}
         {work.media.type === "image" && (
           <Image
+            ref={(img) => {
+              if (img && !img.complete) setPending(true);
+            }}
             src={work.media.src}
             alt={work.title}
             fill
-            onLoad={() => setLoaded(true)}
-            className="object-cover object-top transition-all duration-500"
+            sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+            onLoad={() => setPending(false)}
+            className={`object-cover object-top ${fade}`}
           />
         )}
         {work.media.type === "component" && work.media.render()}
@@ -51,6 +47,16 @@ export default function WorkItem({ work }: WorkItemProps) {
         <h3>{work.title}</h3>
         <span className="text-accent text-lg">{work.description}</span>
       </div>
-    </div>
+    </>
   );
+
+  if (work.url) {
+    return (
+      <Link href={work.url} className="group block">
+        {content}
+      </Link>
+    );
+  }
+
+  return <div className="group">{content}</div>;
 }

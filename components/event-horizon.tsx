@@ -478,6 +478,12 @@ export default function EventHorizon({
       rafRef.current = requestAnimationFrame(render);
     }
 
+    // Keep a single pending frame, so the shader never draws twice per frame.
+    function start() {
+      cancelAnimationFrame(rafRef.current);
+      rafRef.current = requestAnimationFrame(render);
+    }
+
     const onResize = () => {
       needsResize = true;
     };
@@ -487,7 +493,7 @@ export default function EventHorizon({
       ([entry]) => {
         visible = entry.isIntersecting;
         if (visible && runningRef.current) {
-          rafRef.current = requestAnimationFrame(render);
+          start();
         }
       },
       { threshold: 0 },
@@ -499,14 +505,14 @@ export default function EventHorizon({
         runningRef.current = false;
       } else {
         runningRef.current = true;
-        rafRef.current = requestAnimationFrame(render);
+        start();
       }
     };
     document.addEventListener("visibilitychange", onVisibility);
 
     resize();
     runningRef.current = true;
-    rafRef.current = requestAnimationFrame(render);
+    start();
 
     return () => {
       runningRef.current = false;

@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import Image from "next/image";
+import { useState, useEffect, useRef } from "react";
+import Image, { getImageProps } from "next/image";
 
 const montageImages = [
   "https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/montage/flow-lounge-montage-1.jpg",
@@ -12,16 +12,29 @@ const montageImages = [
   "https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/montage/flow-lounge-montage-6.jpg",
 ];
 
-export default function ImageMontage({ className }: { className?: string }) {
+export default function ImageMontage({
+  className,
+  sizes = "100vw",
+}: {
+  className?: string;
+  sizes?: string;
+}) {
   const [index, setIndex] = useState(0);
+  const preloaded = useRef(false);
 
-  // Preload all images on mount
-  useEffect(() => {
+  // Once the first image has loaded (it is lazy, so only near the viewport),
+  // preload the others with the same optimized URLs that <Image> requests.
+  const preloadAll = () => {
+    if (preloaded.current) return;
+    preloaded.current = true;
     montageImages.forEach((src) => {
+      const { props } = getImageProps({ src, alt: "", fill: true, sizes });
       const img = new window.Image();
-      img.src = src;
+      img.sizes = props.sizes ?? "";
+      img.srcset = props.srcSet ?? "";
+      img.src = props.src;
     });
-  }, []);
+  };
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -35,6 +48,8 @@ export default function ImageMontage({ className }: { className?: string }) {
       src={montageImages[index]}
       alt="Flow Lounge"
       fill
+      sizes={sizes}
+      onLoad={preloadAll}
       className={className}
     />
   );

@@ -1,11 +1,6 @@
 "use client";
 
-import { useRouter, usePathname } from "next/navigation";
-
 export default function FlowLoungeLogo({ className }: { className?: string }) {
-  const router = useRouter();
-  const pathname = usePathname();
-
   return (
     <svg
       className={className}

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback, useMemo } from "react";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 
 const BLADE_COUNT = 28;
 
@@ -73,10 +73,12 @@ const CY = SVG_SIZE / 2;
 const DISK_R = 175;
 const TEXT_R = 228;
 
-const EASE_SMOOTH = [0.4, 0, 0.2, 1] as const;
+// Same curve as --ease-in-out in globals.css.
+const EASE_IN_OUT = [0.77, 0, 0.175, 1] as const;
 
 function AnimationCycle({ onComplete }: { onComplete: () => void }) {
   const [phase, setPhase] = useState<Phase>("spiral");
+  const reduceMotion = useReducedMotion();
 
   useEffect(() => {
     const duration = PHASE_DURATIONS[phase];
@@ -104,7 +106,7 @@ function AnimationCycle({ onComplete }: { onComplete: () => void }) {
 
   return (
     <motion.div
-      className="w-full h-full flex items-center justify-center text-foreground relative bg-foreground"
+      className="inverted w-full h-full flex items-center justify-center text-foreground relative bg-foreground"
       initial={{ opacity: 0 }}
       animate={{ opacity: isFadingOut ? 0 : 1 }}
       transition={{
@@ -119,7 +121,9 @@ function AnimationCycle({ onComplete }: { onComplete: () => void }) {
           scale: isCollapsed ? 0.45 : 1,
           x: isCollapsed ? "-25%" : "0%",
         }}
-        transition={{ duration: 1.5, ease: EASE_SMOOTH }}
+        transition={
+          reduceMotion ? { duration: 0 } : { duration: 1.5, ease: EASE_IN_OUT }
+        }
       >
         <svg
           viewBox={`0 0 ${SVG_SIZE} ${SVG_SIZE}`}
@@ -135,7 +139,7 @@ function AnimationCycle({ onComplete }: { onComplete: () => void }) {
 
           {/* Rotating spiral disk */}
           <motion.g
-            animate={{ rotate: 360 }}
+            animate={reduceMotion ? undefined : { rotate: 360 }}
             transition={{ duration: 14, repeat: Infinity, ease: "linear" }}
             style={{ transformOrigin: `${CX}px ${CY}px` }}
           >
@@ -168,7 +172,6 @@ function AnimationCycle({ onComplete }: { onComplete: () => void }) {
               textAnchor="middle"
               fontSize="25"
               letterSpacing="12"
-              style={{ fontFamily: "Paggoda, Satoshi, sans-serif" }}
             >
               <textPath href="#dga-topArc" startOffset="50%">
                 PERSONAL WORKS
@@ -188,7 +191,6 @@ function AnimationCycle({ onComplete }: { onComplete: () => void }) {
               fontSize="25"
               letterSpacing="12"
               dy="20"
-              style={{ fontFamily: "Paggoda, Satoshi, sans-serif" }}
             >
               <textPath href="#dga-bottomArc" startOffset="50%">
                 PERSONAL WORKS
@@ -211,7 +213,6 @@ function AnimationCycle({ onComplete }: { onComplete: () => void }) {
       >
         <p
           className="text-background leading-[0.9] tracking-tight text-4xl md:text-4xl lg:text-5xl whitespace-nowrap"
-          style={{ fontFamily: "Paggoda, Satoshi, sans-serif" }}
         >
           digital gallery
         </p>

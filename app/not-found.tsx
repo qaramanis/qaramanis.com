@@ -17,7 +17,7 @@ export default function NotFound() {
       <div className="flex flex-col md:flex-row gap-4 justify-center items-center w-[50%]">
         <Link
           href="/"
-          className="text-foreground hover:text-accent underline-offset-2 decoration-1 transition-all duration-300"
+          className="text-foreground hover:text-accent underline-offset-2 decoration-1 transition-colors duration-200"
         >
           Go Home
         </Link>

@@ -1,8 +1,16 @@
 import type { Metadata } from "next";
+import localFont from "next/font/local";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
-import LenisProvider from "@/providers/lenis-provider";
 import LayoutWrapper from "@/components/layout-wrapper";
+
+// Latin subset of ABCArealVariable.woff2, no stylistic sets (79 KB instead of 182 KB).
+// One variable file covers every weight in use (400, 500, 700).
+const areal = localFont({
+  src: "../public/fonts/ABCAreal/ABCArealVariable-latin.woff2",
+  weight: "400 700",
+  variable: "--font-areal-web",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://qaramanis.com"),
@@ -71,11 +79,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    // The head script adds "dark" to this class before React hydrates.
+    <html lang="en" className={areal.variable} suppressHydrationWarning>
       <head>
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){try{var t=localStorage.getItem("theme");if(t==="dark")document.documentElement.classList.add("dark")}catch(e){}})()`,
+            __html: `(function(){var d=document.documentElement;try{if(localStorage.getItem("theme")==="dark")d.classList.add("dark")}catch(e){}var m=document.createElement("meta");m.name="theme-color";m.content=getComputedStyle(d).getPropertyValue("--background").trim();document.head.appendChild(m)})()`,
           }}
         />
         <script
@@ -128,7 +137,6 @@ export default function RootLayout({
         />
       </head>
       <body className={`antialiased`}>
-        <LenisProvider />
         <LayoutWrapper>{children}</LayoutWrapper>
         <Analytics />
         {/*<InvertedCircleCursor />*/}

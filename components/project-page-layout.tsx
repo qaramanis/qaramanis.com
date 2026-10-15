@@ -18,7 +18,7 @@ export default function ProjectPageLayout({
 
       <div className="col-span-12 border-t border-foreground mt-8 md:mt-16 lg:mt-16 mb-2 md:mb-4 lg:mb-8" />
 
-      <div className="col-span-12 md:col-span-9 text-lg md:text-3xl lg:text-3xl font-tinos tracking-tighter">
+      <div className="col-span-12 md:col-span-9 text-lg md:text-3xl lg:text-3xl tracking-tight">
         {description}
       </div>
 

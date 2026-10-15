@@ -38,6 +38,7 @@ export default function FlowLoungeContent() {
           src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/images/flow-lounge-2.jpg"
           alt="Flow Lounge espresso martini cocktail"
           fill
+          sizes="50vw"
           className="object-cover bg-foreground object-center"
         />
       </div>
@@ -46,18 +47,20 @@ export default function FlowLoungeContent() {
           src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/images/flow-lounge-3.jpg"
           alt="Flow Lounge hookah lifestyle shot"
           fill
+          sizes="50vw"
           className="object-cover object-center"
         />
       </div>
 
       <div className="col-span-6 aspect-square bg-accent/30 relative">
-        <ImageMontage className="object-cover object-bottom" />
+        <ImageMontage sizes="50vw" className="object-cover object-bottom" />
       </div>
       <div className="col-span-6 aspect-square bg-accent/30 relative">
         <Image
           src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/images/flow-lounge-4.jpg"
           alt="Flow Lounge curated hookah arrangement"
           fill
+          sizes="50vw"
           className="object-cover object-top"
         />
       </div>
@@ -67,6 +70,7 @@ export default function FlowLoungeContent() {
           src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/images/flow-lounge-5.jpg"
           alt="Flow Lounge branded apparel - t-shirt collateral"
           fill
+          sizes="50vw"
           className="object-cover bg-foreground object-center"
         />
       </div>
@@ -75,6 +79,7 @@ export default function FlowLoungeContent() {
           src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/images/flow-lounge-6.jpg"
           alt="Flow Lounge brand photography - guitar lifestyle shot"
           fill
+          sizes="50vw"
           className="object-cover object-center"
         />
       </div>

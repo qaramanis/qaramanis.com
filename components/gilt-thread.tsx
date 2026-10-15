@@ -400,7 +400,7 @@ export default function GiltThread({
     canvas.addEventListener("touchend", onTouchEnd);
 
     // ── Init threads ──
-    let threads: Thread[] = [];
+    const threads: Thread[] = [];
     const numThreads = Math.max(2, Math.min(8, Math.round(THREAD_COUNT)));
     for (let i = 0; i < numThreads; i++) {
       threads.push(makeThread(i));

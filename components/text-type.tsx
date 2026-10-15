@@ -5,11 +5,10 @@ import {
   useEffect,
   useRef,
   useState,
-  createElement,
   useMemo,
   useCallback,
 } from "react";
-import { gsap } from "gsap";
+import { useMediaQuery } from "@/lib/use-media-query";
 
 interface TextTypeProps {
   className?: string;
@@ -61,6 +60,11 @@ const TextType = ({
   const cursorRef = useRef<HTMLSpanElement>(null);
   const containerRef = useRef<HTMLElement>(null);
 
+  // The text is hidden below md, and stays still with reduced motion.
+  const isWide = useMediaQuery("(min-width: 48rem)");
+  const reduceMotion = useMediaQuery("(prefers-reduced-motion: reduce)");
+  const isAnimated = isWide && !reduceMotion;
+
   const textArray = useMemo(
     () => (Array.isArray(text) ? text : [text]),
     [text],
@@ -96,20 +100,19 @@ const TextType = ({
   }, [startOnVisible]);
 
   useEffect(() => {
-    if (showCursor && cursorRef.current) {
-      gsap.set(cursorRef.current, { opacity: 1 });
-      gsap.to(cursorRef.current, {
-        opacity: 0,
-        duration: cursorBlinkDuration,
-        repeat: -1,
-        yoyo: true,
-        ease: "power2.inOut",
-      });
-    }
-  }, [showCursor, cursorBlinkDuration]);
+    if (!showCursor || !cursorRef.current || !isAnimated) return;
+    // Web Animations API instead of GSAP: no library on every page.
+    // A caret blinks on and off, it does not fade: on for the first half, off for the second.
+    const blink = cursorRef.current.animate([{ opacity: 1 }, { opacity: 0 }], {
+      duration: cursorBlinkDuration * 2000,
+      iterations: Infinity,
+      easing: "steps(2, jump-none)",
+    });
+    return () => blink.cancel();
+  }, [showCursor, cursorBlinkDuration, isAnimated]);
 
   useEffect(() => {
-    if (!isVisible) return;
+    if (!isVisible || !isAnimated) return;
 
     let timeout: NodeJS.Timeout;
 
@@ -187,8 +190,10 @@ const TextType = ({
     loop,
     initialDelay,
     isVisible,
+    isAnimated,
     reverseMode,
     variableSpeed,
+    getRandomSpeed,
     onSentenceComplete,
   ]);
 
@@ -196,27 +201,27 @@ const TextType = ({
     hideCursorWhileTyping &&
     (currentCharIndex < textArray[currentTextIndex].length || isDeleting);
 
-  return createElement(
-    Component,
-    {
-      ref: containerRef,
-      className: `inline-block whitespace-pre-wrap tracking-tight ${className}`,
-      ...props,
-    },
-    <span
-      className="hidden md:inline"
-      style={{ color: getCurrentTextColor() || "inherit" }}
+  return (
+    <Component
+      ref={containerRef}
+      className={`inline-block whitespace-pre-wrap tracking-tight ${className}`}
+      {...props}
     >
-      {displayedText}
-    </span>,
-    showCursor && (
       <span
-        ref={cursorRef}
-        className={`ml-1 hidden md:inline-block opacity-100 ${shouldHideCursor ? "hidden" : ""} ${cursorClassName}`}
+        className="hidden md:inline"
+        style={{ color: getCurrentTextColor() || "inherit" }}
       >
-        {cursorCharacter}
+        {reduceMotion ? textArray[0] : displayedText}
       </span>
-    ),
+      {showCursor && (
+        <span
+          ref={cursorRef}
+          className={`ml-1 hidden md:inline-block opacity-100 ${shouldHideCursor ? "hidden" : ""} ${cursorClassName}`}
+        >
+          {cursorCharacter}
+        </span>
+      )}
+    </Component>
   );
 };
 

@@ -1,23 +1,40 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { Sun, Moon } from "lucide-react";
+import { useSyncExternalStore } from "react";
+
+function syncThemeColor() {
+  const color = getComputedStyle(document.documentElement)
+    .getPropertyValue("--background")
+    .trim();
+  document
+    .querySelector('meta[name="theme-color"]')
+    ?.setAttribute("content", color);
+}
+
+// The theme lives on <html class="dark">, set by the head script before paint.
+function subscribe(onChange: () => void) {
+  const observer = new MutationObserver(onChange);
+  observer.observe(document.documentElement, {
+    attributes: true,
+    attributeFilter: ["class"],
+  });
+  return () => observer.disconnect();
+}
 
 export default function ThemeToggle() {
-  const [dark, setDark] = useState(false);
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-    setDark(document.documentElement.classList.contains("dark"));
-  }, []);
+  // null on the server: the theme is not known until the client renders.
+  const dark = useSyncExternalStore<boolean | null>(
+    subscribe,
+    () => document.documentElement.classList.contains("dark"),
+    () => null,
+  );
 
   const toggle = () => {
     const next = !dark;
     const apply = () => {
-      setDark(next);
       document.documentElement.classList.toggle("dark", next);
       localStorage.setItem("theme", next ? "dark" : "light");
+      syncThemeColor();
     };
 
     if (document.startViewTransition) {
@@ -27,7 +44,7 @@ export default function ThemeToggle() {
     }
   };
 
-  if (!mounted) return <div className="w-10 h-5" />;
+  if (dark === null) return <div className="w-10 h-5" />;
 
   return (
     <button
@@ -38,7 +55,7 @@ export default function ThemeToggle() {
       aria-checked={dark}
     >
       <span
-        className={`absolute top-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-foreground transition-[left] duration-300 ${dark ? "left-5.5" : "left-1"}`}
+        className={`absolute top-1/2 left-1 -translate-y-1/2 w-3 h-3 rounded-full bg-foreground transition-transform duration-200 ease-in-out ${dark ? "translate-x-4.5" : ""}`}
       />
     </button>
   );

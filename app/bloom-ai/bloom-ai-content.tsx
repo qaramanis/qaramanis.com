@@ -2,17 +2,28 @@
 
 import ProjectPageLayout from "@/components/project-page-layout";
 import ProjectLink from "@/components/project-link";
+import AutoplayVideo from "@/components/autoplay-video";
 import { Play, X } from "lucide-react";
 import Image from "next/image";
 import { useRef, useState } from "react";
 
+// Same as the exit duration of .dialog-transition in globals.css.
+const DIALOG_EXIT_MS = 150;
+
 export default function BloomAIContent() {
   const dialogRef = useRef<HTMLDialogElement>(null);
+  const closeTimer = useRef<ReturnType<typeof setTimeout>>(undefined);
   const [videoOpen, setVideoOpen] = useState(false);
 
   const openDialog = () => {
+    clearTimeout(closeTimer.current);
     setVideoOpen(true);
     dialogRef.current?.showModal();
+  };
+
+  // Keep the video in the box while the dialog fades out, then remove it.
+  const onDialogClose = () => {
+    closeTimer.current = setTimeout(() => setVideoOpen(false), DIALOG_EXIT_MS);
   };
 
   const closeDialog = () => {
@@ -22,14 +33,11 @@ export default function BloomAIContent() {
   const media = (
     <>
       <div className="col-span-12 w-screen -ml-2 md:-ml-4 lg:-ml-8 aspect-[1920/1080] bg-foreground relative overflow-hidden">
-        <video
+        <AutoplayVideo
           src={
             "https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/bloom-ai/bloom-ai-video.mp4"
           }
-          autoPlay
-          loop
-          muted
-          playsInline
+          priority
           className="w-full h-full object-cover transition-all duration-500"
         />
       </div>
@@ -54,6 +62,7 @@ export default function BloomAIContent() {
           src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/bloom-ai/bloom-ai-3.png"
           alt="Bloom AI - interactive components and live trackers"
           fill
+          sizes="50vw"
           className="object-cover bg-foreground object-right"
         />
       </div>
@@ -62,6 +71,7 @@ export default function BloomAIContent() {
           src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/bloom-ai/bloom-ai-4.png"
           alt="Bloom AI - user personalization and engagement"
           fill
+          sizes="50vw"
           className="object-cover bg-foreground object-right"
         />
       </div>
@@ -108,12 +118,12 @@ export default function BloomAIContent() {
 
       <dialog
         ref={dialogRef}
-        onClose={() => setVideoOpen(false)}
+        onClose={onDialogClose}
         onClick={(e) => {
           if (e.target === e.currentTarget) closeDialog();
         }}
         aria-label="Bloom AI demo video"
-        className="fixed inset-0 z-50 w-full h-full max-w-none max-h-none m-0 p-0 border-none bg-transparent backdrop:bg-black/80 open:flex items-center justify-center"
+        className="dialog-transition fixed inset-0 z-50 w-full h-full max-w-none max-h-none m-0 p-0 border-none bg-transparent backdrop:bg-black/80 open:flex items-center justify-center"
       >
         <button
           type="button"

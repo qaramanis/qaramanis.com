@@ -46,7 +46,7 @@ export default function SnowfallBackground() {
   );
 
   return (
-    <div className="absolute inset-0 pointer-events-none overflow-hidden">
+    <div className="absolute inset-0 pointer-events-none overflow-hidden [container-type:size]">
       {snowflakes.map((flake) => (
         <div
           key={flake.id}
@@ -63,22 +63,29 @@ export default function SnowfallBackground() {
         </div>
       ))}
       <style jsx>{`
+        /* transform only (no top), so the fall runs on the compositor */
         @keyframes fall {
           0% {
-            top: -100px;
-            transform: rotate(0deg);
+            transform: translateY(0) rotate(0deg);
           }
           100% {
-            top: calc(100% + 100px);
-            transform: rotate(360deg);
+            transform: translateY(calc(100cqh + 200px)) rotate(360deg);
           }
         }
 
         .snowflake {
           position: absolute;
+          top: -100px;
           animation: fall linear infinite;
           color: rgba(255, 255, 255, 0.9);
           user-select: none;
+        }
+
+        /* Paused, the negative delays freeze each flake mid-fall: still snow, no motion */
+        @media (prefers-reduced-motion: reduce) {
+          .snowflake {
+            animation-play-state: paused;
+          }
         }
       `}</style>
     </div>

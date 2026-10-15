@@ -1,27 +1,4 @@
 @import "tailwindcss";
-@import "lenis/dist/lenis.css";
-
-@font-face {
-    font-family: "HigherJump";
-    src: url("/fonts/higher-jump/Higher-Jump.ttf") format("truetype");
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Paggoda";
-    src: url("/fonts/paggoda/paggoda.otf") format("opentype");
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Paggoda";
-    src: url("/fonts/paggoda/paggoda-italic.otf") format("opentype");
-    font-weight: normal;
-    font-style: italic;
-}
 
 @theme inline {
     --color-background: var(--background);
@@ -31,13 +8,10 @@
     --color-destructive: var(--destructive);
     --color-warning: var(--warning);
     --color-success: var(--success);
-    --font-sans: var(--font-satoshi);
-    --font-mono: var(--font-satoshi);
-    --font-hack: var(--font-hack);
-    --font-paraText: var(--font-para-text);
-    --font-satoshi: var(--font-satoshi);
-    --font-tinos: var(--font-tinos);
-    --font-higherJump: var(--font-higher-jump);
+    --font-sans: var(--font-areal);
+    --font-mono: var(--font-areal);
+    --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+    --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 :root {
@@ -54,19 +28,17 @@
     --color-accent-cyan: #06b6d4;
     --color-gold-ice: #1a4490;
     --color-agora-mcp: #060606;
-    --font-hack: "Hack", monospace;
-    --font-tinos: "Tinos", sans-serif;
-    --font-satoshi: "Satoshi", sans-serif;
-    --font-higher-jump: "Higher Jump", sans-serif;
-    --font-paggoda: "Paggoda";
+    /* --font-areal-web: set by next/font in app/layout.tsx */
+    --font-areal: var(--font-areal-web), sans-serif;
     scrollbar-width: none;
+    -webkit-tap-highlight-color: transparent;
     /*cursor: none;*/
 }
 
 body {
     background: var(--background);
     color: var(--foreground);
-    font-family: var(--font-satoshi);
+    font-family: var(--font-areal);
 }
 
 .dark {
@@ -74,6 +46,18 @@ body {
     --foreground: #d9d9d9;
     --accent: #8a8c8e;
     --accent-secondary: #6a6c6e;
+}
+
+/* ABC Areal Darkmode axis: thinner strokes for light text on dark backgrounds.
+   Letter widths stay the same, so the text does not reflow on a theme change. */
+.dark,
+.inverted {
+    font-variation-settings: "DRKM" 1;
+}
+
+/* .inverted: a bg-foreground surface, so its text is dark in the dark theme */
+.dark .inverted {
+    font-variation-settings: "DRKM" 0;
 }
 
 ::view-transition-old(root),
@@ -93,5 +77,55 @@ body {
 }
 
 .btn-primary {
-    @apply hover:text-accent transition-colors duration-300;
+    @apply hover:text-accent transition-colors duration-200;
+}
+
+.page-enter {
+    animation: page-enter 250ms var(--ease-out);
+}
+
+@keyframes page-enter {
+    from {
+        opacity: 0;
+    }
+}
+
+/* Modal open/close: enter 250ms, exit 150ms. Origin stays centered. */
+.dialog-transition,
+.dialog-transition::backdrop {
+    opacity: 0;
+    transition:
+        opacity 150ms var(--ease-out),
+        transform 150ms var(--ease-out),
+        overlay 150ms allow-discrete,
+        display 150ms allow-discrete;
+}
+
+.dialog-transition[open],
+.dialog-transition[open]::backdrop {
+    opacity: 1;
+    transition-duration: 250ms;
+}
+
+@starting-style {
+    .dialog-transition[open],
+    .dialog-transition[open]::backdrop {
+        opacity: 0;
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .dialog-transition {
+        transform: scale(0.96);
+    }
+
+    .dialog-transition[open] {
+        transform: none;
+    }
+
+    @starting-style {
+        .dialog-transition[open] {
+            transform: scale(0.96);
+        }
+    }
 }
