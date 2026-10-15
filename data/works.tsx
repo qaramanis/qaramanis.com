@@ -3,6 +3,7 @@ import EventHorizon from "@/components/event-horizon";
 import GoldIceWorkItem from "@/components/gold-ice/gold-ice";
 import RepowerSolutionsWorkItem from "@/components/repower-solutions/repower-solutions";
 import AdrenalineSpikeWorkItem from "@/components/adrenaline-spike/adrenaline-spike";
+import AgoraMcpWorkItem from "@/components/agora-mcp/agora-mcp";
 
 export const WORK_CATEGORIES = [
   "Web Design",
@@ -93,6 +94,16 @@ const workItems: Omit<Work, "id">[] = [
     media: {
       type: "component",
       render: () => <AdrenalineSpikeWorkItem />,
+    },
+  },
+  {
+    title: "Agora MCP",
+    description: "System Design, Web Design",
+    categories: ["System Design", "Web Design"],
+    url: "/agora-mcp",
+    media: {
+      type: "component",
+      render: () => <AgoraMcpWorkItem />,
     },
   },
   // {

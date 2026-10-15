@@ -8,6 +8,7 @@ export type ProjectSlug =
   | "gold-ice"
   | "repower-solutions"
   | "adrenaline-spike"
+  | "agora-mcp"
   | "bloom-ai"
   | "digital-gallery";
 
@@ -97,6 +98,27 @@ export const PROJECTS_SEO: Record<ProjectSlug, ProjectSeo> = {
     ],
     keywords:
       "Adrenaline Spike, off-road motorcycle rental, enduro, adventure bikes, Mount Chortiatis, Thessaloniki, web design, brand identity",
+  },
+  "agora-mcp": {
+    name: "Agora MCP",
+    metaTitle: "Agora MCP - MCP Servers for Open Government Data",
+    description:
+      "System design and web design for Agora MCP - public registries exposed as MCP servers, so any AI assistant can query public spending, procurement, open data and public services.",
+    heroImage: `${SITE_URL}/agora-mcp/screenshot3.png`,
+    heroImageWidth: 2844,
+    heroImageHeight: 1528,
+    heroImageAlt:
+      "Agora MCP - one prompt to your agent, the tools it calls and the registries that answer it",
+    externalUrl: "https://agora.qaramanis.com",
+    about: [
+      "Open Government Data",
+      "Model Context Protocol",
+      "Artificial Intelligence",
+      "System Design",
+      "Web Design",
+    ],
+    keywords:
+      "Agora MCP, agoramcp, Model Context Protocol, MCP server, open government data, Greece, Diavgeia, public spending, procurement, AI assistant",
   },
   "bloom-ai": {
     name: "Bloom AI",

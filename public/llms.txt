@@ -89,6 +89,18 @@ Flow Lounge, under the curation and signature of Titto Peronetti, presents a com
 **Type:** Web Design
 **Status:** Currently in development
 
+### Agora MCP - https://agora.qaramanis.com
+**Type:** System Design, Web Design
+**Industry:** Open Government Data, Artificial Intelligence
+
+Agora MCP exposes public registries as MCP (Model Context Protocol) servers, so Claude, Cursor or any AI assistant can query public spending, procurement, open datasets and public services in plain language. Seven official registries and fifty tools, available for Greece, with every answer carrying the licence and attribution of the registry it came from. The same tools also answer over a plain HTTP API.
+
+**What Apostolos delivered:**
+- System design of the MCP servers and the HTTP API
+- Website design and frontend development
+
+**Case study:** https://qaramanis.com/agora-mcp
+
 ### Vidavo S.A. - https://vidavo.eu
 **Role:** Full Stack Web Engineer
 **Industry:** Healthcare Technology
@@ -223,6 +235,8 @@ A: Hospitality, events, healthcare technology, lifestyle brands, and more. His d
 - https://qaramanis.com - Portfolio and homepage
 - https://qaramanis.com/flow-lounge - Flow Lounge case study
 - https://flowlounge.gr - Flow Lounge live website
+- https://qaramanis.com/agora-mcp - Agora MCP case study
+- https://agora.qaramanis.com - Agora MCP live website
 - https://twitter.com/qaramanis - Twitter/X profile
 - https://github.com/qaramanis - GitHub profile
 - https://www.linkedin.com/in/apostolos-karamanis/ - LinkedIn profile
