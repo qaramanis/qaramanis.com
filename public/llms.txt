@@ -101,6 +101,13 @@ Agora MCP exposes public registries as MCP (Model Context Protocol) servers, so 
 
 **Case study:** https://qaramanis.com/agora-mcp
 
+### HQC Greece
+**Type:** Web Design
+**Industry:** Halal Certification
+**Status:** Currently in development
+
+HQC (Halal Quality Control) is a halal certification body active since 1983. Apostolos is designing and building the new website of its Greece office - a bilingual site in Greek and English.
+
 ### Vidavo S.A. - https://vidavo.eu
 **Role:** Full Stack Web Engineer
 **Industry:** Healthcare Technology

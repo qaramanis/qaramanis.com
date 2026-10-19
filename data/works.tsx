@@ -4,6 +4,7 @@ import GoldIceWorkItem from "@/components/gold-ice/gold-ice";
 import RepowerSolutionsWorkItem from "@/components/repower-solutions/repower-solutions";
 import AdrenalineSpikeWorkItem from "@/components/adrenaline-spike/adrenaline-spike";
 import AgoraMcpWorkItem from "@/components/agora-mcp/agora-mcp";
+import HqcGreeceWorkItem from "@/components/hqc-greece/hqc-greece";
 
 export const WORK_CATEGORIES = [
   "Web Design",
@@ -104,6 +105,16 @@ const workItems: Omit<Work, "id">[] = [
     media: {
       type: "component",
       render: () => <AgoraMcpWorkItem />,
+    },
+  },
+  {
+    title: "HQC Greece",
+    description: "Web Design",
+    categories: ["Web Design"],
+    url: "/hqc-greece",
+    media: {
+      type: "component",
+      render: () => <HqcGreeceWorkItem />,
     },
   },
   // {

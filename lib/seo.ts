@@ -9,6 +9,7 @@ export type ProjectSlug =
   | "repower-solutions"
   | "adrenaline-spike"
   | "agora-mcp"
+  | "hqc-greece"
   | "bloom-ai"
   | "digital-gallery";
 
@@ -119,6 +120,25 @@ export const PROJECTS_SEO: Record<ProjectSlug, ProjectSeo> = {
     ],
     keywords:
       "Agora MCP, agoramcp, Model Context Protocol, MCP server, open government data, Greece, Diavgeia, public spending, procurement, AI assistant",
+  },
+  "hqc-greece": {
+    name: "HQC Greece",
+    metaTitle: "HQC Greece - Website Design for a Halal Certification Body",
+    description:
+      "Web design for HQC Greece - the Greece office of Halal Quality Control, a halal certification body active since 1983. A clear, bilingual site in Greek and English.",
+    // The site-wide image until the website screenshots are ready.
+    heroImage: `${SITE_URL}/apostolos-karamanis-creative-developer.jpg`,
+    heroImageWidth: 1200,
+    heroImageHeight: 630,
+    heroImageAlt: "HQC Greece - halal certification, Greece office",
+    about: [
+      "Halal Certification",
+      "Quality Control",
+      "Certification Body",
+      "Web Design",
+    ],
+    keywords:
+      "HQC Greece, Halal Quality Control, halal certification, halal audit, certification body, Greece, web design",
   },
   "bloom-ai": {
     name: "Bloom AI",

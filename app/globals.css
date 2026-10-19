@@ -28,6 +28,7 @@
     --color-accent-cyan: #06b6d4;
     --color-gold-ice: #1a4490;
     --color-agora-mcp: #060606;
+    --color-hqc-greece: #173b28;
     /* --font-areal-web: set by next/font in app/layout.tsx */
     --font-areal: var(--font-areal-web), sans-serif;
     scrollbar-width: none;
