@@ -65,7 +65,10 @@ export default function AdrenalineSpikeContent() {
 
   const footer = (
     <>
-      <ProjectMeta label="My Role" items={["Web Design", "Brand Identity"]} />
+      <ProjectMeta
+        label="My Role"
+        items={["Web Design", "Brand Identity", "System Design"]}
+      />
       <ProjectLink
         href="https://www.adrenalinespike.gr/"
         label="View Website"

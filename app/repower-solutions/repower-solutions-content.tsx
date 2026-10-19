@@ -57,7 +57,7 @@ export default function RepowerSolutionsContent() {
 
   const footer = (
     <>
-      <ProjectMeta label="My Role" items={["Web Design", "Brand Collateral"]} />
+      <ProjectMeta label="My Role" items={["Web Design", "Brand Identity"]} />
       <ProjectLink
         disabled
         label="Website under construction"

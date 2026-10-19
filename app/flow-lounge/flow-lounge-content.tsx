@@ -101,10 +101,7 @@ export default function FlowLoungeContent() {
 
   const footer = (
     <>
-      <ProjectMeta
-        label="My Role"
-        items={["Web Design", "Brand Collateral", "Digital Media"]}
-      />
+      <ProjectMeta label="My Role" items={["Web Design", "Brand Identity"]} />
       <ProjectMeta
         label="Collaborators"
         items={["Titto Peronetti"]}
