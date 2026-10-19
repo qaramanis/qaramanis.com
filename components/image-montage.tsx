@@ -23,7 +23,7 @@ export default function ImageMontage({
   const preloaded = useRef(false);
 
   // Once the first image has loaded (it is lazy, so only near the viewport),
-  // preload the others with the same optimized URLs that <Image> requests.
+  // preload the others with the same URLs that <Image> requests.
   const preloadAll = () => {
     if (preloaded.current) return;
     preloaded.current = true;
