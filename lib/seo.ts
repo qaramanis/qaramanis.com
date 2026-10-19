@@ -30,7 +30,7 @@ export const PROJECTS_SEO: Record<ProjectSlug, ProjectSeo> = {
     name: "Flow Lounge",
     metaTitle: "Flow Lounge - Hookah Lounge Brand & Website",
     description:
-      "Web design, brand collateral, and digital media for Flow Lounge - a hookah lounge brand curated by Titto Peronetti for restaurants, hotels, and private events.",
+      "Web design, brand identity, and digital media for Flow Lounge - a hookah lounge brand curated by Titto Peronetti for restaurants, hotels, and private events.",
     heroImage:
       "https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/images/flow-lounge-1.jpg",
     heroImageWidth: 1920,
@@ -60,7 +60,7 @@ export const PROJECTS_SEO: Record<ProjectSlug, ProjectSeo> = {
     name: "Repower Solutions",
     metaTitle: "Repower Solutions - Website Design for an Energy Engineering Firm",
     description:
-      "Web design and brand collateral for Repower Solutions - a Thessaloniki-based technical firm delivering energy upgrades, photovoltaic systems, heat pumps, and engineering studies.",
+      "Web design and brand identity for Repower Solutions - a Thessaloniki-based technical firm delivering energy upgrades, photovoltaic systems, heat pumps, and engineering studies.",
     heroImage:
       "https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/repower-solutions/repower-1.png",
     heroImageWidth: 1920,
@@ -72,7 +72,7 @@ export const PROJECTS_SEO: Record<ProjectSlug, ProjectSeo> = {
       "Photovoltaic Systems",
       "Heat Pumps",
       "Web Design",
-      "Brand Collateral",
+      "Brand Identity",
     ],
     keywords:
       "Repower Solutions, energy upgrades, photovoltaic systems, heat pumps, engineering studies, Thessaloniki",

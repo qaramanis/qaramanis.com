@@ -2,6 +2,7 @@
 
 import ProjectPageLayout from "@/components/project-page-layout";
 import ProjectLink from "@/components/project-link";
+import ProjectMeta from "@/components/project-meta";
 import AutoplayVideo from "@/components/autoplay-video";
 import { Play, X } from "lucide-react";
 import Image from "next/image";
@@ -92,18 +93,19 @@ export default function BloomAIContent() {
 
   const footer = (
     <>
+      <ProjectMeta label="My Role" items={["Web Design", "System Design"]} />
       <ProjectLink
         href="https://bloom.qaramanis.com"
         label="View Website"
         ariaLabel="Visit Bloom AI website, opens in new tab"
-        className="col-span-3 md:col-span-2 md:col-start-1"
+        className="col-span-6 md:col-span-2 md:col-start-3"
       />
       <ProjectLink
         onClick={openDialog}
         label="View Demo"
         icon={Play}
         ariaLabel="Open Bloom AI demo video"
-        className="col-span-3 md:col-span-3 md:col-start-3"
+        className="col-span-6 md:col-span-3 md:col-start-5"
       />
     </>
   );
