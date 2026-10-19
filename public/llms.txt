@@ -93,7 +93,7 @@ Flow Lounge, under the curation and signature of Titto Peronetti, presents a com
 **Type:** System Design, Web Design
 **Industry:** Open Government Data, Artificial Intelligence
 
-Agora MCP exposes public registries as MCP (Model Context Protocol) servers, so Claude, Cursor or any AI assistant can query public spending, procurement, open datasets and public services in plain language. Seven official registries and fifty tools, available for Greece, with every answer carrying the licence and attribution of the registry it came from. The same tools also answer over a plain HTTP API.
+Agora MCP exposes public registries as MCP (Model Context Protocol) servers, so Claude, Cursor or any AI assistant can query public spending, procurement, open datasets and public services in plain language. 10+ public registries and 70+ tools, available for Greece, with every answer carrying the licence and attribution of the registry it came from. The same tools also answer over a plain HTTP API.
 
 **What Apostolos delivered:**
 - System design of the MCP servers and the HTTP API

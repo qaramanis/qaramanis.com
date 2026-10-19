@@ -57,9 +57,9 @@ export default function AgoraMcpContent() {
       language.
       <br />
       <br />
-      Designed as one system, from the servers to the website: seven official
-      registries, fifty tools (and counting). Every answer carrying the licence and
-      attribution of the registry it came from.
+      Designed as one system, from the servers to the website: 10+ public
+      registries, 70+ tools (and counting). Every answer carrying the licence
+      and attribution of the registry it came from.
     </>
   );
 
