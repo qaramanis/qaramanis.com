@@ -58,26 +58,6 @@ const workItems: Omit<Work, "id">[] = [
     },
   },
   {
-    title: "Adrenaline Spike",
-    description: "Web Design, Brand Identity",
-    categories: ["Web Design", "Brand Identity"],
-    url: "/adrenaline-spike",
-    media: {
-      type: "component",
-      render: () => <AdrenalineSpikeWorkItem />,
-    },
-  },
-  {
-    title: "Flow Lounge",
-    description: "Web Design, Brand Identity",
-    categories: ["Web Design", "Brand Identity"],
-    url: "/flow-lounge",
-    media: {
-      type: "video",
-      src: "https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/flow-lounge.mp4",
-    },
-  },
-  {
     title: "Bloom AI",
     description: "System Design, Web Design",
     categories: ["System Design", "Web Design"],
@@ -94,6 +74,26 @@ const workItems: Omit<Work, "id">[] = [
           color="#d9d9d9"
         />
       ),
+    },
+  },
+  {
+    title: "Flow Lounge",
+    description: "Web Design, Brand Identity",
+    categories: ["Web Design", "Brand Identity"],
+    url: "/flow-lounge",
+    media: {
+      type: "video",
+      src: "https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/flow-lounge.mp4",
+    },
+  },
+  {
+    title: "Adrenaline Spike",
+    description: "Web Design, Brand Identity",
+    categories: ["Web Design", "Brand Identity"],
+    url: "/adrenaline-spike",
+    media: {
+      type: "component",
+      render: () => <AdrenalineSpikeWorkItem />,
     },
   },
   {

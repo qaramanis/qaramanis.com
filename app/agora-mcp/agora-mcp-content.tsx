@@ -9,14 +9,14 @@ export default function AgoraMcpContent() {
     <>
       <div className="col-span-12 w-screen -ml-2 md:-ml-4 lg:-ml-8 aspect-[1920/1080] bg-foreground relative overflow-hidden">
         <AutoplayVideo
-          src="/agora-mcp/loop.mp4"
+          src="/agora-mcp/reel.mp4"
           priority
           className="w-full h-full object-cover"
         />
       </div>
       <div className="col-span-12 w-full aspect-[1920/1080] bg-foreground relative overflow-hidden">
         <AutoplayVideo
-          src="/agora-mcp/reel.mp4"
+          src="/agora-mcp/loop.mp4"
           className="w-full h-full object-cover"
         />
       </div>
