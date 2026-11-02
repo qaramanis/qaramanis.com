@@ -7,6 +7,7 @@ export default function AgoraMcpWorkItem() {
     <div className="relative w-full h-full bg-[var(--color-agora-mcp)] flex items-center justify-center overflow-hidden">
       <AutoplayVideo
         src="/agora-mcp/loop.mp4"
+        poster="/agora-mcp/loop-poster.webp"
         priority
         className="w-full h-auto scale-130 [mask-image:linear-gradient(to_bottom,transparent,black_12%,black_88%,transparent)]"
       />

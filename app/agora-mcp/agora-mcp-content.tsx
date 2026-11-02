@@ -10,6 +10,7 @@ export default function AgoraMcpContent() {
       <div className="col-span-12 w-screen -ml-2 md:-ml-4 lg:-ml-8 aspect-[1920/1080] bg-foreground relative overflow-hidden">
         <AutoplayVideo
           src="/agora-mcp/reel.mp4"
+          ariaLabel="Agora MCP showreel - the public registries, a question in plain language, contract values on a map of Greece and the Agora MCP wordmark"
           priority
           className="w-full h-full object-cover"
         />
@@ -17,6 +18,8 @@ export default function AgoraMcpContent() {
       <div className="col-span-12 w-full aspect-[1920/1080] bg-foreground relative overflow-hidden">
         <AutoplayVideo
           src="/agora-mcp/loop.mp4"
+          poster="/agora-mcp/loop-poster.webp"
+          ariaLabel="Agora MCP interface - tool search, a chart of commitments per day, a payment record and the licence of the registry it came from"
           className="w-full h-full object-cover"
         />
       </div>

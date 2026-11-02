@@ -10,6 +10,8 @@ export default function AdrenalineSpikeContent() {
       <div className="col-span-12 w-screen -ml-2 md:-ml-4 lg:-ml-8 aspect-[1920/1080] bg-[var(--color-adrenaline-spike)] relative overflow-hidden">
         <AutoplayVideo
           src="/adrenaline-spike/loop.mp4"
+          poster="/adrenaline-spike/loop-poster.webp"
+          ariaLabel="Adrenaline Spike booking flow as one moving shape - Check Availability, the availability calendar, rental days, gear, booking search and a confirmed booking"
           priority
           className="w-full h-full object-cover"
         />

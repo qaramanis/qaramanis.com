@@ -31,10 +31,9 @@ export const PROJECTS_SEO: Record<ProjectSlug, ProjectSeo> = {
     metaTitle: "Flow Lounge - Hookah Lounge Brand & Website",
     description:
       "Web design, brand identity, and digital media for Flow Lounge - a hookah lounge brand curated by Titto Peronetti for restaurants, hotels, and private events.",
-    heroImage:
-      "https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/images/flow-lounge-1.jpg",
-    heroImageWidth: 1920,
-    heroImageHeight: 1080,
+    heroImage: `${SITE_URL}/flow-lounge/screenshot1.webp`,
+    heroImageWidth: 2844,
+    heroImageHeight: 1528,
     heroImageAlt: "Flow Lounge - hookah lounge brand by Titto Peronetti",
     externalUrl: "https://flowlounge.gr",
     about: ["Hospitality", "Events", "Hookah Culture", "Brand Identity"],

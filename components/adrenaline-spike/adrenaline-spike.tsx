@@ -19,7 +19,7 @@ export default function AdrenalineSpikeWorkItem() {
       />
       <AutoplayVideo
         src="/adrenaline-spike/loop.mp4"
-        priority
+        poster="/adrenaline-spike/loop-poster.webp"
         className="relative w-full h-auto scale-120 [mask-image:linear-gradient(to_bottom,transparent,black_12%,black_88%,transparent)]"
       />
     </div>
