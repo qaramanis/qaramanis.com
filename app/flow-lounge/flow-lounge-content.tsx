@@ -7,80 +7,80 @@ import Image from "next/image";
 export default function FlowLoungeContent() {
   const media = (
     <>
-      <div className="col-span-12 w-screen -ml-2 md:-ml-4 lg:-ml-8 aspect-[1920/1080] bg-accent/30 relative">
+      <div className="col-span-12 w-screen -ml-2 md:-ml-4 lg:-ml-8 aspect-[2844/1528] bg-accent/30 relative">
         <Image
-          src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/images/flow-lounge-1.jpg"
-          alt="Flow Lounge website hero - hookah lounge brand by Titto Peronetti"
+          src="/flow-lounge/screenshot1.webp"
+          alt="Flow Lounge website hero - Our mission is to bring people joy, over the FLOW LOUNGE wordmark"
           fill
           priority
           className="object-cover bg-foreground"
         />
       </div>
-      <div className="col-span-12 w-full aspect-[1920/1080] bg-accent/30 relative">
+      <div className="col-span-12 aspect-[2844/1528] bg-accent/30 relative">
         <Image
-          src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/images/flow-lounge-banner.png"
-          alt="Flow Lounge brand banner"
+          src="/flow-lounge/screenshot2.webp"
+          alt="Flow Lounge website - hookah page with the Classic, Premium and Exclusive tobacco cards"
           fill
           className="object-cover bg-foreground"
         />
       </div>
-      <div className="col-span-12 w-full aspect-[1920/1080] bg-accent/30 relative">
+      <div className="col-span-12 aspect-[2844/1528] bg-accent/30 relative">
         <Image
-          src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/images/flow-lounge-7.jpg"
-          alt="Flow Lounge brand photography - atmosphere and identity"
+          src="/flow-lounge/screenshot3.webp"
+          alt="Flow Lounge website - Smoke and play, the playroom section with board and console games"
+          fill
+          className="object-cover bg-foreground"
+        />
+      </div>
+      <div className="col-span-12 aspect-[2844/1528] bg-accent/30 relative">
+        <Image
+          src="/flow-lounge/screenshot4.webp"
+          alt="Flow Lounge website - Past nights, event posters from the events page"
           fill
           className="object-cover bg-foreground"
         />
       </div>
 
-      <div className="col-span-6 aspect-square bg-accent/30 relative">
+      <div className="col-span-12 w-full aspect-[1920/1080] bg-accent/30 relative">
         <Image
-          src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/images/flow-lounge-2.jpg"
+          src="/flow-lounge/images/flow-lounge-7.webp"
+          alt="Flow Lounge neon sign - Sex, Smoke, Rock n Roll - above the bar"
+          fill
+          className="object-cover bg-foreground"
+        />
+      </div>
+
+      <div className="col-span-6 md:col-span-3 aspect-[2/3] bg-accent/30 relative">
+        <Image
+          src="/flow-lounge/images/flow-lounge-2.webp"
           alt="Flow Lounge espresso martini cocktail"
           fill
-          sizes="50vw"
+          sizes="(min-width: 768px) 25vw, 50vw"
           className="object-cover bg-foreground object-center"
         />
       </div>
-      <div className="col-span-6 aspect-square bg-accent/30 relative">
+      <div className="col-span-6 md:col-span-3 aspect-[2/3] bg-accent/30 relative">
         <Image
-          src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/images/flow-lounge-3.jpg"
-          alt="Flow Lounge hookah lifestyle shot"
+          src="/flow-lounge/images/flow-lounge-3.webp"
+          alt="Flow Lounge crystal hookah with a Bonche bowl"
           fill
-          sizes="50vw"
+          sizes="(min-width: 768px) 25vw, 50vw"
           className="object-cover object-center"
         />
       </div>
-
-      <div className="col-span-6 aspect-square bg-accent/30 relative">
-        <ImageMontage sizes="50vw" className="object-cover object-bottom" />
-      </div>
-      <div className="col-span-6 aspect-square bg-accent/30 relative">
-        <Image
-          src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/images/flow-lounge-4.jpg"
-          alt="Flow Lounge curated hookah arrangement"
-          fill
-          sizes="50vw"
-          className="object-cover object-top"
+      <div className="col-span-6 md:col-span-3 aspect-[2/3] bg-accent/30 relative">
+        <ImageMontage
+          sizes="(min-width: 768px) 25vw, 50vw"
+          className="object-cover object-bottom"
         />
       </div>
-
-      <div className="col-span-6 aspect-square bg-accent/30 relative">
+      <div className="col-span-6 md:col-span-3 aspect-[2/3] bg-accent/30 relative">
         <Image
-          src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/images/flow-lounge-5.jpg"
+          src="/flow-lounge/images/flow-lounge-5.webp"
           alt="Flow Lounge branded apparel - t-shirt collateral"
           fill
-          sizes="50vw"
+          sizes="(min-width: 768px) 25vw, 50vw"
           className="object-cover bg-foreground object-center"
-        />
-      </div>
-      <div className="col-span-6 aspect-square bg-accent/30 relative">
-        <Image
-          src="https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/images/flow-lounge-6.jpg"
-          alt="Flow Lounge brand photography - guitar lifestyle shot"
-          fill
-          sizes="50vw"
-          className="object-cover object-center"
         />
       </div>
     </>

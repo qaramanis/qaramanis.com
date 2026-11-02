@@ -4,12 +4,12 @@ import { useState, useEffect, useRef } from "react";
 import Image, { getImageProps } from "next/image";
 
 const montageImages = [
-  "https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/montage/flow-lounge-montage-1.jpg",
-  "https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/montage/flow-lounge-montage-2.jpg",
-  "https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/montage/flow-lounge-montage-3.jpg",
-  "https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/montage/flow-lounge-montage-4.jpg",
-  "https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/montage/flow-lounge-montage-5.jpg",
-  "https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/montage/flow-lounge-montage-6.jpg",
+  "/flow-lounge/montage/flow-lounge-montage-1.webp",
+  "/flow-lounge/montage/flow-lounge-montage-2.webp",
+  "/flow-lounge/montage/flow-lounge-montage-3.webp",
+  "/flow-lounge/montage/flow-lounge-montage-4.webp",
+  "/flow-lounge/montage/flow-lounge-montage-5.webp",
+  "/flow-lounge/montage/flow-lounge-montage-6.webp",
 ];
 
 export default function ImageMontage({

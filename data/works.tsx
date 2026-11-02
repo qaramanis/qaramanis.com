@@ -38,6 +38,36 @@ const workItems: Omit<Work, "id">[] = [
     },
   },
   {
+    title: "Repower Solutions",
+    description: "Web Design",
+    categories: ["Web Design"],
+    url: "/repower-solutions",
+    media: {
+      type: "component",
+      render: () => <RepowerSolutionsWorkItem />,
+    },
+  },
+  {
+    title: "Gold Ice",
+    description: "Web Design",
+    categories: ["Web Design"],
+    url: "/gold-ice",
+    media: {
+      type: "component",
+      render: () => <GoldIceWorkItem />,
+    },
+  },
+  {
+    title: "Adrenaline Spike",
+    description: "Web Design, Brand Identity",
+    categories: ["Web Design", "Brand Identity"],
+    url: "/adrenaline-spike",
+    media: {
+      type: "component",
+      render: () => <AdrenalineSpikeWorkItem />,
+    },
+  },
+  {
     title: "Flow Lounge",
     description: "Web Design, Brand Identity",
     categories: ["Web Design", "Brand Identity"],
@@ -64,36 +94,6 @@ const workItems: Omit<Work, "id">[] = [
           color="#d9d9d9"
         />
       ),
-    },
-  },
-  {
-    title: "Gold Ice",
-    description: "Web Design",
-    categories: ["Web Design"],
-    url: "/gold-ice",
-    media: {
-      type: "component",
-      render: () => <GoldIceWorkItem />,
-    },
-  },
-  {
-    title: "Repower Solutions",
-    description: "Web Design",
-    categories: ["Web Design"],
-    url: "/repower-solutions",
-    media: {
-      type: "component",
-      render: () => <RepowerSolutionsWorkItem />,
-    },
-  },
-  {
-    title: "Adrenaline Spike",
-    description: "Web Design, Brand Identity",
-    categories: ["Web Design", "Brand Identity"],
-    url: "/adrenaline-spike",
-    media: {
-      type: "component",
-      render: () => <AdrenalineSpikeWorkItem />,
     },
   },
   {
