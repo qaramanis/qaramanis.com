@@ -28,6 +28,9 @@
     --color-accent-cyan: #06b6d4;
     --color-gold-ice: #1a4490;
     --color-agora-mcp: #060606;
+    /* Adrenaline Spike: loop video background and its dot grid */
+    --color-adrenaline-spike: #f8fbf8;
+    --color-adrenaline-spike-dot: #b9bcb9;
     /* --font-areal-web: set by next/font in app/layout.tsx */
     --font-areal: var(--font-areal-web), sans-serif;
     scrollbar-width: none;

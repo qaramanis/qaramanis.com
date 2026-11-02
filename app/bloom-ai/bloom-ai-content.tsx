@@ -38,6 +38,7 @@ export default function BloomAIContent() {
           src={
             "https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/bloom-ai/bloom-ai-video.mp4"
           }
+          ariaLabel="Bloom AI monitor - a live world map with event layers, live news channels and AI insights, moving between regions"
           priority
           className="w-full h-full object-cover transition-all duration-500"
         />

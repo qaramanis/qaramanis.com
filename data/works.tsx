@@ -38,13 +38,23 @@ const workItems: Omit<Work, "id">[] = [
     },
   },
   {
-    title: "Flow Lounge",
-    description: "Web Design, Brand Identity",
-    categories: ["Web Design", "Brand Identity"],
-    url: "/flow-lounge",
+    title: "Repower Solutions",
+    description: "Web Design",
+    categories: ["Web Design"],
+    url: "/repower-solutions",
     media: {
-      type: "video",
-      src: "https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/flow-lounge.mp4",
+      type: "component",
+      render: () => <RepowerSolutionsWorkItem />,
+    },
+  },
+  {
+    title: "Gold Ice",
+    description: "Web Design",
+    categories: ["Web Design"],
+    url: "/gold-ice",
+    media: {
+      type: "component",
+      render: () => <GoldIceWorkItem />,
     },
   },
   {
@@ -67,23 +77,13 @@ const workItems: Omit<Work, "id">[] = [
     },
   },
   {
-    title: "Gold Ice",
-    description: "Web Design",
-    categories: ["Web Design"],
-    url: "/gold-ice",
+    title: "Flow Lounge",
+    description: "Web Design, Brand Identity",
+    categories: ["Web Design", "Brand Identity"],
+    url: "/flow-lounge",
     media: {
-      type: "component",
-      render: () => <GoldIceWorkItem />,
-    },
-  },
-  {
-    title: "Repower Solutions",
-    description: "Web Design",
-    categories: ["Web Design"],
-    url: "/repower-solutions",
-    media: {
-      type: "component",
-      render: () => <RepowerSolutionsWorkItem />,
+      type: "video",
+      src: "https://5ios91bhrgnfxlta.public.blob.vercel-storage.com/flow-lounge/flow-lounge.mp4",
     },
   },
   {
