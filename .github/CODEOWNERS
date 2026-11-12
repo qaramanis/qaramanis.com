@@ -1,0 +1,2 @@
+# Owners for high-risk paths only. Do not add a `*` rule.
+/.github/workflows/ @qaramanis

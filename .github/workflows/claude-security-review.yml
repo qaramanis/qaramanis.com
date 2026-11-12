@@ -1,0 +1,29 @@
+name: Claude Security Review
+on:
+  pull_request:
+    types: [opened, synchronize, ready_for_review, reopened]
+concurrency:
+  group: claude-security-review-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+jobs:
+  security:
+    # GitHub does not give secrets to pull requests from forks.
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    permissions:
+      contents: read
+      pull-requests: write # Necessary to post the findings as PR comments
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 2
+      # The Action has no release tags. This is the commit of `main` on 2026-02-11.
+      - uses: anthropics/claude-code-security-review@0c6a49f1fa56a1d472575da86a94dbc1edb78eda
+        with:
+          comment-pr: true
+          # This Action accepts an API key only, not CLAUDE_CODE_OAUTH_TOKEN.
+          claude-api-key: ${{ secrets.ANTHROPIC_API_KEY }}
+          claude-model: claude-opus-5-5
+          exclude-directories: public
