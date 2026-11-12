@@ -30,6 +30,7 @@ jobs:
           claude-model: claude-opus-5
           # Scan each push, not only the first run for the PR.
           run-every-commit: true
+          exclude-directories: public
       # The Action only warns when the scan fails, and the check stays green.
       - name: Fail if the scan did not complete
         run: |
@@ -38,4 +39,3 @@ jobs:
             echo "::error::The security scan did not complete. Read the log of the scan step."
             exit 1
           fi
-          exclude-directories: public
