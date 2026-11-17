@@ -13,6 +13,9 @@ interface AutoplayVideoProps {
   // Above the fold: start downloading with the page, like next/image `priority`.
   priority?: boolean;
   onLoadedData?: () => void;
+  // It must wait for more data before it can play, and it plays again.
+  onWaiting?: () => void;
+  onPlaying?: () => void;
 }
 
 // Muted looping video that plays only while it is on (or near) the screen.
@@ -25,6 +28,8 @@ export default function AutoplayVideo({
   className,
   priority = false,
   onLoadedData,
+  onWaiting,
+  onPlaying,
 }: AutoplayVideoProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
 
@@ -82,6 +87,8 @@ export default function AutoplayVideo({
       muted
       playsInline
       onLoadedData={onLoadedData}
+      onWaiting={onWaiting}
+      onPlaying={onPlaying}
       className={className}
     />
   );

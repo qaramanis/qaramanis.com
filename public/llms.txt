@@ -101,6 +101,18 @@ Agora MCP exposes public registries as MCP (Model Context Protocol) servers, so 
 
 **Case study:** https://qaramanis.com/agora-mcp
 
+### Demetra - https://demetra.qaramanis.com
+**Type:** System Design, Web Design
+**Industry:** Agriculture, Geospatial Data, Artificial Intelligence
+
+Demetra is a map dashboard for the cropland of California, built for the NASA Space Apps Challenge 2026. For each block of 990 m and each year from 2017 to 2022, it shows the crops in the block, their estimated revenue, the soil below each crop and the climate of the year. The data comes from public USDA and NASA datasets in a Postgres + PostGIS database. The map also shows a crop prediction for 2023, and an AI assistant answers questions about blocks, crop rotation, soil, climate and weather from the same data.
+
+**What Apostolos delivered:**
+- System design of the database queries, the data API and the AI assistant
+- Dashboard design and frontend development
+
+**Case study:** https://qaramanis.com/demetra
+
 ### Vidavo S.A. - https://vidavo.eu
 **Role:** Full Stack Web Engineer
 **Industry:** Healthcare Technology
@@ -237,6 +249,8 @@ A: Hospitality, events, healthcare technology, lifestyle brands, and more. His d
 - https://flowlounge.gr - Flow Lounge live website
 - https://qaramanis.com/agora-mcp - Agora MCP case study
 - https://agora.qaramanis.com - Agora MCP live website
+- https://qaramanis.com/demetra - Demetra case study
+- https://demetra.qaramanis.com - Demetra live website
 - https://twitter.com/qaramanis - Twitter/X profile
 - https://github.com/qaramanis - GitHub profile
 - https://www.linkedin.com/in/apostolos-karamanis/ - LinkedIn profile
