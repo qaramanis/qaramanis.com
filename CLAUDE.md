@@ -35,6 +35,12 @@ Personal portfolio site. Static pages, no backend.
 
 - Start work branches from `develop`. Open pull requests against `develop`.
 - `main` is for deployments only.
+- Work with branches carefully. Before you create or switch a branch, examine
+  the current branch, the uncommitted changes, and whether `develop` is up to
+  date with `origin/develop`. Do not lose or move work that is not committed.
+- The owner selects each branch name. Before you create a branch, ask the owner
+  for the name. You can suggest names, but use only the name that the owner
+  selects.
 
 ## Non-goals
 
