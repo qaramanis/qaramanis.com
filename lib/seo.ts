@@ -9,6 +9,7 @@ export type ProjectSlug =
   | "repower-solutions"
   | "adrenaline-spike"
   | "agora-mcp"
+  | "demetra"
   | "bloom-ai"
   | "digital-gallery";
 
@@ -118,6 +119,27 @@ export const PROJECTS_SEO: Record<ProjectSlug, ProjectSeo> = {
     ],
     keywords:
       "Agora MCP, agoramcp, Model Context Protocol, MCP server, open government data, Greece, Diavgeia, public spending, procurement, AI assistant",
+  },
+  demetra: {
+    name: "Demetra",
+    metaTitle: "Demetra - Map Dashboard for California Cropland",
+    description:
+      "System design and web design for Demetra - a map of California cropland with the crops, estimated revenue, soil and climate of each 990 m block, a 2023 crop prediction and a data-aware AI assistant. Built for the NASA Space Apps Challenge 2026.",
+    heroImage: `${SITE_URL}/demetra/screenshot1.webp`,
+    heroImageWidth: 2844,
+    heroImageHeight: 1528,
+    heroImageAlt:
+      "Demetra - the main crop of each 990 m block in the Central Valley of California",
+    externalUrl: "https://demetra.qaramanis.com",
+    about: [
+      "Agriculture",
+      "Geospatial Data",
+      "Artificial Intelligence",
+      "System Design",
+      "Web Design",
+    ],
+    keywords:
+      "Demetra, California cropland, crop map, map dashboard, USDA Cropland Data Layer, gSSURGO soil, NASA POWER climate, crop rotation, crop prediction, AI assistant, NASA Space Apps Challenge",
   },
   "bloom-ai": {
     name: "Bloom AI",
