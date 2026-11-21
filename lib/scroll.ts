@@ -44,10 +44,11 @@ export function scrollToElement(elementId: string, offset: number = 0): void {
   if (!element) return;
 
   const targetPosition = element.getBoundingClientRect().top + window.scrollY - offset;
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   window.scrollTo({
     top: targetPosition,
-    behavior: "smooth",
+    behavior: reduceMotion ? "instant" : "smooth",
   });
 }
 
